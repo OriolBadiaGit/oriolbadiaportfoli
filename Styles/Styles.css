@@ -1,0 +1,212 @@
+* {
+  font-family: "Parkinsans", sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+header {
+  /* background-color: aqua; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#LogoHeader {
+  width: 50px;
+  height: 50px;
+}
+
+
+#Menu {
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.417);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  border: 3px solid rgba(17, 98, 65, 0.5);
+  align-items: center;
+  padding: 0% 1%;
+  margin-top: 1%;
+  width: 80%;
+}
+
+#MenuItems {
+  display: flex;
+  margin: 1%;
+  width: 100%;
+  gap: 15%;
+  justify-content: center;
+  text-decoration: none;
+  padding: 1%;
+  font-size: 120%;
+}
+
+li {
+  list-style: none;
+  color: white;
+  transition: 0.5s;
+}
+
+li:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+#MenuItems #Active:hover {
+  color: #116241;
+  transform: scale(1);
+  transition: 0.5s;
+  cursor: default;
+  font-weight: bolder;
+}
+
+#MenuItems #Active {
+  color: #116241;
+  font-weight: bolder;
+}
+
+
+button {
+  background: none;
+  padding: 1%;
+  display: flex;
+  border-radius: 10px;
+  background-color: #116241;
+  border: none;
+  color: white;
+}
+
+main {
+  background-image: url(../ImagesVideos/Artboard\ 1.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.ContainerTitles {
+  margin-top: 17%;
+  display: flex;
+  flex-direction: column;
+  gap: 10%;
+  text-align: center;
+  color: white;
+  margin-left: 36%;
+  /* background-color: aliceblue; */
+  width: 26%;
+}
+
+.Title {
+  font-size: 8rem;
+}
+
+.Subtitle {
+  font-size: 4rem;
+}
+
+.inner-headings {
+  text-align: center;
+  /* background-color: aquamarine; */
+  width: 55%;
+  font-size: 400%;
+  color: white;
+  z-index: 0;
+  margin-top: 2%;
+  margin-left: 22%;
+  border: 0px solid #ddd;
+  height: 80px;
+  line-height: 80px;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+.inner-headings span {
+  position: relative;
+  animation: TextRotating 13s ease-in-out infinite;
+  color: #116241;
+  font-weight: bolder;
+}
+
+@keyframes TextRotating {
+
+  20% {
+    top: 0;
+  }
+
+  40% {
+    top: -80px
+  }
+
+  60% {
+    top: -160px;
+  }
+
+  80% {
+    top: -240px;
+  }
+
+  90% {
+    top: -320px;
+  }
+
+  100% {
+    top: -400px;
+  }
+}
+
+.ButtonCurriculum {
+  display: flex;
+  flex-direction: column;
+  margin-top: 14.5%;
+  margin-left: 45%;
+  text-align: center;
+  font-size: 200%;
+  width: 10%;
+  /* background-color: brown; */
+
+}
+
+
+
+.CVsection {
+  display: flex;
+  justify-content: center;
+  background-color: #116241;
+}
+
+#CVImage {
+  margin-top: 10%;
+  margin-bottom: 5%;
+  border-radius: 30px;
+}
+
+.ContainerSliderCompar {
+  width: 100%;
+  /* background-color: antiquewhite; */
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+
+}
+
+.slider-example-focus {
+  width: 80%;
+  border-radius: 20px;
+}
