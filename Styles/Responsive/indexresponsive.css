@@ -1,0 +1,17 @@
+@media (max-width: 1920px) {
+    .inner-headings {
+        text-align: center;
+        /* background-color: aquamarine; */
+        width: 70%;
+        font-size: 350%;
+        color: white;
+        z-index: 0;
+        margin-top: 2%;
+        margin-left: 15%;
+        border: 0px solid #ddd;
+        height: 80px;
+        line-height: 80px;
+        text-transform: uppercase;
+        /* overflow: hidden; */
+    }
+}
