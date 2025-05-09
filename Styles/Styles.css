@@ -134,7 +134,7 @@ main {
   height: 80px;
   line-height: 80px;
   text-transform: uppercase;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .inner-headings span {
@@ -182,8 +182,6 @@ main {
   /* background-color: brown; */
 
 }
-
-
 
 .CVsection {
   display: flex;
