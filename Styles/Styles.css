@@ -134,15 +134,15 @@ main {
   height: 80px;
   line-height: 80px;
   text-transform: uppercase;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
-/* .inner-headings span {
+.inner-headings span {
   position: relative;
   animation: TextRotating 13s ease-in-out infinite;
   color: #116241;
   font-weight: bolder;
-} */
+}
 
 @keyframes TextRotating {
 
