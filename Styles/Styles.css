@@ -40,6 +40,7 @@ header {
   padding: 0% 1%;
   margin-top: 1%;
   width: 80%;
+  z-index: 1;
 }
 
 #MenuItems {
@@ -173,7 +174,7 @@ main {
 .ButtonCurriculum {
   display: flex;
   flex-direction: column;
-  margin-top: 14.5%;
+  margin-top: 19.5%;
   margin-left: 45%;
   text-align: center;
   font-size: 200%;
