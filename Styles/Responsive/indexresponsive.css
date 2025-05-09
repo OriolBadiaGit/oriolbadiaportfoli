@@ -183,7 +183,8 @@
         text-transform: uppercase;
         overflow: hidden;
     }
-  .ButtonCurriculum {
+
+    .ButtonCurriculum {
         display: flex;
         flex-direction: column;
         margin-top: 30.5%;
@@ -203,7 +204,7 @@
         z-index: 0;
     }
 
-  
+
 }
 
 @media (max-width: 994px) {
@@ -236,30 +237,39 @@
     }
 
     .ContainerTitles {
-        width: 50%;
-        margin-left: 26%;
-        margin-top: 25%;
+        width: 60%;
+        margin-left: 20%;
+        margin-top: 35%;
+    }
+
+    .Title {
+        font-size: 7rem;
+    }
+
+    .Subtitle {
+        font-size: 3rem;
     }
 
     .inner-headings {
         text-align: center;
         /* background-color: aquamarine; */
-        width: 80%;
+        width: 85%;
         font-size: 250%;
         color: white;
         z-index: 0;
         margin-top: 0%;
-        margin-left: 12%;
+        margin-left: 8%;
         border: 0px solid #ddd;
         height: 80px;
         line-height: 80px;
         text-transform: uppercase;
-        overflow: hidden;
+        /* overflow: hidden; */
     }
-  .ButtonCurriculum {
+
+    .ButtonCurriculum {
         display: flex;
         flex-direction: column;
-        margin-top: 30.5%;
+        margin-top: 34%;
         margin-left: 45%;
         text-align: center;
         font-size: 200%;
@@ -270,11 +280,11 @@
 
     #CVImage {
         scale: 60%;
-        margin-top: 0%;
-        margin-bottom: 0%;
+        margin-top: -30%;
+        margin-bottom: -30%;
         border-radius: 30px;
         z-index: 0;
     }
 
-  
+
 }
