@@ -1,9 +1,10 @@
 @media (max-width: 1920px) {
 
-.ContainerTitles {
-  width: 40%;
-  margin-left: 30%;
-}
+    .ContainerTitles {
+        width: 40%;
+        margin-left: 30%;
+    }
+
     .inner-headings {
         text-align: center;
         /* background-color: aquamarine; */
@@ -20,9 +21,10 @@
         /* overflow: hidden; */
     }
 
-#CVImage {
-  margin-top: 5%;
-  margin-bottom: 2%;
-  border-radius: 30px;
-}
+    #CVImage {
+        scale: 80%;
+        margin-top: 5%;
+        margin-bottom: 2%;
+        border-radius: 30px;
+    }
 }
