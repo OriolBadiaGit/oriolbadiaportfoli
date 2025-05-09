@@ -1,17 +1,18 @@
 @media (max-width: 1920px) {
 
 .ContainerTitles {
-  width: 28%;
+  width: 40%;
+  margin-left: 30%;
 }
     .inner-headings {
         text-align: center;
         /* background-color: aquamarine; */
         width: 75%;
-        font-size: 350%;
+        font-size: 300%;
         color: white;
         z-index: 0;
         margin-top: 2%;
-        margin-left: 15%;
+        margin-left: 13%;
         border: 0px solid #ddd;
         height: 80px;
         line-height: 80px;
