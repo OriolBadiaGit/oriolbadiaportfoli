@@ -128,7 +128,7 @@ main {
   font-size: 400%;
   color: white;
   z-index: 0;
-  margin-top: 2%;
+  margin-top: 0%;
   margin-left: 23%;
   border: 0px solid #ddd;
   height: 80px;
@@ -174,7 +174,7 @@ main {
 .ButtonCurriculum {
   display: flex;
   flex-direction: column;
-  margin-top: 13.5%;
+  margin-top: 15.5%;
   margin-left: 45%;
   text-align: center;
   font-size: 200%;
