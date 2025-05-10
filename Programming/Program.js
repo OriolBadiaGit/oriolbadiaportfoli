@@ -13,3 +13,9 @@ toggle.addEventListener('click', function () {
     logomobilecontainer.style.display = 'none';
   }
 });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelector('.fa-xmark').addEventListener('click', function () {
+      document.getElementById('Menu').style.display = 'none';
+    });
+  });

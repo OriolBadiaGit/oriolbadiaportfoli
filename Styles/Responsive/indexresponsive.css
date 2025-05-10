@@ -306,7 +306,6 @@
         border: 3px solid rgba(17, 98, 65, 0.5);
         align-items: center;
         padding: 0% 1%;
-        margin-top: 1%;
         width: 80%;
         z-index: 1;
     }
@@ -374,6 +373,7 @@
 
 
 }
+
 
 @media (max-width: 850px) {
     #LogoHeader {
@@ -461,55 +461,1912 @@
 
 }
 
-@media (max-width: 692px) {
+@media (max-width: 738px) {
     #LogoHeader {
         display: none;
     }
 
+    #Menu.show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fa-xmark {
+        visibility: visible;
+        font-size: 3rem;
+        color: white;
+        margin-right: 3%;
+        margin-top: 3%;
+    }
+
+    .ContainerXMobile {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
     #LogoMobile {
         display: flex;
+        position: absolute;
+        margin-left: 42%;
+        margin-top: 8%;
         width: 90px;
         height: 90px;
-        position: absolute;
+
     }
 
     .HeaderMobile {
-        display:flex ;
+        display: flex;
+        position: absolute;
         width: 100%;
         justify-content: center;
-        margin-top: 5%;
-        position: absolute;
+        margin-top: 15%;
+
     }
 
     #Menu {
-        display: flex;
+        display: none;
         flex-direction: column;
         position: fixed;
-        justify-content: space-between;
-        background: rgb(0, 30, 11);
+        background: rgba(0, 30, 11, 0.774);
         border-radius: 16px;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(5px);
         border: 3px solid rgba(17, 98, 65, 0.5);
         align-items: center;
-        padding: 0% 1%;
-        margin-top: 1%;
-        width: 95%;
-        height: 98%;
+        text-align: center;
+        width: 99%;
+        height: 100%;
         z-index: 1;
-        display: none;
+        touch-action: none;
     }
 
     #MenuItems {
         display: flex;
         flex-direction: column;
-        text-align: center;
-        width: 100%;
-        gap: 10%;
-        justify-content: center;
-        text-decoration: none;
-        padding: 1%;
         font-size: 4rem;
+        height: 100%;
+    }
+
+    button {
+        background: none;
+        padding: 2%;
+        margin-bottom: 10%;
+        font-size: 3rem;
+        display: flex;
+        border-radius: 10px;
+        background-color: #116241;
+        border: 5px solid rgb(1, 55, 13);
+        color: white;
+    }
+
+    .ContainerTitles {
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 55%;
+    }
+
+    .Title {
+        font-size: 6rem;
+    }
+
+    .Subtitle {
+        font-size: 2rem;
+    }
+
+    .inner-headings {
+        text-align: center;
+        /* background-color: aquamarine; */
+        width: 100%;
+        font-size: 2rem;
+        color: white;
+        z-index: 0;
+        margin-top: 0%;
+        margin-left: 0%;
+        border: 0px solid #ddd;
+        height: 80px;
+        line-height: 80px;
+        text-transform: uppercase;
+        /* overflow: hidden; */
+    }
+
+    .ButtonCurriculum {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50.5%;
+        margin-left: 36%;
+        text-align: center;
+        font-size: 200%;
+        width: 30%;
+        /* background-color: brown; */
+
+    }
+
+    #CVImage {
+        scale: 40%;
+        margin-top: -60%;
+        margin-bottom: -30%;
+        border-radius: 30px;
+        z-index: 0;
+    }
+
+
+}
+
+@media (max-width: 736px) {
+    #LogoHeader {
+        display: none;
+    }
+
+    #Menu.show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fa-xmark {
+        visibility: visible;
+        font-size: 3rem;
+        color: white;
+        margin-right: 3%;
+        margin-top: 3%;
+    }
+
+    .ContainerXMobile {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    #LogoMobile {
+        display: flex;
+        position: absolute;
+        margin-left: 42%;
+        margin-top: 8%;
+        width: 90px;
+        height: 90px;
+
+    }
+
+    .HeaderMobile {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        justify-content: center;
+        margin-top: 15%;
+
+    }
+
+    #Menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        background: rgba(0, 30, 11, 0.774);
+        border-radius: 16px;
+        backdrop-filter: blur(5px);
+        border: 3px solid rgba(17, 98, 65, 0.5);
+        align-items: center;
+        text-align: center;
+        width: 99%;
+        height: 100%;
+        z-index: 1;
+        touch-action: none;
+    }
+
+    #MenuItems {
+        display: flex;
+        flex-direction: column;
+        font-size: 4rem;
+        height: 100%;
+    }
+
+    button {
+        background: none;
+        padding: 2%;
+        margin-bottom: 10%;
+        font-size: 3rem;
+        display: flex;
+        border-radius: 10px;
+        background-color: #116241;
+        border: 5px solid rgb(1, 55, 13);
+        color: white;
+    }
+
+    .ContainerTitles {
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 55%;
+    }
+
+    .Title {
+        font-size: 6rem;
+    }
+
+    .Subtitle {
+        font-size: 2rem;
+    }
+
+    .inner-headings {
+        text-align: center;
+        /* background-color: aquamarine; */
+        width: 100%;
+        font-size: 2rem;
+        color: white;
+        z-index: 0;
+        margin-top: 0%;
+        margin-left: 0%;
+        border: 0px solid #ddd;
+        height: 80px;
+        line-height: 80px;
+        text-transform: uppercase;
+        /* overflow: hidden; */
+    }
+
+    .ButtonCurriculum {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50.5%;
+        margin-left: 36%;
+        text-align: center;
+        font-size: 200%;
+        width: 30%;
+        /* background-color: brown; */
+
+    }
+
+    #CVImage {
+        scale: 40%;
+        margin-top: -60%;
+        margin-bottom: -30%;
+        border-radius: 30px;
+        z-index: 0;
+    }
+
+
+}
+
+@media (max-width: 734px) {
+    #LogoHeader {
+        display: none;
+    }
+
+    #Menu.show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fa-xmark {
+        visibility: visible;
+        font-size: 3rem;
+        color: white;
+        margin-right: 3%;
+        margin-top: 3%;
+    }
+
+    .ContainerXMobile {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    #LogoMobile {
+        display: flex;
+        position: absolute;
+        margin-left: 42%;
+        margin-top: 8%;
+        width: 90px;
+        height: 90px;
+
+    }
+
+    .HeaderMobile {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        justify-content: center;
+        margin-top: 15%;
+
+    }
+
+    #Menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        background: rgba(0, 30, 11, 0.774);
+        border-radius: 16px;
+        backdrop-filter: blur(5px);
+        border: 3px solid rgba(17, 98, 65, 0.5);
+        align-items: center;
+        text-align: center;
+        width: 99%;
+        height: 100%;
+        z-index: 1;
+        touch-action: none;
+    }
+
+    #MenuItems {
+        display: flex;
+        flex-direction: column;
+        font-size: 4rem;
+        height: 100%;
+    }
+
+    button {
+        background: none;
+        padding: 2%;
+        margin-bottom: 10%;
+        font-size: 3rem;
+        display: flex;
+        border-radius: 10px;
+        background-color: #116241;
+        border: 5px solid rgb(1, 55, 13);
+        color: white;
+    }
+
+    .ContainerTitles {
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 55%;
+    }
+
+    .Title {
+        font-size: 6rem;
+    }
+
+    .Subtitle {
+        font-size: 2rem;
+    }
+
+    .inner-headings {
+        text-align: center;
+        /* background-color: aquamarine; */
+        width: 100%;
+        font-size: 2rem;
+        color: white;
+        z-index: 0;
+        margin-top: 0%;
+        margin-left: 0%;
+        border: 0px solid #ddd;
+        height: 80px;
+        line-height: 80px;
+        text-transform: uppercase;
+        /* overflow: hidden; */
+    }
+
+    .ButtonCurriculum {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50.5%;
+        margin-left: 36%;
+        text-align: center;
+        font-size: 200%;
+        width: 30%;
+        /* background-color: brown; */
+
+    }
+
+    #CVImage {
+        scale: 40%;
+        margin-top: -60%;
+        margin-bottom: -30%;
+        border-radius: 30px;
+        z-index: 0;
+    }
+
+
+}
+
+@media (max-width: 730px) {
+    #LogoHeader {
+        display: none;
+    }
+
+    #Menu.show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fa-xmark {
+        visibility: visible;
+        font-size: 3rem;
+        color: white;
+        margin-right: 3%;
+        margin-top: 3%;
+    }
+
+    .ContainerXMobile {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    #LogoMobile {
+        display: flex;
+        position: absolute;
+        margin-left: 42%;
+        margin-top: 8%;
+        width: 90px;
+        height: 90px;
+
+    }
+
+    .HeaderMobile {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        justify-content: center;
+        margin-top: 15%;
+
+    }
+
+    #Menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        background: rgba(0, 30, 11, 0.774);
+        border-radius: 16px;
+        backdrop-filter: blur(5px);
+        border: 3px solid rgba(17, 98, 65, 0.5);
+        align-items: center;
+        text-align: center;
+        width: 99%;
+        height: 100%;
+        z-index: 1;
+        touch-action: none;
+    }
+
+    #MenuItems {
+        display: flex;
+        flex-direction: column;
+        font-size: 4rem;
+        height: 100%;
+    }
+
+    button {
+        background: none;
+        padding: 2%;
+        margin-bottom: 10%;
+        font-size: 3rem;
+        display: flex;
+        border-radius: 10px;
+        background-color: #116241;
+        border: 5px solid rgb(1, 55, 13);
+        color: white;
+    }
+
+    .ContainerTitles {
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 55%;
+    }
+
+    .Title {
+        font-size: 6rem;
+    }
+
+    .Subtitle {
+        font-size: 2rem;
+    }
+
+    .inner-headings {
+        text-align: center;
+        /* background-color: aquamarine; */
+        width: 100%;
+        font-size: 2rem;
+        color: white;
+        z-index: 0;
+        margin-top: 0%;
+        margin-left: 0%;
+        border: 0px solid #ddd;
+        height: 80px;
+        line-height: 80px;
+        text-transform: uppercase;
+        /* overflow: hidden; */
+    }
+
+    .ButtonCurriculum {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50.5%;
+        margin-left: 36%;
+        text-align: center;
+        font-size: 200%;
+        width: 30%;
+        /* background-color: brown; */
+
+    }
+
+    #CVImage {
+        scale: 40%;
+        margin-top: -60%;
+        margin-bottom: -30%;
+        border-radius: 30px;
+        z-index: 0;
+    }
+
+
+}
+
+
+@media (max-width: 726px) {
+    #LogoHeader {
+        display: none;
+    }
+
+    #Menu.show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fa-xmark {
+        visibility: visible;
+        font-size: 3rem;
+        color: white;
+        margin-right: 3%;
+        margin-top: 3%;
+    }
+
+    .ContainerXMobile {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    #LogoMobile {
+        display: flex;
+        position: absolute;
+        margin-left: 42%;
+        margin-top: 8%;
+        width: 90px;
+        height: 90px;
+
+    }
+
+    .HeaderMobile {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        justify-content: center;
+        margin-top: 15%;
+
+    }
+
+    #Menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        background: rgba(0, 30, 11, 0.774);
+        border-radius: 16px;
+        backdrop-filter: blur(5px);
+        border: 3px solid rgba(17, 98, 65, 0.5);
+        align-items: center;
+        text-align: center;
+        width: 99%;
+        height: 100%;
+        z-index: 1;
+        touch-action: none;
+    }
+
+    #MenuItems {
+        display: flex;
+        flex-direction: column;
+        font-size: 4rem;
+        height: 100%;
+    }
+
+    button {
+        background: none;
+        padding: 2%;
+        margin-bottom: 10%;
+        font-size: 3rem;
+        display: flex;
+        border-radius: 10px;
+        background-color: #116241;
+        border: 5px solid rgb(1, 55, 13);
+        color: white;
+    }
+
+    .ContainerTitles {
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 55%;
+    }
+
+    .Title {
+        font-size: 6rem;
+    }
+
+    .Subtitle {
+        font-size: 2rem;
+    }
+
+    .inner-headings {
+        text-align: center;
+        /* background-color: aquamarine; */
+        width: 100%;
+        font-size: 2rem;
+        color: white;
+        z-index: 0;
+        margin-top: 0%;
+        margin-left: 0%;
+        border: 0px solid #ddd;
+        height: 80px;
+        line-height: 80px;
+        text-transform: uppercase;
+        /* overflow: hidden; */
+    }
+
+    .ButtonCurriculum {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50.5%;
+        margin-left: 36%;
+        text-align: center;
+        font-size: 200%;
+        width: 30%;
+        /* background-color: brown; */
+
+    }
+
+    #CVImage {
+        scale: 40%;
+        margin-top: -60%;
+        margin-bottom: -30%;
+        border-radius: 30px;
+        z-index: 0;
+    }
+
+
+}
+
+@media (max-width: 724px) {
+    #LogoHeader {
+        display: none;
+    }
+
+    #Menu.show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fa-xmark {
+        visibility: visible;
+        font-size: 3rem;
+        color: white;
+        margin-right: 3%;
+        margin-top: 3%;
+    }
+
+    .ContainerXMobile {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    #LogoMobile {
+        display: flex;
+        position: absolute;
+        margin-left: 42%;
+        margin-top: 8%;
+        width: 90px;
+        height: 90px;
+
+    }
+
+    .HeaderMobile {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        justify-content: center;
+        margin-top: 15%;
+
+    }
+
+    #Menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        background: rgba(0, 30, 11, 0.774);
+        border-radius: 16px;
+        backdrop-filter: blur(5px);
+        border: 3px solid rgba(17, 98, 65, 0.5);
+        align-items: center;
+        text-align: center;
+        width: 99%;
+        height: 100%;
+        z-index: 1;
+        touch-action: none;
+    }
+
+    #MenuItems {
+        display: flex;
+        flex-direction: column;
+        font-size: 4rem;
+        height: 100%;
+    }
+
+    button {
+        background: none;
+        padding: 2%;
+        margin-bottom: 10%;
+        font-size: 3rem;
+        display: flex;
+        border-radius: 10px;
+        background-color: #116241;
+        border: 5px solid rgb(1, 55, 13);
+        color: white;
+    }
+
+    .ContainerTitles {
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 55%;
+    }
+
+    .Title {
+        font-size: 6rem;
+    }
+
+    .Subtitle {
+        font-size: 2rem;
+    }
+
+    .inner-headings {
+        text-align: center;
+        /* background-color: aquamarine; */
+        width: 100%;
+        font-size: 2rem;
+        color: white;
+        z-index: 0;
+        margin-top: 0%;
+        margin-left: 0%;
+        border: 0px solid #ddd;
+        height: 80px;
+        line-height: 80px;
+        text-transform: uppercase;
+        /* overflow: hidden; */
+    }
+
+    .ButtonCurriculum {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50.5%;
+        margin-left: 36%;
+        text-align: center;
+        font-size: 200%;
+        width: 30%;
+        /* background-color: brown; */
+
+    }
+
+    #CVImage {
+        scale: 40%;
+        margin-top: -60%;
+        margin-bottom: -30%;
+        border-radius: 30px;
+        z-index: 0;
+    }
+
+
+}
+
+@media (max-width: 722px) {
+    #LogoHeader {
+        display: none;
+    }
+
+    #Menu.show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fa-xmark {
+        visibility: visible;
+        font-size: 3rem;
+        color: white;
+        margin-right: 3%;
+        margin-top: 3%;
+    }
+
+    .ContainerXMobile {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    #LogoMobile {
+        display: flex;
+        position: absolute;
+        margin-left: 42%;
+        margin-top: 8%;
+        width: 90px;
+        height: 90px;
+
+    }
+
+    .HeaderMobile {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        justify-content: center;
+        margin-top: 15%;
+
+    }
+
+    #Menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        background: rgba(0, 30, 11, 0.774);
+        border-radius: 16px;
+        backdrop-filter: blur(5px);
+        border: 3px solid rgba(17, 98, 65, 0.5);
+        align-items: center;
+        text-align: center;
+        width: 99%;
+        height: 100%;
+        z-index: 1;
+        touch-action: none;
+    }
+
+    #MenuItems {
+        display: flex;
+        flex-direction: column;
+        font-size: 4rem;
+        height: 100%;
+    }
+
+    button {
+        background: none;
+        padding: 2%;
+        margin-bottom: 10%;
+        font-size: 3rem;
+        display: flex;
+        border-radius: 10px;
+        background-color: #116241;
+        border: 5px solid rgb(1, 55, 13);
+        color: white;
+    }
+
+    .ContainerTitles {
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 55%;
+    }
+
+    .Title {
+        font-size: 6rem;
+    }
+
+    .Subtitle {
+        font-size: 2rem;
+    }
+
+    .inner-headings {
+        text-align: center;
+        /* background-color: aquamarine; */
+        width: 100%;
+        font-size: 2rem;
+        color: white;
+        z-index: 0;
+        margin-top: 0%;
+        margin-left: 0%;
+        border: 0px solid #ddd;
+        height: 80px;
+        line-height: 80px;
+        text-transform: uppercase;
+        /* overflow: hidden; */
+    }
+
+    .ButtonCurriculum {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50.5%;
+        margin-left: 36%;
+        text-align: center;
+        font-size: 200%;
+        width: 30%;
+        /* background-color: brown; */
+
+    }
+
+    #CVImage {
+        scale: 40%;
+        margin-top: -60%;
+        margin-bottom: -30%;
+        border-radius: 30px;
+        z-index: 0;
+    }
+
+
+}
+
+
+@media (max-width: 716px) {
+    #LogoHeader {
+        display: none;
+    }
+
+    #Menu.show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fa-xmark {
+        visibility: visible;
+        font-size: 3rem;
+        color: white;
+        margin-right: 3%;
+        margin-top: 3%;
+    }
+
+    .ContainerXMobile {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    #LogoMobile {
+        display: flex;
+        position: absolute;
+        margin-left: 42%;
+        margin-top: 8%;
+        width: 90px;
+        height: 90px;
+
+    }
+
+    .HeaderMobile {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        justify-content: center;
+        margin-top: 15%;
+
+    }
+
+    #Menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        background: rgba(0, 30, 11, 0.774);
+        border-radius: 16px;
+        backdrop-filter: blur(5px);
+        border: 3px solid rgba(17, 98, 65, 0.5);
+        align-items: center;
+        text-align: center;
+        width: 99%;
+        height: 100%;
+        z-index: 1;
+        touch-action: none;
+    }
+
+    #MenuItems {
+        display: flex;
+        flex-direction: column;
+        font-size: 4rem;
+        height: 100%;
+    }
+
+    button {
+        background: none;
+        padding: 2%;
+        margin-bottom: 10%;
+        font-size: 3rem;
+        display: flex;
+        border-radius: 10px;
+        background-color: #116241;
+        border: 5px solid rgb(1, 55, 13);
+        color: white;
+    }
+
+    .ContainerTitles {
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 55%;
+    }
+
+    .Title {
+        font-size: 6rem;
+    }
+
+    .Subtitle {
+        font-size: 2rem;
+    }
+
+    .inner-headings {
+        text-align: center;
+        /* background-color: aquamarine; */
+        width: 100%;
+        font-size: 2rem;
+        color: white;
+        z-index: 0;
+        margin-top: 0%;
+        margin-left: 0%;
+        border: 0px solid #ddd;
+        height: 80px;
+        line-height: 80px;
+        text-transform: uppercase;
+        /* overflow: hidden; */
+    }
+
+    .ButtonCurriculum {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50.5%;
+        margin-left: 36%;
+        text-align: center;
+        font-size: 200%;
+        width: 30%;
+        /* background-color: brown; */
+
+    }
+
+    #CVImage {
+        scale: 40%;
+        margin-top: -60%;
+        margin-bottom: -30%;
+        border-radius: 30px;
+        z-index: 0;
+    }
+
+
+}
+
+@media (max-width: 712px) {
+    #LogoHeader {
+        display: none;
+    }
+
+    #Menu.show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fa-xmark {
+        visibility: visible;
+        font-size: 3rem;
+        color: white;
+        margin-right: 3%;
+        margin-top: 3%;
+    }
+
+    .ContainerXMobile {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    #LogoMobile {
+        display: flex;
+        position: absolute;
+        margin-left: 42%;
+        margin-top: 8%;
+        width: 90px;
+        height: 90px;
+
+    }
+
+    .HeaderMobile {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        justify-content: center;
+        margin-top: 15%;
+
+    }
+
+    #Menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        background: rgba(0, 30, 11, 0.774);
+        border-radius: 16px;
+        backdrop-filter: blur(5px);
+        border: 3px solid rgba(17, 98, 65, 0.5);
+        align-items: center;
+        text-align: center;
+        width: 99%;
+        height: 100%;
+        z-index: 1;
+        touch-action: none;
+    }
+
+    #MenuItems {
+        display: flex;
+        flex-direction: column;
+        font-size: 4rem;
+        height: 100%;
+    }
+
+    button {
+        background: none;
+        padding: 2%;
+        margin-bottom: 10%;
+        font-size: 3rem;
+        display: flex;
+        border-radius: 10px;
+        background-color: #116241;
+        border: 5px solid rgb(1, 55, 13);
+        color: white;
+    }
+
+    .ContainerTitles {
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 55%;
+    }
+
+    .Title {
+        font-size: 6rem;
+    }
+
+    .Subtitle {
+        font-size: 2rem;
+    }
+
+    .inner-headings {
+        text-align: center;
+        /* background-color: aquamarine; */
+        width: 100%;
+        font-size: 2rem;
+        color: white;
+        z-index: 0;
+        margin-top: 0%;
+        margin-left: 0%;
+        border: 0px solid #ddd;
+        height: 80px;
+        line-height: 80px;
+        text-transform: uppercase;
+        /* overflow: hidden; */
+    }
+
+    .ButtonCurriculum {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50.5%;
+        margin-left: 36%;
+        text-align: center;
+        font-size: 200%;
+        width: 30%;
+        /* background-color: brown; */
+
+    }
+
+    #CVImage {
+        scale: 40%;
+        margin-top: -60%;
+        margin-bottom: -30%;
+        border-radius: 30px;
+        z-index: 0;
+    }
+
+
+}
+
+@media (max-width: 710px) {
+    #LogoHeader {
+        display: none;
+    }
+
+    #Menu.show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fa-xmark {
+        visibility: visible;
+        font-size: 3rem;
+        color: white;
+        margin-right: 3%;
+        margin-top: 3%;
+    }
+
+    .ContainerXMobile {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    #LogoMobile {
+        display: flex;
+        position: absolute;
+        margin-left: 42%;
+        margin-top: 8%;
+        width: 90px;
+        height: 90px;
+
+    }
+
+    .HeaderMobile {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        justify-content: center;
+        margin-top: 15%;
+
+    }
+
+    #Menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        background: rgba(0, 30, 11, 0.774);
+        border-radius: 16px;
+        backdrop-filter: blur(5px);
+        border: 3px solid rgba(17, 98, 65, 0.5);
+        align-items: center;
+        text-align: center;
+        width: 99%;
+        height: 100%;
+        z-index: 1;
+        touch-action: none;
+    }
+
+    #MenuItems {
+        display: flex;
+        flex-direction: column;
+        font-size: 4rem;
+        height: 100%;
+    }
+
+    button {
+        background: none;
+        padding: 2%;
+        margin-bottom: 10%;
+        font-size: 3rem;
+        display: flex;
+        border-radius: 10px;
+        background-color: #116241;
+        border: 5px solid rgb(1, 55, 13);
+        color: white;
+    }
+
+    .ContainerTitles {
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 55%;
+    }
+
+    .Title {
+        font-size: 6rem;
+    }
+
+    .Subtitle {
+        font-size: 2rem;
+    }
+
+    .inner-headings {
+        text-align: center;
+        /* background-color: aquamarine; */
+        width: 100%;
+        font-size: 2rem;
+        color: white;
+        z-index: 0;
+        margin-top: 0%;
+        margin-left: 0%;
+        border: 0px solid #ddd;
+        height: 80px;
+        line-height: 80px;
+        text-transform: uppercase;
+        /* overflow: hidden; */
+    }
+
+    .ButtonCurriculum {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50.5%;
+        margin-left: 36%;
+        text-align: center;
+        font-size: 200%;
+        width: 30%;
+        /* background-color: brown; */
+
+    }
+
+    #CVImage {
+        scale: 40%;
+        margin-top: -60%;
+        margin-bottom: -30%;
+        border-radius: 30px;
+        z-index: 0;
+    }
+
+
+}
+
+
+@media (max-width: 708px) {
+    #LogoHeader {
+        display: none;
+    }
+
+    #Menu.show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fa-xmark {
+        visibility: visible;
+        font-size: 3rem;
+        color: white;
+        margin-right: 3%;
+        margin-top: 3%;
+    }
+
+    .ContainerXMobile {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    #LogoMobile {
+        display: flex;
+        position: absolute;
+        margin-left: 42%;
+        margin-top: 8%;
+        width: 90px;
+        height: 90px;
+
+    }
+
+    .HeaderMobile {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        justify-content: center;
+        margin-top: 15%;
+
+    }
+
+    #Menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        background: rgba(0, 30, 11, 0.774);
+        border-radius: 16px;
+        backdrop-filter: blur(5px);
+        border: 3px solid rgba(17, 98, 65, 0.5);
+        align-items: center;
+        text-align: center;
+        width: 99%;
+        height: 100%;
+        z-index: 1;
+        touch-action: none;
+    }
+
+    #MenuItems {
+        display: flex;
+        flex-direction: column;
+        font-size: 4rem;
+        height: 100%;
+    }
+
+    button {
+        background: none;
+        padding: 2%;
+        margin-bottom: 10%;
+        font-size: 3rem;
+        display: flex;
+        border-radius: 10px;
+        background-color: #116241;
+        border: 5px solid rgb(1, 55, 13);
+        color: white;
+    }
+
+    .ContainerTitles {
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 55%;
+    }
+
+    .Title {
+        font-size: 6rem;
+    }
+
+    .Subtitle {
+        font-size: 2rem;
+    }
+
+    .inner-headings {
+        text-align: center;
+        /* background-color: aquamarine; */
+        width: 100%;
+        font-size: 2rem;
+        color: white;
+        z-index: 0;
+        margin-top: 0%;
+        margin-left: 0%;
+        border: 0px solid #ddd;
+        height: 80px;
+        line-height: 80px;
+        text-transform: uppercase;
+        /* overflow: hidden; */
+    }
+
+    .ButtonCurriculum {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50.5%;
+        margin-left: 36%;
+        text-align: center;
+        font-size: 200%;
+        width: 30%;
+        /* background-color: brown; */
+
+    }
+
+    #CVImage {
+        scale: 40%;
+        margin-top: -60%;
+        margin-bottom: -30%;
+        border-radius: 30px;
+        z-index: 0;
+    }
+
+
+}
+
+
+@media (max-width: 700px) {
+    #LogoHeader {
+        display: none;
+    }
+
+    #Menu.show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fa-xmark {
+        visibility: visible;
+        font-size: 3rem;
+        color: white;
+        margin-right: 3%;
+        margin-top: 3%;
+    }
+
+    .ContainerXMobile {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    #LogoMobile {
+        display: flex;
+        position: absolute;
+        margin-left: 42%;
+        margin-top: 8%;
+        width: 90px;
+        height: 90px;
+
+    }
+
+    .HeaderMobile {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        justify-content: center;
+        margin-top: 15%;
+
+    }
+
+    #Menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        background: rgba(0, 30, 11, 0.774);
+        border-radius: 16px;
+        backdrop-filter: blur(5px);
+        border: 3px solid rgba(17, 98, 65, 0.5);
+        align-items: center;
+        text-align: center;
+        width: 99%;
+        height: 100%;
+        z-index: 1;
+        touch-action: none;
+    }
+
+    #MenuItems {
+        display: flex;
+        flex-direction: column;
+        font-size: 4rem;
+        height: 100%;
+    }
+
+    button {
+        background: none;
+        padding: 2%;
+        margin-bottom: 10%;
+        font-size: 3rem;
+        display: flex;
+        border-radius: 10px;
+        background-color: #116241;
+        border: 5px solid rgb(1, 55, 13);
+        color: white;
+    }
+
+    .ContainerTitles {
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 55%;
+    }
+
+    .Title {
+        font-size: 6rem;
+    }
+
+    .Subtitle {
+        font-size: 2rem;
+    }
+
+    .inner-headings {
+        text-align: center;
+        /* background-color: aquamarine; */
+        width: 100%;
+        font-size: 2rem;
+        color: white;
+        z-index: 0;
+        margin-top: 0%;
+        margin-left: 0%;
+        border: 0px solid #ddd;
+        height: 80px;
+        line-height: 80px;
+        text-transform: uppercase;
+        /* overflow: hidden; */
+    }
+
+    .ButtonCurriculum {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50.5%;
+        margin-left: 36%;
+        text-align: center;
+        font-size: 200%;
+        width: 30%;
+        /* background-color: brown; */
+
+    }
+
+    #CVImage {
+        scale: 40%;
+        margin-top: -60%;
+        margin-bottom: -30%;
+        border-radius: 30px;
+        z-index: 0;
+    }
+
+
+}
+
+
+@media (max-width: 696px) {
+    #LogoHeader {
+        display: none;
+    }
+
+    #Menu.show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fa-xmark {
+        visibility: visible;
+        font-size: 3rem;
+        color: white;
+        margin-right: 3%;
+        margin-top: 3%;
+    }
+
+    .ContainerXMobile {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    #LogoMobile {
+        display: flex;
+        position: absolute;
+        margin-left: 42%;
+        margin-top: 8%;
+        width: 90px;
+        height: 90px;
+
+    }
+
+    .HeaderMobile {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        justify-content: center;
+        margin-top: 15%;
+
+    }
+
+    #Menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        background: rgba(0, 30, 11, 0.774);
+        border-radius: 16px;
+        backdrop-filter: blur(5px);
+        border: 3px solid rgba(17, 98, 65, 0.5);
+        align-items: center;
+        text-align: center;
+        width: 99%;
+        height: 100%;
+        z-index: 1;
+        touch-action: none;
+    }
+
+    #MenuItems {
+        display: flex;
+        flex-direction: column;
+        font-size: 4rem;
+        height: 100%;
+    }
+
+    button {
+        background: none;
+        padding: 2%;
+        margin-bottom: 10%;
+        font-size: 3rem;
+        display: flex;
+        border-radius: 10px;
+        background-color: #116241;
+        border: 5px solid rgb(1, 55, 13);
+        color: white;
+    }
+
+    .ContainerTitles {
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 55%;
+    }
+
+    .Title {
+        font-size: 6rem;
+    }
+
+    .Subtitle {
+        font-size: 2rem;
+    }
+
+    .inner-headings {
+        text-align: center;
+        /* background-color: aquamarine; */
+        width: 100%;
+        font-size: 2rem;
+        color: white;
+        z-index: 0;
+        margin-top: 0%;
+        margin-left: 0%;
+        border: 0px solid #ddd;
+        height: 80px;
+        line-height: 80px;
+        text-transform: uppercase;
+        /* overflow: hidden; */
+    }
+
+    .ButtonCurriculum {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50.5%;
+        margin-left: 36%;
+        text-align: center;
+        font-size: 200%;
+        width: 30%;
+        /* background-color: brown; */
+
+    }
+
+    #CVImage {
+        scale: 40%;
+        margin-top: -60%;
+        margin-bottom: -30%;
+        border-radius: 30px;
+        z-index: 0;
+    }
+
+
+}
+
+
+
+@media (max-width: 693px) {
+    #LogoHeader {
+        display: none;
+    }
+
+    #Menu.show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fa-xmark {
+        visibility: visible;
+        font-size: 3rem;
+        color: white;
+        margin-right: 3%;
+        margin-top: 3%;
+    }
+
+    .ContainerXMobile {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    #LogoMobile {
+        display: flex;
+        position: absolute;
+        margin-left: 42%;
+        margin-top: 8%;
+        width: 90px;
+        height: 90px;
+
+    }
+
+    .HeaderMobile {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        justify-content: center;
+        margin-top: 15%;
+
+    }
+
+    #Menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        background: rgba(0, 30, 11, 0.774);
+        border-radius: 16px;
+        backdrop-filter: blur(5px);
+        border: 3px solid rgba(17, 98, 65, 0.5);
+        align-items: center;
+        text-align: center;
+        width: 99%;
+        height: 100%;
+        z-index: 1;
+        touch-action: none;
+    }
+
+    #MenuItems {
+        display: flex;
+        flex-direction: column;
+        font-size: 4rem;
+        height: 100%;
+    }
+
+    button {
+        background: none;
+        padding: 2%;
+        margin-bottom: 10%;
+        font-size: 3rem;
+        display: flex;
+        border-radius: 10px;
+        background-color: #116241;
+        border: 5px solid rgb(1, 55, 13);
+        color: white;
+    }
+
+    .ContainerTitles {
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 55%;
+    }
+
+    .Title {
+        font-size: 6rem;
+    }
+
+    .Subtitle {
+        font-size: 2rem;
+    }
+
+    .inner-headings {
+        text-align: center;
+        /* background-color: aquamarine; */
+        width: 100%;
+        font-size: 2rem;
+        color: white;
+        z-index: 0;
+        margin-top: 0%;
+        margin-left: 0%;
+        border: 0px solid #ddd;
+        height: 80px;
+        line-height: 80px;
+        text-transform: uppercase;
+        /* overflow: hidden; */
+    }
+
+    .ButtonCurriculum {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50.5%;
+        margin-left: 36%;
+        text-align: center;
+        font-size: 200%;
+        width: 30%;
+        /* background-color: brown; */
+
+    }
+
+    #CVImage {
+        scale: 40%;
+        margin-top: -60%;
+        margin-bottom: -30%;
+        border-radius: 30px;
+        z-index: 0;
+    }
+
+
+}
+
+
+@media (max-width: 692px) {
+    #LogoHeader {
+        display: none;
+    }
+
+    #Menu.show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fa-xmark {
+        visibility: visible;
+        font-size: 3rem;
+        color: white;
+        margin-right: 3%;
+        margin-top: 3%;
+    }
+
+    .ContainerXMobile {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    #LogoMobile {
+        display: flex;
+        position: absolute;
+        margin-left: 42%;
+        margin-top: 8%;
+        width: 90px;
+        height: 90px;
+
+    }
+
+    .HeaderMobile {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        justify-content: center;
+        margin-top: 15%;
+
+    }
+
+    #Menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        background: rgba(0, 30, 11, 0.774);
+        border-radius: 16px;
+        backdrop-filter: blur(5px);
+        border: 3px solid rgba(17, 98, 65, 0.5);
+        align-items: center;
+        text-align: center;
+        width: 99%;
+        height: 100%;
+        z-index: 1;
+        touch-action: none;
+    }
+
+    #MenuItems {
+        display: flex;
+        flex-direction: column;
+        font-size: 4rem;
+        height: 100%;
     }
 
     button {
@@ -584,13 +2441,15 @@
 
     #LogoMobile {
         display: flex;
+         margin-left: 42%;
+        margin-top: 8%;
         width: 90px;
         height: 90px;
         position: absolute;
     }
 
     .HeaderMobile {
-        display:flex ;
+        display: flex;
         width: 100%;
         justify-content: center;
         margin-top: 5%;
@@ -598,11 +2457,11 @@
     }
 
     #Menu {
-        display: flex;
+        display: none;
         flex-direction: column;
         position: fixed;
         justify-content: space-between;
-        background: rgb(0, 30, 11);
+        background: rgba(0, 30, 11, 0.774);
         border-radius: 16px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(5px);
@@ -693,20 +2552,22 @@
 
 }
 
-@media (max-width: 442px) {
+@media (max-width: 466px) {
     #LogoHeader {
         display: none;
     }
 
     #LogoMobile {
         display: flex;
+         margin-left: 42%;
+        margin-top: 8%;
         width: 90px;
         height: 90px;
         position: absolute;
     }
 
     .HeaderMobile {
-        display:flex ;
+        display: flex;
         width: 100%;
         justify-content: center;
         margin-top: 5%;
@@ -714,11 +2575,11 @@
     }
 
     #Menu {
-        display: flex;
+        display: none;
         flex-direction: column;
         position: fixed;
         justify-content: space-between;
-        background: rgb(0, 30, 11);
+        background: rgba(0, 30, 11, 0.774);
         border-radius: 16px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(5px);
@@ -729,7 +2590,6 @@
         width: 95%;
         height: 98%;
         z-index: 1;
-        display: none;
     }
 
     #MenuItems {
@@ -741,14 +2601,14 @@
         justify-content: center;
         text-decoration: none;
         padding: 1%;
-        font-size: 4rem;
+        font-size: 3rem;
     }
 
     button {
         background: none;
         padding: 2%;
         margin-bottom: 10%;
-        font-size: 3rem;
+        font-size: 2rem;
         display: flex;
         border-radius: 10px;
         background-color: #116241;
@@ -809,20 +2669,23 @@
 
 }
 
-@media (max-width: 336px) {
+
+@media (max-width: 462px) {
     #LogoHeader {
         display: none;
     }
 
     #LogoMobile {
         display: flex;
+         margin-left: 42%;
+        margin-top: 8%;
         width: 90px;
         height: 90px;
         position: absolute;
     }
 
     .HeaderMobile {
-        display:flex ;
+        display: flex;
         width: 100%;
         justify-content: center;
         margin-top: 5%;
@@ -830,11 +2693,11 @@
     }
 
     #Menu {
-        display: flex;
+        display: none;
         flex-direction: column;
         position: fixed;
         justify-content: space-between;
-        background: rgb(0, 30, 11);
+        background: rgba(0, 30, 11, 0.774);
         border-radius: 16px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(5px);
@@ -845,7 +2708,1534 @@
         width: 95%;
         height: 98%;
         z-index: 1;
+    }
+
+    #MenuItems {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        gap: 10%;
+        justify-content: center;
+        text-decoration: none;
+        padding: 1%;
+        font-size: 3rem;
+    }
+
+    button {
+        background: none;
+        padding: 2%;
+        margin-bottom: 10%;
+        font-size: 2rem;
+        display: flex;
+        border-radius: 10px;
+        background-color: #116241;
+        border: 5px solid rgb(1, 55, 13);
+        color: white;
+    }
+
+    .ContainerTitles {
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 75%;
+    }
+
+    .Title {
+        font-size: 4rem;
+    }
+
+    .Subtitle {
+        font-size: 2rem;
+    }
+
+    .inner-headings {
+        text-align: center;
+        /* background-color: aquamarine; */
+        width: 100%;
+        font-size: 1rem;
+        color: white;
+        z-index: 0;
+        margin-top: 0%;
+        margin-left: 0%;
+        border: 0px solid #ddd;
+        height: 80px;
+        line-height: 80px;
+        text-transform: uppercase;
+        /* overflow: hidden; */
+    }
+
+    .ButtonCurriculum {
+        display: flex;
+        flex-direction: column;
+        margin-top: 100%;
+        margin-left: 36%;
+        text-align: center;
+        font-size: 200%;
+        width: 35%;
+        /* background-color: brown; */
+
+    }
+
+    #CVImage {
+        scale: 25%;
+        margin-top: -150%;
+        margin-bottom: -150%;
+        border-radius: 30px;
+        z-index: 0;
+    }
+
+
+}
+
+
+@media (max-width: 460px) {
+    #LogoHeader {
         display: none;
+    }
+
+    #LogoMobile {
+        display: flex;
+         margin-left: 42%;
+        margin-top: 8%;
+        width: 90px;
+        height: 90px;
+        position: absolute;
+    }
+
+    .HeaderMobile {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-top: 5%;
+        position: absolute;
+    }
+
+    #Menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        justify-content: space-between;
+        background: rgba(0, 30, 11, 0.774);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        border: 3px solid rgba(17, 98, 65, 0.5);
+        align-items: center;
+        padding: 0% 1%;
+        margin-top: 1%;
+        width: 95%;
+        height: 98%;
+        z-index: 1;
+    }
+
+    #MenuItems {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        gap: 10%;
+        justify-content: center;
+        text-decoration: none;
+        padding: 1%;
+        font-size: 3rem;
+    }
+
+    button {
+        background: none;
+        padding: 2%;
+        margin-bottom: 10%;
+        font-size: 2rem;
+        display: flex;
+        border-radius: 10px;
+        background-color: #116241;
+        border: 5px solid rgb(1, 55, 13);
+        color: white;
+    }
+
+    .ContainerTitles {
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 75%;
+    }
+
+    .Title {
+        font-size: 4rem;
+    }
+
+    .Subtitle {
+        font-size: 2rem;
+    }
+
+    .inner-headings {
+        text-align: center;
+        /* background-color: aquamarine; */
+        width: 100%;
+        font-size: 1rem;
+        color: white;
+        z-index: 0;
+        margin-top: 0%;
+        margin-left: 0%;
+        border: 0px solid #ddd;
+        height: 80px;
+        line-height: 80px;
+        text-transform: uppercase;
+        /* overflow: hidden; */
+    }
+
+    .ButtonCurriculum {
+        display: flex;
+        flex-direction: column;
+        margin-top: 100%;
+        margin-left: 36%;
+        text-align: center;
+        font-size: 200%;
+        width: 35%;
+        /* background-color: brown; */
+
+    }
+
+    #CVImage {
+        scale: 25%;
+        margin-top: -150%;
+        margin-bottom: -150%;
+        border-radius: 30px;
+        z-index: 0;
+    }
+
+
+}
+
+@media (max-width: 456px) {
+    #LogoHeader {
+        display: none;
+    }
+
+    #LogoMobile {
+        display: flex;
+         margin-left: 42%;
+        margin-top: 8%;
+        width: 90px;
+        height: 90px;
+        position: absolute;
+    }
+
+    .HeaderMobile {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-top: 5%;
+        position: absolute;
+    }
+
+    #Menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        justify-content: space-between;
+        background: rgba(0, 30, 11, 0.774);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        border: 3px solid rgba(17, 98, 65, 0.5);
+        align-items: center;
+        padding: 0% 1%;
+        margin-top: 1%;
+        width: 95%;
+        height: 98%;
+        z-index: 1;
+    }
+
+    #MenuItems {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        gap: 10%;
+        justify-content: center;
+        text-decoration: none;
+        padding: 1%;
+        font-size: 3rem;
+    }
+
+    button {
+        background: none;
+        padding: 2%;
+        margin-bottom: 10%;
+        font-size: 2rem;
+        display: flex;
+        border-radius: 10px;
+        background-color: #116241;
+        border: 5px solid rgb(1, 55, 13);
+        color: white;
+    }
+
+    .ContainerTitles {
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 75%;
+    }
+
+    .Title {
+        font-size: 4rem;
+    }
+
+    .Subtitle {
+        font-size: 2rem;
+    }
+
+    .inner-headings {
+        text-align: center;
+        /* background-color: aquamarine; */
+        width: 100%;
+        font-size: 1rem;
+        color: white;
+        z-index: 0;
+        margin-top: 0%;
+        margin-left: 0%;
+        border: 0px solid #ddd;
+        height: 80px;
+        line-height: 80px;
+        text-transform: uppercase;
+        /* overflow: hidden; */
+    }
+
+    .ButtonCurriculum {
+        display: flex;
+        flex-direction: column;
+        margin-top: 100%;
+        margin-left: 36%;
+        text-align: center;
+        font-size: 200%;
+        width: 35%;
+        /* background-color: brown; */
+
+    }
+
+    #CVImage {
+        scale: 25%;
+        margin-top: -150%;
+        margin-bottom: -150%;
+        border-radius: 30px;
+        z-index: 0;
+    }
+
+
+}
+
+@media (max-width: 454px) {
+    #LogoHeader {
+        display: none;
+    }
+
+    #LogoMobile {
+        display: flex;
+         margin-left: 42%;
+        margin-top: 8%;
+        width: 90px;
+        height: 90px;
+        position: absolute;
+    }
+
+    .HeaderMobile {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-top: 5%;
+        position: absolute;
+    }
+
+    #Menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        justify-content: space-between;
+        background: rgba(0, 30, 11, 0.774);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        border: 3px solid rgba(17, 98, 65, 0.5);
+        align-items: center;
+        padding: 0% 1%;
+        margin-top: 1%;
+        width: 95%;
+        height: 98%;
+        z-index: 1;
+
+    }
+
+    #MenuItems {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        gap: 10%;
+        justify-content: center;
+        text-decoration: none;
+        padding: 1%;
+        font-size: 3rem;
+    }
+
+    button {
+        background: none;
+        padding: 2%;
+        margin-bottom: 10%;
+        font-size: 2rem;
+        display: flex;
+        border-radius: 10px;
+        background-color: #116241;
+        border: 5px solid rgb(1, 55, 13);
+        color: white;
+    }
+
+    .ContainerTitles {
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 75%;
+    }
+
+    .Title {
+        font-size: 4rem;
+    }
+
+    .Subtitle {
+        font-size: 2rem;
+    }
+
+    .inner-headings {
+        text-align: center;
+        /* background-color: aquamarine; */
+        width: 100%;
+        font-size: 1rem;
+        color: white;
+        z-index: 0;
+        margin-top: 0%;
+        margin-left: 0%;
+        border: 0px solid #ddd;
+        height: 80px;
+        line-height: 80px;
+        text-transform: uppercase;
+        /* overflow: hidden; */
+    }
+
+    .ButtonCurriculum {
+        display: flex;
+        flex-direction: column;
+        margin-top: 100%;
+        margin-left: 36%;
+        text-align: center;
+        font-size: 200%;
+        width: 35%;
+        /* background-color: brown; */
+
+    }
+
+    #CVImage {
+        scale: 25%;
+        margin-top: -150%;
+        margin-bottom: -150%;
+        border-radius: 30px;
+        z-index: 0;
+    }
+
+
+}
+
+@media (max-width: 452px) {
+    #LogoHeader {
+        display: none;
+    }
+
+    #LogoMobile {
+        display: flex;
+         margin-left: 42%;
+        margin-top: 8%;
+        width: 90px;
+        height: 90px;
+        position: absolute;
+    }
+
+    .HeaderMobile {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-top: 5%;
+        position: absolute;
+    }
+
+    #Menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        justify-content: space-between;
+        background: rgba(0, 30, 11, 0.774);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        border: 3px solid rgba(17, 98, 65, 0.5);
+        align-items: center;
+        padding: 0% 1%;
+        margin-top: 1%;
+        width: 95%;
+        height: 98%;
+        z-index: 1;
+
+    }
+
+    #MenuItems {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        gap: 10%;
+        justify-content: center;
+        text-decoration: none;
+        padding: 1%;
+        font-size: 3rem;
+    }
+
+    button {
+        background: none;
+        padding: 2%;
+        margin-bottom: 10%;
+        font-size: 2rem;
+        display: flex;
+        border-radius: 10px;
+        background-color: #116241;
+        border: 5px solid rgb(1, 55, 13);
+        color: white;
+    }
+
+    .ContainerTitles {
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 75%;
+    }
+
+    .Title {
+        font-size: 4rem;
+    }
+
+    .Subtitle {
+        font-size: 2rem;
+    }
+
+    .inner-headings {
+        text-align: center;
+        /* background-color: aquamarine; */
+        width: 100%;
+        font-size: 1rem;
+        color: white;
+        z-index: 0;
+        margin-top: 0%;
+        margin-left: 0%;
+        border: 0px solid #ddd;
+        height: 80px;
+        line-height: 80px;
+        text-transform: uppercase;
+        /* overflow: hidden; */
+    }
+
+    .ButtonCurriculum {
+        display: flex;
+        flex-direction: column;
+        margin-top: 100%;
+        margin-left: 36%;
+        text-align: center;
+        font-size: 200%;
+        width: 35%;
+        /* background-color: brown; */
+
+    }
+
+    #CVImage {
+        scale: 25%;
+        margin-top: -150%;
+        margin-bottom: -150%;
+        border-radius: 30px;
+        z-index: 0;
+    }
+
+
+}
+
+
+@media (max-width: 446px) {
+    #LogoHeader {
+        display: none;
+    }
+
+    #LogoMobile {
+        display: flex;
+         margin-left: 42%;
+        margin-top: 8%;
+        width: 90px;
+        height: 90px;
+        position: absolute;
+    }
+
+    .HeaderMobile {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-top: 5%;
+        position: absolute;
+    }
+
+    #Menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        justify-content: space-between;
+        background: rgba(0, 30, 11, 0.774);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        border: 3px solid rgba(17, 98, 65, 0.5);
+        align-items: center;
+        padding: 0% 1%;
+        margin-top: 1%;
+        width: 95%;
+        height: 98%;
+        z-index: 1;
+    }
+
+    #MenuItems {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        gap: 10%;
+        justify-content: center;
+        text-decoration: none;
+        padding: 1%;
+        font-size: 3rem;
+    }
+
+    button {
+        background: none;
+        padding: 2%;
+        margin-bottom: 10%;
+        font-size: 2rem;
+        display: flex;
+        border-radius: 10px;
+        background-color: #116241;
+        border: 5px solid rgb(1, 55, 13);
+        color: white;
+    }
+
+    .ContainerTitles {
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 75%;
+    }
+
+    .Title {
+        font-size: 4rem;
+    }
+
+    .Subtitle {
+        font-size: 2rem;
+    }
+
+    .inner-headings {
+        text-align: center;
+        /* background-color: aquamarine; */
+        width: 100%;
+        font-size: 1rem;
+        color: white;
+        z-index: 0;
+        margin-top: 0%;
+        margin-left: 0%;
+        border: 0px solid #ddd;
+        height: 80px;
+        line-height: 80px;
+        text-transform: uppercase;
+        /* overflow: hidden; */
+    }
+
+    .ButtonCurriculum {
+        display: flex;
+        flex-direction: column;
+        margin-top: 100%;
+        margin-left: 36%;
+        text-align: center;
+        font-size: 200%;
+        width: 35%;
+        /* background-color: brown; */
+
+    }
+
+    #CVImage {
+        scale: 25%;
+        margin-top: -150%;
+        margin-bottom: -150%;
+        border-radius: 30px;
+        z-index: 0;
+    }
+
+
+}
+
+@media (max-width: 442px) {
+    #LogoHeader {
+        display: none;
+    }
+
+    #LogoMobile {
+        display: flex;
+         margin-left: 42%;
+        margin-top: 8%;
+        width: 90px;
+        height: 90px;
+        position: absolute;
+    }
+
+    .HeaderMobile {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-top: 5%;
+        position: absolute;
+    }
+
+    #Menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        justify-content: space-between;
+        background: rgba(0, 30, 11, 0.774);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        border: 3px solid rgba(17, 98, 65, 0.5);
+        align-items: center;
+        padding: 0% 1%;
+        margin-top: 1%;
+        width: 95%;
+        height: 98%;
+        z-index: 1;
+    }
+
+    #MenuItems {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        gap: 10%;
+        justify-content: center;
+        text-decoration: none;
+        padding: 1%;
+        font-size: 3rem;
+    }
+
+    button {
+        background: none;
+        padding: 2%;
+        margin-bottom: 10%;
+        font-size: 2rem;
+        display: flex;
+        border-radius: 10px;
+        background-color: #116241;
+        border: 5px solid rgb(1, 55, 13);
+        color: white;
+    }
+
+    .ContainerTitles {
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 75%;
+    }
+
+    .Title {
+        font-size: 4rem;
+    }
+
+    .Subtitle {
+        font-size: 2rem;
+    }
+
+    .inner-headings {
+        text-align: center;
+        /* background-color: aquamarine; */
+        width: 100%;
+        font-size: 1rem;
+        color: white;
+        z-index: 0;
+        margin-top: 0%;
+        margin-left: 0%;
+        border: 0px solid #ddd;
+        height: 80px;
+        line-height: 80px;
+        text-transform: uppercase;
+        /* overflow: hidden; */
+    }
+
+    .ButtonCurriculum {
+        display: flex;
+        flex-direction: column;
+        margin-top: 100%;
+        margin-left: 36%;
+        text-align: center;
+        font-size: 200%;
+        width: 35%;
+        /* background-color: brown; */
+
+    }
+
+    #CVImage {
+        scale: 25%;
+        margin-top: -150%;
+        margin-bottom: -150%;
+        border-radius: 30px;
+        z-index: 0;
+    }
+
+
+}
+
+
+
+@media (max-width: 366px) {
+    #LogoHeader {
+        display: none;
+    }
+
+    #LogoMobile {
+        display: flex;
+         margin-left: 42%;
+        margin-top: 8%;
+        width: 90px;
+        height: 90px;
+        position: absolute;
+    }
+
+    .HeaderMobile {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-top: 5%;
+        position: absolute;
+    }
+
+    #Menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        justify-content: space-between;
+        background: rgba(0, 30, 11, 0.774);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        border: 3px solid rgba(17, 98, 65, 0.5);
+        align-items: center;
+        padding: 0% 1%;
+        margin-top: 1%;
+        width: 95%;
+        height: 98%;
+        z-index: 1;
+    }
+
+    #MenuItems {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        gap: 10%;
+        justify-content: center;
+        text-decoration: none;
+        padding: 1%;
+        font-size: 4rem;
+    }
+
+    button {
+        background: none;
+        padding: 2%;
+        margin-bottom: 10%;
+        font-size: 3rem;
+        display: flex;
+        border-radius: 10px;
+        background-color: #116241;
+        border: 5px solid rgb(1, 55, 13);
+        color: white;
+    }
+
+    .ContainerTitles {
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 130%;
+    }
+
+    .Title {
+        font-size: 4rem;
+    }
+
+    .Subtitle {
+        font-size: 2rem;
+    }
+
+    .inner-headings {
+        text-align: center;
+        /* background-color: aquamarine; */
+        width: 100%;
+        font-size: 1rem;
+        color: white;
+        z-index: 0;
+        margin-top: 0%;
+        margin-left: 0%;
+        border: 0px solid #ddd;
+        height: 80px;
+        line-height: 80px;
+        text-transform: uppercase;
+        /* overflow: hidden; */
+    }
+
+    .ButtonCurriculum {
+        display: flex;
+        flex-direction: column;
+        margin-top: 102%;
+        margin-left: 29%;
+        text-align: center;
+        font-size: 200%;
+        width: 45%;
+        /* background-color: brown; */
+
+    }
+
+    #CVImage {
+        scale: 22%;
+        margin-top: -230%;
+        margin-bottom: -230%;
+        border-radius: 30px;
+        z-index: 0;
+    }
+
+
+}
+
+
+@media (max-width: 362px) {
+    #LogoHeader {
+        display: none;
+    }
+
+    #LogoMobile {
+        display: flex;
+         margin-left: 42%;
+        margin-top: 8%;
+        width: 90px;
+        height: 90px;
+        position: absolute;
+        margin-top: 8%
+    }
+
+    .HeaderMobile {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        position: absolute;
+    }
+
+    #Menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        justify-content: space-between;
+        background: rgba(0, 30, 11, 0.774);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        border: 3px solid rgba(17, 98, 65, 0.5);
+        align-items: center;
+        padding: 0% 1%;
+        margin-top: 1%;
+        width: 95%;
+        height: 98%;
+        z-index: 1;
+    }
+
+    #MenuItems {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        gap: 10%;
+        justify-content: center;
+        text-decoration: none;
+        padding: 1%;
+        font-size: 3rem;
+    }
+
+    button {
+        background: none;
+        padding: 2%;
+        margin-bottom: 10%;
+        font-size: 3rem;
+        display: flex;
+        border-radius: 10px;
+        background-color: #116241;
+        border: 5px solid rgb(1, 55, 13);
+        color: white;
+    }
+
+    .ContainerTitles {
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 50%;
+    }
+
+    .Title {
+        font-size: 4rem;
+    }
+
+    .Subtitle {
+        font-size: 2rem;
+    }
+
+    .inner-headings {
+        text-align: center;
+        /* background-color: aquamarine; */
+        width: 100%;
+        font-size: 1rem;
+        color: white;
+        z-index: 0;
+        margin-top: 0%;
+        margin-left: 0%;
+        border: 0px solid #ddd;
+        height: 80px;
+        line-height: 80px;
+        text-transform: uppercase;
+        /* overflow: hidden; */
+    }
+
+    .ButtonCurriculum {
+        display: flex;
+        flex-direction: column;
+        margin-top: 30%;
+        margin-left: 29%;
+        text-align: center;
+        font-size: 200%;
+        width: 45%;
+        /* background-color: brown; */
+
+    }
+
+    #CVImage {
+        scale: 22%;
+        margin-top: -230%;
+        margin-bottom: -230%;
+        border-radius: 30px;
+        z-index: 0;
+    }
+
+
+}
+
+@media (max-width: 358px) {
+    #LogoHeader {
+        display: none;
+    }
+
+    #LogoMobile {
+        display: flex;
+         margin-left: 42%;
+        margin-top: 8%;
+        width: 90px;
+        height: 90px;
+        position: absolute;
+    }
+
+    .HeaderMobile {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-top: 5%;
+        position: absolute;
+    }
+
+    #Menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        justify-content: space-between;
+        background: rgba(0, 30, 11, 0.774);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        border: 3px solid rgba(17, 98, 65, 0.5);
+        align-items: center;
+        padding: 0% 1%;
+        margin-top: 1%;
+        width: 95%;
+        height: 98%;
+        z-index: 1;
+    }
+
+    #MenuItems {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        gap: 10%;
+        justify-content: center;
+        text-decoration: none;
+        padding: 1%;
+        font-size: 4rem;
+    }
+
+    button {
+        background: none;
+        padding: 2%;
+        margin-bottom: 10%;
+        font-size: 3rem;
+        display: flex;
+        border-radius: 10px;
+        background-color: #116241;
+        border: 5px solid rgb(1, 55, 13);
+        color: white;
+    }
+
+    .ContainerTitles {
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 130%;
+    }
+
+    .Title {
+        font-size: 4rem;
+    }
+
+    .Subtitle {
+        font-size: 2rem;
+    }
+
+    .inner-headings {
+        text-align: center;
+        /* background-color: aquamarine; */
+        width: 100%;
+        font-size: 1rem;
+        color: white;
+        z-index: 0;
+        margin-top: 0%;
+        margin-left: 0%;
+        border: 0px solid #ddd;
+        height: 80px;
+        line-height: 80px;
+        text-transform: uppercase;
+        /* overflow: hidden; */
+    }
+
+    .ButtonCurriculum {
+        display: flex;
+        flex-direction: column;
+        margin-top: 102%;
+        margin-left: 29%;
+        text-align: center;
+        font-size: 200%;
+        width: 45%;
+        /* background-color: brown; */
+
+    }
+
+    #CVImage {
+        scale: 22%;
+        margin-top: -230%;
+        margin-bottom: -230%;
+        border-radius: 30px;
+        z-index: 0;
+    }
+
+
+}
+
+@media (max-width: 356px) {
+    #LogoHeader {
+        display: none;
+    }
+
+    #LogoMobile {
+        display: flex;
+         margin-left: 42%;
+        margin-top: 8%;
+        width: 90px;
+        height: 90px;
+        position: absolute;
+    }
+
+    .HeaderMobile {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-top: 5%;
+        position: absolute;
+    }
+
+    #Menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        justify-content: space-between;
+        background: rgba(0, 30, 11, 0.774);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        border: 3px solid rgba(17, 98, 65, 0.5);
+        align-items: center;
+        padding: 0% 1%;
+        margin-top: 1%;
+        width: 95%;
+        height: 98%;
+        z-index: 1;
+    }
+
+    #MenuItems {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        gap: 10%;
+        justify-content: center;
+        text-decoration: none;
+        padding: 1%;
+        font-size: 4rem;
+    }
+
+    button {
+        background: none;
+        padding: 2%;
+        margin-bottom: 10%;
+        font-size: 3rem;
+        display: flex;
+        border-radius: 10px;
+        background-color: #116241;
+        border: 5px solid rgb(1, 55, 13);
+        color: white;
+    }
+
+    .ContainerTitles {
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 130%;
+    }
+
+    .Title {
+        font-size: 4rem;
+    }
+
+    .Subtitle {
+        font-size: 2rem;
+    }
+
+    .inner-headings {
+        text-align: center;
+        /* background-color: aquamarine; */
+        width: 100%;
+        font-size: 1rem;
+        color: white;
+        z-index: 0;
+        margin-top: 0%;
+        margin-left: 0%;
+        border: 0px solid #ddd;
+        height: 80px;
+        line-height: 80px;
+        text-transform: uppercase;
+        /* overflow: hidden; */
+    }
+
+    .ButtonCurriculum {
+        display: flex;
+        flex-direction: column;
+        margin-top: 102%;
+        margin-left: 29%;
+        text-align: center;
+        font-size: 200%;
+        width: 45%;
+        /* background-color: brown; */
+
+    }
+
+    #CVImage {
+        scale: 22%;
+        margin-top: -230%;
+        margin-bottom: -230%;
+        border-radius: 30px;
+        z-index: 0;
+    }
+
+
+}
+
+@media (max-width: 350px) {
+    #LogoHeader {
+        display: none;
+    }
+
+    #LogoMobile {
+        display: flex;
+         margin-left: 42%;
+        margin-top: 8%;
+        width: 90px;
+        height: 90px;
+        position: absolute;
+    }
+
+    .HeaderMobile {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-top: 5%;
+        position: absolute;
+    }
+
+    #Menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        justify-content: space-between;
+        background: rgba(0, 30, 11, 0.774);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        border: 3px solid rgba(17, 98, 65, 0.5);
+        align-items: center;
+        padding: 0% 1%;
+        margin-top: 1%;
+        width: 95%;
+        height: 98%;
+        z-index: 1;
+    }
+
+    #MenuItems {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        gap: 10%;
+        justify-content: center;
+        text-decoration: none;
+        padding: 1%;
+        font-size: 4rem;
+    }
+
+    button {
+        background: none;
+        padding: 2%;
+        margin-bottom: 10%;
+        font-size: 3rem;
+        display: flex;
+        border-radius: 10px;
+        background-color: #116241;
+        border: 5px solid rgb(1, 55, 13);
+        color: white;
+    }
+
+    .ContainerTitles {
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 130%;
+    }
+
+    .Title {
+        font-size: 4rem;
+    }
+
+    .Subtitle {
+        font-size: 2rem;
+    }
+
+    .inner-headings {
+        text-align: center;
+        /* background-color: aquamarine; */
+        width: 100%;
+        font-size: 1rem;
+        color: white;
+        z-index: 0;
+        margin-top: 0%;
+        margin-left: 0%;
+        border: 0px solid #ddd;
+        height: 80px;
+        line-height: 80px;
+        text-transform: uppercase;
+        /* overflow: hidden; */
+    }
+
+    .ButtonCurriculum {
+        display: flex;
+        flex-direction: column;
+        margin-top: 102%;
+        margin-left: 29%;
+        text-align: center;
+        font-size: 200%;
+        width: 45%;
+        /* background-color: brown; */
+
+    }
+
+    #CVImage {
+        scale: 22%;
+        margin-top: -230%;
+        margin-bottom: -230%;
+        border-radius: 30px;
+        z-index: 0;
+    }
+
+
+}
+
+@media (max-width: 348px) {
+    #LogoHeader {
+        display: none;
+    }
+
+    #LogoMobile {
+        display: flex;
+         margin-left: 42%;
+        margin-top: 8%;
+        width: 90px;
+        height: 90px;
+        position: absolute;
+    }
+
+    .HeaderMobile {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-top: 5%;
+        position: absolute;
+    }
+
+    #Menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        justify-content: space-between;
+        background: rgba(0, 30, 11, 0.774);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        border: 3px solid rgba(17, 98, 65, 0.5);
+        align-items: center;
+        padding: 0% 1%;
+        margin-top: 1%;
+        width: 95%;
+        height: 98%;
+        z-index: 1;
+    }
+
+    #MenuItems {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        gap: 10%;
+        justify-content: center;
+        text-decoration: none;
+        padding: 1%;
+        font-size: 4rem;
+    }
+
+    button {
+        background: none;
+        padding: 2%;
+        margin-bottom: 10%;
+        font-size: 3rem;
+        display: flex;
+        border-radius: 10px;
+        background-color: #116241;
+        border: 5px solid rgb(1, 55, 13);
+        color: white;
+    }
+
+    .ContainerTitles {
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 130%;
+    }
+
+    .Title {
+        font-size: 4rem;
+    }
+
+    .Subtitle {
+        font-size: 2rem;
+    }
+
+    .inner-headings {
+        text-align: center;
+        /* background-color: aquamarine; */
+        width: 100%;
+        font-size: 1rem;
+        color: white;
+        z-index: 0;
+        margin-top: 0%;
+        margin-left: 0%;
+        border: 0px solid #ddd;
+        height: 80px;
+        line-height: 80px;
+        text-transform: uppercase;
+        /* overflow: hidden; */
+    }
+
+    .ButtonCurriculum {
+        display: flex;
+        flex-direction: column;
+        margin-top: 102%;
+        margin-left: 29%;
+        text-align: center;
+        font-size: 200%;
+        width: 45%;
+        /* background-color: brown; */
+
+    }
+
+    #CVImage {
+        scale: 22%;
+        margin-top: -230%;
+        margin-bottom: -230%;
+        border-radius: 30px;
+        z-index: 0;
+    }
+
+
+}
+
+@media (max-width: 344px) {
+    #LogoHeader {
+        display: none;
+    }
+
+    #LogoMobile {
+        display: flex;
+         margin-left: 42%;
+        margin-top: 8%;
+        width: 90px;
+        height: 90px;
+        position: absolute;
+    }
+
+    .HeaderMobile {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-top: 5%;
+        position: absolute;
+    }
+
+    #Menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        justify-content: space-between;
+        background: rgba(0, 30, 11, 0.774);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        border: 3px solid rgba(17, 98, 65, 0.5);
+        align-items: center;
+        padding: 0% 1%;
+        margin-top: 1%;
+        width: 95%;
+        height: 98%;
+        z-index: 1;
     }
 
     #MenuItems {
@@ -932,13 +4322,15 @@
 
     #LogoMobile {
         display: flex;
+         margin-left: 42%;
+        margin-top: 8%;
         width: 90px;
         height: 90px;
         position: absolute;
     }
 
     .HeaderMobile {
-        display:flex ;
+        display: flex;
         width: 100%;
         justify-content: center;
         margin-top: 5%;
@@ -946,11 +4338,11 @@
     }
 
     #Menu {
-        display: flex;
+        display: none;
         flex-direction: column;
         position: fixed;
         justify-content: space-between;
-        background: rgb(0, 30, 11);
+        background: rgba(0, 30, 11, 0.774);
         border-radius: 16px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(5px);
@@ -961,7 +4353,6 @@
         width: 95%;
         height: 98%;
         z-index: 1;
-        display: none;
     }
 
     #MenuItems {
@@ -995,18 +4386,18 @@
     }
 
     .Title {
-        font-size: 3rem;
+        font-size: 4rem;
     }
 
     .Subtitle {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     .inner-headings {
         text-align: center;
         /* background-color: aquamarine; */
         width: 100%;
-        font-size: 0.8rem;
+        font-size: 1rem;
         color: white;
         z-index: 0;
         margin-top: 0%;
@@ -1021,19 +4412,19 @@
     .ButtonCurriculum {
         display: flex;
         flex-direction: column;
-        margin-top: 147%;
+        margin-top: 102%;
         margin-left: 29%;
         text-align: center;
-        font-size: 150%;
+        font-size: 200%;
         width: 45%;
         /* background-color: brown; */
 
     }
 
     #CVImage {
-        scale: 18%;
-        margin-top: -220%;
-        margin-bottom: -220%;
+        scale: 22%;
+        margin-top: -230%;
+        margin-bottom: -230%;
         border-radius: 30px;
         z-index: 0;
     }
@@ -1041,20 +4432,23 @@
 
 }
 
-@media (max-width: 336px) {
+
+@media (max-width: 216px) {
     #LogoHeader {
         display: none;
     }
 
     #LogoMobile {
         display: flex;
+         margin-left: 42%;
+        margin-top: 8%;
         width: 90px;
         height: 90px;
         position: absolute;
     }
 
     .HeaderMobile {
-        display:flex ;
+        display: flex;
         width: 100%;
         justify-content: center;
         margin-top: 5%;
@@ -1062,11 +4456,11 @@
     }
 
     #Menu {
-        display: flex;
+        display: none;
         flex-direction: column;
         position: fixed;
         justify-content: space-between;
-        background: rgb(0, 30, 11);
+        background: rgba(0, 30, 11, 0.774);
         border-radius: 16px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(5px);
@@ -1077,7 +4471,6 @@
         width: 95%;
         height: 98%;
         z-index: 1;
-        display: none;
     }
 
     #MenuItems {
@@ -1089,14 +4482,14 @@
         justify-content: center;
         text-decoration: none;
         padding: 1%;
-        font-size: 4rem;
+        font-size: 1rem;
     }
 
     button {
         background: none;
         padding: 2%;
         margin-bottom: 10%;
-        font-size: 3rem;
+        font-size: 1.5rem;
         display: flex;
         border-radius: 10px;
         background-color: #116241;
@@ -1147,7 +4540,7 @@
     }
 
     #CVImage {
-        scale: 15%;
+        scale: 12%;
         margin-top: -220%;
         margin-bottom: -220%;
         border-radius: 30px;
