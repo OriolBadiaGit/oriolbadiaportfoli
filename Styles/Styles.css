@@ -218,7 +218,7 @@ button {
 
 .GeneralContainer {
   position: absolute;
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
   width: 100%;
   display: flex;
   padding-top: 7%;
