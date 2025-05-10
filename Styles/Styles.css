@@ -4,9 +4,10 @@
   padding: 0;
   scroll-behavior: smooth;
 }
+
 /*STYLES INDEX*/
 body::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 a {
@@ -21,11 +22,12 @@ header {
   justify-content: center;
 }
 
-.HeaderMobile, #LogoMobile{
+.HeaderMobile,
+#LogoMobile {
   display: none;
 }
 
-.fa-xmark{
+.fa-xmark {
   visibility: hidden;
 }
 
@@ -206,12 +208,80 @@ button {
 /*------------------------*/
 
 /* STYLES PROJECTES */
-.MainProjectes{
-    background-image: url(../ImagesVideos/Artboard\ 1.png);
+.MainProjectes {
+  background-image: url(../ImagesVideos/Artboard\ 1.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
+}
+
+.GeneralContainer {
+  position: absolute;
+  background-color: aquamarine;
+  width: 100%;
+  display: flex;
+  padding-top: 7%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ContainerFlexOptions {
+  background-color: antiquewhite;
+  margin: 1% 0% 4% 0%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  width: 80%;
+}
+
+.ContainerOption {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 35%;
+  color: white;
+  height: 100%;
+  padding: 7% 0%;
+}
+
+
+
+.TextContainer {
+  position: relative;
+  z-index: 1;
+}
+
+.TextContainer:hover {
+  cursor: pointer;
+}
+
+#BGoptionProjectGun {
+  position: relative;
+  overflow: hidden;
+  /* Evita que el blur surti del contenidor */
+}
+
+
+#BGoptionProjectGun::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../ImagesVideos/BG_ProjectGunOption.png);
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px) grayscale(100%);
+  transition: 0.5s;
+  z-index: 0;
+}
+
+#BGoptionProjectGun:hover::before {
+  cursor: pointer;
+  filter: blur(0px) grayscale(0%);
+  transition: 0.5s;
 }
 
 /*------------------*/
@@ -223,7 +293,6 @@ button {
   justify-content: center;
   margin-top: 5%;
   margin-bottom: 5%;
-
 }
 
 .slider-example-focus {
