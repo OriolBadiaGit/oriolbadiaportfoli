@@ -208,17 +208,15 @@ button {
 /*------------------------*/
 
 /* STYLES PROJECTES */
-.MainProjectes {
-  background-image: url(../ImagesVideos/Artboard\ 1.png);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
+
+#BodyProjectes {
+  background-image: linear-gradient(to bottom, #5da54f, #4c984e, #3c8c4d, #2d7f4b, #1f7248, #136948, #096148, #045846, #055146, #0c4a44, #144341, #1a3c3d);
 }
 
 .GeneralContainer {
-  position: absolute;
+  /* position: relative; */
   /* background-color: aquamarine; */
+  position: relative;
   width: 100%;
   display: flex;
   padding-top: 7%;
@@ -227,7 +225,7 @@ button {
 }
 
 .ContainerFlexOptions {
-  background-color: antiquewhite;
+  /* background-color: antiquewhite; */
   margin: 1% 0% 4% 0%;
   display: flex;
   justify-content: space-around;
@@ -240,6 +238,7 @@ button {
   justify-content: center;
   position: relative;
   width: 35%;
+  border-radius: 20px;
   color: white;
   height: 100%;
   padding: 7% 0%;
@@ -259,7 +258,6 @@ button {
 #BGoptionProjectGun {
   position: relative;
   overflow: hidden;
-  /* Evita que el blur surti del contenidor */
 }
 
 
@@ -279,6 +277,33 @@ button {
 }
 
 #BGoptionProjectGun:hover::before {
+  cursor: pointer;
+  filter: blur(0px) grayscale(0%);
+  transition: 0.5s;
+}
+
+
+#BGoptionProjectDummy {
+  position: relative;
+  overflow: hidden;
+}
+
+#BGoptionProjectDummy::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../ImagesVideos/BG_ProjectDummyOption.png);
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px) grayscale(100%);
+  transition: 0.5s;
+  z-index: 0;
+}
+
+#BGoptionProjectDummy:hover::before {
   cursor: pointer;
   filter: blur(0px) grayscale(0%);
   transition: 0.5s;
