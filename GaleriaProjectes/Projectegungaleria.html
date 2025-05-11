@@ -11,45 +11,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- Saira -->
-    <link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-
-    <!-- Chakra | Iceberg | Tulpen -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Iceberg&family=Tulpen+One&display=swap"
-        rel="stylesheet">
-
-    <!-- Orbitron -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
-
-    <!-- Orbitron -->
-    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
-
-    <!-- Quantico -->
-    <link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
-
-    <!-- Audiowide -->
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
-
-    <!-- Jura -->
-    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
-
-    <!-- Tourney -->
-    <link href="https://fonts.googleapis.com/css2?family=Tourney:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-
-    <!-- Tourney -->
-    <link href="https://fonts.googleapis.com/css2?family=Turret+Road:wght@200;300;400;500;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
     <!--*------------------------------------------------------------------------*-->
 
     <!--* FRAMEWORKS Y PLUGINS LINKS *-->
-    <link rel="stylesheet" href="Frameworks/Bootstrap/css/bootstrap.min.css">
-    <script src="Frameworks/Bootstrap/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
     <script src="../Frameworks/Jquery/jquery.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../Plugins/IziModal/node_modules/izimodal/css/iziModal.css">
@@ -58,43 +26,39 @@
     <link rel="stylesheet" href="../Plugins/SweetAlert/sweetalert2.min.css">
     <link rel="stylesheet" href="../Plugins/Swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="../Plugins/Tippy/Animations/scale.css">
-
     <script defer src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css" />
     <!--*------------------------------------------------------------------------*-->
 
     <link rel="stylesheet" href="../Styles/Styles.css">
-    <link rel="shortcut icon" href="../ImagesVideos/Logo.png" type="image/x-icon">
-    <title>Gun SCI-FI</title>
+    <link rel="stylesheet" href="../Styles/Responsive/indexresponsive.css">
+    <link rel="shortcut icon" href="../ImagesVideos/LogoWhite.png" type="image/x-icon">
+    <title>Projecte Gun</title>
 </head>
 
 <!--*CONTINGUT PÀGINA WEB (BODY)*-->
 
-<body id="BodyIndex">
+<body id="BodyProjectes">
     <header>
-        <nav>
-            <div id="Left">
-                <a href="../index.html"><img src="../ImagesVideos/Logo.png" alt="Logo de la web"></a>
+        <div id="Menu">
+            <div class="ContainerXMobile">
+                <i class="fa-solid fa-xmark"></i>
             </div>
-
-            <div id="Center">
-                <ul>
-                    <li><a class="linknav" href="../index.html">Inici</a></li>
-                </ul>
-                <ul>
-                    <li id="active">Projectes</li>
-                </ul>
-                <ul>
-                    <li>Coneixaments</li>
-                </ul>
-            </div>
-            <div id="Right">
-                <ul>
-                    <li>Contacte</li>
-                </ul>
-            </div>
-        </nav>
+            <a href="../index.html"><img id="LogoHeader" src="../ImagesVideos/Logo.png" alt="Logo de la web"></a>
+            <ul id="MenuItems">
+                <a href="../index.html">
+                    <li>Inici</li>
+                </a>
+                <li id="Active">Projectes</li>
+                <li>Coneixements</li>
+                <li>Sobre mi</li>
+            </ul>
+            <button class="ButtonContact">Contacta'm</button>
+        </div>
     </header>
+    <div id="HeaderMobile">
+        <img id="LogoMobile" src="../ImagesVideos/LogoWhite.png" alt="Logo de la web al movil">
+    </div>
 
     <section id="Section1">
         <div class="ContainerSliderCompar">
