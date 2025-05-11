@@ -155,6 +155,8 @@ button {
   overflow: hidden;
 }
 
+
+
 .inner-headings span {
   position: relative;
   animation: TextRotating 13s ease-in-out infinite;
