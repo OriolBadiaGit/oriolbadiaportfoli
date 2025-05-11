@@ -2441,7 +2441,7 @@
 
     #LogoMobile {
         display: flex;
-         margin-left: 42%;
+        margin-left: 42%;
         margin-top: 8%;
         width: 90px;
         height: 90px;
@@ -2559,7 +2559,7 @@
 
     #LogoMobile {
         display: flex;
-         margin-left: 42%;
+        margin-left: 42%;
         margin-top: 8%;
         width: 90px;
         height: 90px;
@@ -2677,7 +2677,7 @@
 
     #LogoMobile {
         display: flex;
-         margin-left: 42%;
+        margin-left: 42%;
         margin-top: 8%;
         width: 90px;
         height: 90px;
@@ -2795,7 +2795,7 @@
 
     #LogoMobile {
         display: flex;
-         margin-left: 42%;
+        margin-left: 42%;
         margin-top: 8%;
         width: 90px;
         height: 90px;
@@ -2912,7 +2912,7 @@
 
     #LogoMobile {
         display: flex;
-         margin-left: 42%;
+        margin-left: 42%;
         margin-top: 8%;
         width: 90px;
         height: 90px;
@@ -3029,7 +3029,7 @@
 
     #LogoMobile {
         display: flex;
-         margin-left: 42%;
+        margin-left: 42%;
         margin-top: 8%;
         width: 90px;
         height: 90px;
@@ -3147,7 +3147,7 @@
 
     #LogoMobile {
         display: flex;
-         margin-left: 42%;
+        margin-left: 42%;
         margin-top: 8%;
         width: 90px;
         height: 90px;
@@ -3266,7 +3266,7 @@
 
     #LogoMobile {
         display: flex;
-         margin-left: 42%;
+        margin-left: 42%;
         margin-top: 8%;
         width: 90px;
         height: 90px;
@@ -3383,7 +3383,7 @@
 
     #LogoMobile {
         display: flex;
-         margin-left: 42%;
+        margin-left: 42%;
         margin-top: 8%;
         width: 90px;
         height: 90px;
@@ -3500,7 +3500,7 @@
 
     #LogoMobile {
         display: flex;
-         margin-left: 37%;
+        margin-left: 37%;
         margin-top: 8%;
         width: 90px;
         height: 90px;
@@ -3602,11 +3602,14 @@
     #CVImage {
         scale: 22%;
         margin-top: -200%;
-        margin-bottom: -200%;
+        margin-bottom: 200%;
         border-radius: 30px;
         z-index: 0;
     }
 
+    .CVsection {
+        margin-top: -50%;
+    }
 
 }
 
@@ -3617,7 +3620,7 @@
 
     #LogoMobile {
         display: flex;
-         margin-left: 37%;
+        margin-left: 37%;
         margin-top: 8%;
         width: 90px;
         height: 90px;
@@ -3734,7 +3737,7 @@
 
     #LogoMobile {
         display: flex;
-         margin-left: 42%;
+        margin-left: 42%;
         margin-top: 8%;
         width: 90px;
         height: 90px;
@@ -3852,7 +3855,7 @@
 
     #LogoMobile {
         display: flex;
-         margin-left: 42%;
+        margin-left: 42%;
         margin-top: 8%;
         width: 90px;
         height: 90px;
@@ -3969,7 +3972,7 @@
 
     #LogoMobile {
         display: flex;
-         margin-left: 42%;
+        margin-left: 42%;
         margin-top: 8%;
         width: 90px;
         height: 90px;
@@ -4086,7 +4089,7 @@
 
     #LogoMobile {
         display: flex;
-         margin-left: 42%;
+        margin-left: 42%;
         margin-top: 8%;
         width: 90px;
         height: 90px;
@@ -4203,7 +4206,7 @@
 
     #LogoMobile {
         display: flex;
-         margin-left: 42%;
+        margin-left: 42%;
         margin-top: 8%;
         width: 90px;
         height: 90px;
@@ -4320,7 +4323,7 @@
 
     #LogoMobile {
         display: flex;
-         margin-left: 42%;
+        margin-left: 42%;
         margin-top: 8%;
         width: 90px;
         height: 90px;
@@ -4437,7 +4440,7 @@
 
     #LogoMobile {
         display: flex;
-         margin-left: 42%;
+        margin-left: 42%;
         margin-top: 8%;
         width: 90px;
         height: 90px;
@@ -4554,7 +4557,7 @@
 
     #LogoMobile {
         display: flex;
-         margin-left: 42%;
+        margin-left: 42%;
         margin-top: 8%;
         width: 90px;
         height: 90px;
@@ -4672,7 +4675,7 @@
 
     #LogoMobile {
         display: flex;
-         margin-left: 42%;
+        margin-left: 42%;
         margin-top: 8%;
         width: 90px;
         height: 90px;
