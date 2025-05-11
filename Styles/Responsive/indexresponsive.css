@@ -1854,11 +1854,11 @@
     .ContainerTitles {
         width: 100%;
         margin-left: 0%;
-        margin-top: 120%;
+        margin-top: 200%;
     }
 
     .Title {
-        font-size: 6rem;
+        font-size: 3rem;
     }
 
     .Subtitle {
