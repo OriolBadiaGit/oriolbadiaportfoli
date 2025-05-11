@@ -13,7 +13,6 @@
   background-size: cover;
   /* position: static; */
   background-repeat: no-repeat;
-    backdrop-filter: blur(5px);
   width: 100vw;
   height: 100vh;
 }
@@ -48,7 +47,7 @@ header {
   height: 50px;
 }
 
-  
+
 #Menu {
   display: flex;
   position: fixed;
