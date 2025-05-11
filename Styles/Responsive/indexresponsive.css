@@ -1773,8 +1773,7 @@
 
 }
 
-
-@media (max-width: 708px) {
+@media (max-width: 701px) and (max-height: 360px) {
     #LogoHeader {
         display: none;
     }
@@ -1855,7 +1854,7 @@
     .ContainerTitles {
         width: 100%;
         margin-left: 0%;
-        margin-top: 55%;
+        margin-top: 85%;
     }
 
     .Title {
@@ -1904,6 +1903,7 @@
 
 
 }
+
 
 
 @media (max-width: 700px) {
