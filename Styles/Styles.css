@@ -1,10 +1,20 @@
-*{
+/*GLOBAL STYLES*/
+* {
   font-family: "Parkinsans", sans-serif;
   margin: 0;
   padding: 0;
 
 }
 
+footer {
+  background: #116242;
+  padding: 1%;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+/*------------------------*/
 /*STYLES INDEX*/
 body::-webkit-scrollbar {
   display: none;
@@ -28,7 +38,7 @@ header {
   justify-content: center;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
@@ -37,7 +47,7 @@ a{
   font-weight: bolder;
 }
 
-#MenuItems a{
+#MenuItems a {
   color: white;
 }
 
@@ -221,7 +231,7 @@ button:hover {
 /*------------------------*/
 
 /* STYLES PROJECTES */
-#BodyProjectes {
+#BodyProjectes, #BodySobreMi {
   background-image: url(../ImagesVideos/SmallHexagon_Web_Gradient33.jpg);
   background-position: center;
   background-size: cover;
@@ -263,10 +273,9 @@ button:hover {
 
 .TextContainer {
   position: relative;
-  z-index: 1;
 }
 
-.ContainerOption h1 a{
+.ContainerOption h1 a {
   color: white;
 }
 
@@ -454,6 +463,7 @@ button:hover {
 
 /*------------------*/
 
+
 .ContainerSliderCompar {
   width: 100%;
   /* background-color: antiquewhite; */
@@ -466,4 +476,20 @@ button:hover {
 .slider-example-focus {
   width: 80%;
   border-radius: 20px;
+}
+
+/* STYLES SOBRE MI */
+
+#BodySobreMi{
+  display: flex;
+  flex-direction: column;
+}
+.ContainerTextAbtMe{
+/* background-color: #22ce89; */
+color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100vw;
+height: 100vh;
 }
