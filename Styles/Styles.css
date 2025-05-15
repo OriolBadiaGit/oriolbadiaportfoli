@@ -1,8 +1,8 @@
-* {
+*{
   font-family: "Parkinsans", sans-serif;
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth;
+
 }
 
 /*STYLES INDEX*/
@@ -13,6 +13,7 @@
   background-size: cover;
   /* position: static; */
   background-repeat: no-repeat;
+
   width: 100vw;
   height: 100vh;
 }
@@ -21,10 +22,9 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-a,
-a:visited {
+a {
   text-decoration: none;
-  color: #ffffff;
+  color: white;
 }
 
 header {
@@ -58,7 +58,7 @@ header {
     0 4px 20px #116242a2;
   backdrop-filter: blur(5px);
   border: 1.5px solid rgba(255, 255, 255, 0.2);
-  color: white;
+  /* color: white; */
   align-items: center;
   padding: 0% 1%;
   margin-top: 1%;
@@ -79,30 +79,23 @@ header {
 
 li {
   list-style: none;
-  color: white;
   transition: 0.5s;
 }
 
-li,
-a {
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
-}
 
 li:hover {
   transform: scale(1.2);
   cursor: pointer;
 }
 
-#MenuItems #Active:hover {
-  transform: scale(1);
-  transition: 0.5s;
+#MenuItems #Active {
+  color: #116241;
   font-weight: bolder;
 }
 
-#MenuItems #Active {
-  color: #5e967b;
-  /* background-color: #ddd; */
-  font-weight: bolder;
+#MenuItems #Active:hover {
+  transform: scale(1);
+  transition: 0.5s;
 }
 
 button {
@@ -202,6 +195,7 @@ button:hover {
   flex-direction: column;
   margin-top: 15.5%;
   margin-left: 45%;
+  scroll-behavior: smooth;
   text-align: center;
   font-size: 200%;
   color: white;
@@ -387,6 +381,66 @@ button:hover {
 }
 
 #BGoptionProjectDwarf:hover::before {
+  cursor: pointer;
+  filter: blur(0px) grayscale(0%);
+  transition: 0.5s;
+}
+
+/*------------------*/
+
+/* Code for background section project SculptMan */
+
+#BGoptionProjectSculptMan {
+  position: relative;
+  overflow: hidden;
+}
+
+#BGoptionProjectSculptMan::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../ImagesVideos/BG_ProjectSculptManOption.jpeg);
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px) grayscale(100%);
+  transition: 0.5s;
+  z-index: 0;
+}
+
+#BGoptionProjectSculptMan:hover::before {
+  cursor: pointer;
+  filter: blur(0px) grayscale(0%);
+  transition: 0.5s;
+}
+
+/*------------------*/
+
+/* Code for background section project SculptHead */
+
+#BGoptionProjectSculptHead {
+  position: relative;
+  overflow: hidden;
+}
+
+#BGoptionProjectSculptHead::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../ImagesVideos/BG_ProjectSculptHeadOption.png);
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px) grayscale(100%);
+  transition: 0.5s;
+  z-index: 0;
+}
+
+#BGoptionProjectSculptHead:hover::before {
   cursor: pointer;
   filter: blur(0px) grayscale(0%);
   transition: 0.5s;
