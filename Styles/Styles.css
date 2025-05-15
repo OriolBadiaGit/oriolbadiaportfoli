@@ -510,7 +510,7 @@ button:hover {
 /* STYLES SOBRE MI */
 
 .ContainerKnowledges {
-  background-color: #22ce89;
+  /* background-color: #22ce89; */
   color: white;
   justify-content: center;
   display: flex;
@@ -519,7 +519,7 @@ button:hover {
 }
 
 #GeneralContainerCards {
-  background-color: #ddd;
+  /* background-color: #ddd; */
   margin-top: 6%;
   text-align: center;
   width: 80%;
@@ -527,7 +527,7 @@ button:hover {
 
 #ContainerFlexCards {
   width: 100%;
-  background-color: #116241;
+  /* background-color: #116241; */
   height: 70%;
   display: flex;
   justify-content: space-between;
