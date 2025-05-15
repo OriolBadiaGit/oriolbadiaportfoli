@@ -633,6 +633,15 @@
 
     }
 
+    #MenuItems #Active a {
+        color: #22ce89;
+        font-weight: bolder;
+    }
+
+    #MenuItems a {
+        color: white;
+    }
+
     #Menu {
         display: none;
         flex-direction: column;
@@ -798,6 +807,15 @@
 
     }
 
+    #MenuItems #Active a {
+        color: #22ce89;
+        font-weight: bolder;
+    }
+
+    #MenuItems a {
+        color: white;
+    }
+
     #Menu {
         display: none;
         flex-direction: column;
@@ -927,6 +945,15 @@
         justify-content: center;
         margin-top: 15%;
 
+    }
+
+    #MenuItems #Active a {
+        color: #22ce89;
+        font-weight: bolder;
+    }
+
+    #MenuItems a {
+        color: white;
     }
 
     #Menu {
@@ -1062,6 +1089,15 @@
 
     }
 
+    #MenuItems #Active a {
+        color: #22ce89;
+        font-weight: bolder;
+    }
+
+    #MenuItems a {
+        color: white;
+    }
+
     #Menu {
         display: none;
         flex-direction: column;
@@ -1194,6 +1230,15 @@
 
     }
 
+    #MenuItems #Active a {
+        color: #22ce89;
+        font-weight: bolder;
+    }
+
+    #MenuItems a {
+        color: white;
+    }
+
     #Menu {
         display: none;
         flex-direction: column;
@@ -1323,6 +1368,15 @@
         justify-content: center;
         margin-top: 15%;
 
+    }
+
+    #MenuItems #Active a {
+        color: #22ce89;
+        font-weight: bolder;
+    }
+
+    #MenuItems a {
+        color: white;
     }
 
     #Menu {
@@ -1457,6 +1511,15 @@
 
     }
 
+    #MenuItems #Active a {
+        color: #22ce89;
+        font-weight: bolder;
+    }
+
+    #MenuItems a {
+        color: white;
+    }
+
     #Menu {
         display: none;
         flex-direction: column;
@@ -1589,6 +1652,15 @@
 
     }
 
+    #MenuItems #Active a {
+        color: #22ce89;
+        font-weight: bolder;
+    }
+
+    #MenuItems a {
+        color: white;
+    }
+
     #Menu {
         display: none;
         flex-direction: column;
@@ -1719,6 +1791,15 @@
         justify-content: center;
         margin-top: 15%;
 
+    }
+
+    #MenuItems #Active a {
+        color: #22ce89;
+        font-weight: bolder;
+    }
+
+    #MenuItems a {
+        color: white;
     }
 
     #Menu {
@@ -1986,6 +2067,15 @@
 
     }
 
+    #MenuItems #Active a {
+        color: #22ce89;
+        font-weight: bolder;
+    }
+
+    #MenuItems a {
+        color: white;
+    }
+
     #Menu {
         display: none;
         flex-direction: column;
@@ -2118,6 +2208,15 @@
         justify-content: center;
         margin-top: 15%;
 
+    }
+
+    #MenuItems #Active a {
+        color: #22ce89;
+        font-weight: bolder;
+    }
+
+    #MenuItems a {
+        color: white;
     }
 
     #Menu {
@@ -2253,6 +2352,15 @@
 
     }
 
+    #MenuItems #Active a {
+        color: #22ce89;
+        font-weight: bolder;
+    }
+
+    #MenuItems a {
+        color: white;
+    }
+
     #Menu {
         display: none;
         flex-direction: column;
@@ -2362,6 +2470,15 @@
         justify-content: center;
         margin-top: 5%;
         position: absolute;
+    }
+
+    #MenuItems #Active a {
+        color: #22ce89;
+        font-weight: bolder;
+    }
+
+    #MenuItems a {
+        color: white;
     }
 
     #Menu {
@@ -2482,6 +2599,15 @@
         position: absolute;
     }
 
+    #MenuItems #Active a {
+        color: #22ce89;
+        font-weight: bolder;
+    }
+
+    #MenuItems a {
+        color: white;
+    }
+
     #Menu {
         display: none;
         flex-direction: column;
@@ -2598,6 +2724,15 @@
         justify-content: center;
         margin-top: 5%;
         position: absolute;
+    }
+
+    #MenuItems #Active a {
+        color: #22ce89;
+        font-weight: bolder;
+    }
+
+    #MenuItems a {
+        color: white;
     }
 
     #Menu {
@@ -2718,6 +2853,15 @@
         position: absolute;
     }
 
+    #MenuItems #Active a {
+        color: #22ce89;
+        font-weight: bolder;
+    }
+
+    #MenuItems a {
+        color: white;
+    }
+
     #Menu {
         display: none;
         flex-direction: column;
@@ -2833,6 +2977,15 @@
         justify-content: center;
         margin-top: 5%;
         position: absolute;
+    }
+
+    #MenuItems #Active a {
+        color: #22ce89;
+        font-weight: bolder;
+    }
+
+    #MenuItems a {
+        color: white;
     }
 
     #Menu {
@@ -2952,6 +3105,15 @@
         position: absolute;
     }
 
+    #MenuItems #Active a {
+        color: #22ce89;
+        font-weight: bolder;
+    }
+
+    #MenuItems a {
+        color: white;
+    }
+
     #Menu {
         display: none;
         flex-direction: column;
@@ -3068,6 +3230,15 @@
         justify-content: center;
         margin-top: 5%;
         position: absolute;
+    }
+
+    #MenuItems #Active a {
+        color: #22ce89;
+        font-weight: bolder;
+    }
+
+    #MenuItems a {
+        color: white;
     }
 
     #Menu {
@@ -3189,6 +3360,15 @@
         position: absolute;
     }
 
+    #MenuItems #Active a {
+        color: #22ce89;
+        font-weight: bolder;
+    }
+
+    #MenuItems a {
+        color: white;
+    }
+
     #Menu {
         display: none;
         flex-direction: column;
@@ -3304,6 +3484,15 @@
         justify-content: center;
         margin-top: 5%;
         position: absolute;
+    }
+
+    #MenuItems #Active a {
+        color: #22ce89;
+        font-weight: bolder;
+    }
+
+    #MenuItems a {
+        color: white;
     }
 
     #Menu {
@@ -3424,6 +3613,15 @@
         position: absolute;
     }
 
+    #MenuItems #Active a {
+        color: #22ce89;
+        font-weight: bolder;
+    }
+
+    #MenuItems a {
+        color: white;
+    }
+
     #Menu {
         display: none;
         flex-direction: column;
@@ -3539,6 +3737,15 @@
         justify-content: center;
         margin-top: 5%;
         position: absolute;
+    }
+
+    #MenuItems #Active a {
+        color: #22ce89;
+        font-weight: bolder;
+    }
+
+    #MenuItems a {
+        color: white;
     }
 
     #Menu {
@@ -3659,6 +3866,15 @@
         position: absolute;
     }
 
+    #MenuItems #Active a {
+        color: #22ce89;
+        font-weight: bolder;
+    }
+
+    #MenuItems a {
+        color: white;
+    }
+
     #Menu {
         display: none;
         flex-direction: column;
@@ -3775,6 +3991,15 @@
         justify-content: center;
         margin-top: 5%;
         position: absolute;
+    }
+
+    #MenuItems #Active a {
+        color: #22ce89;
+        font-weight: bolder;
+    }
+
+    #MenuItems a {
+        color: white;
     }
 
     #Menu {
@@ -3896,6 +4121,15 @@
         position: absolute;
     }
 
+    #MenuItems #Active a {
+        color: #22ce89;
+        font-weight: bolder;
+    }
+
+    #MenuItems a {
+        color: white;
+    }
+
     #Menu {
         display: none;
         flex-direction: column;
@@ -4012,6 +4246,15 @@
         justify-content: center;
         margin-top: 5%;
         position: absolute;
+    }
+
+    #MenuItems #Active a {
+        color: #22ce89;
+        font-weight: bolder;
+    }
+
+    #MenuItems a {
+        color: white;
     }
 
     #Menu {
