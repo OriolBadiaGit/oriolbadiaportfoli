@@ -21,12 +21,12 @@
     .ContainerTitles {
         width: 40%;
         margin-left: 30%;
-        margin-top: 12%;
+        margin-top: 10%;
     }
 
     .inner-headings {
         text-align: center;
-        /* background-color: aquamarine; */
+        background-color: aquamarine;
         width: 75%;
         font-size: 300%;
         color: white;
@@ -37,9 +37,9 @@
         height: 80px;
         line-height: 80px;
         text-transform: uppercase;
-        /* overflow: hidden; */
+        overflow: hidden;
     }
-
+    
     #CVImage {
         scale: 80%;
         margin-top: 0%;
