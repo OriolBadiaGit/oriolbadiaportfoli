@@ -464,6 +464,36 @@ button:hover {
 
 /*------------------*/
 
+/* Code for background section project Car Rigging */
+
+#BGoptionProjectCarRig {
+  position: relative;
+  overflow: hidden;
+}
+
+#BGoptionProjectCarRig::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../ImagesVideos/BG_ProjectRigCarOption.png);
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px) grayscale(100%);
+  transition: 0.5s;
+  z-index: 0;
+}
+
+#BGoptionProjectCarRig:hover::before {
+  cursor: pointer;
+  filter: blur(0px) grayscale(0%);
+  transition: 0.5s;
+}
+
+/*------------------*/
+
 
 .ContainerSliderCompar {
   width: 100%;
