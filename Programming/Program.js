@@ -4,7 +4,7 @@ const logomobilecontainer = document.getElementById('HeaderMobile');
 
 toggle.addEventListener('click', function () {
   const isHidden = menu.style.display === 'none' || menu.style.display === '';
-  
+
   if (isHidden) {
     menu.style.display = 'flex';
     logomobilecontainer.style.display = 'flex';
@@ -14,8 +14,8 @@ toggle.addEventListener('click', function () {
   }
 });
 
-  document.addEventListener('DOMContentLoaded', function () {
-    document.querySelector('.fa-xmark').addEventListener('click', function () {
-      document.getElementById('Menu').style.display = 'none';
-    });
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelector('.fa-xmark').addEventListener('click', function () {
+    document.getElementById('Menu').style.display = 'none';
   });
+});
