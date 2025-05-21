@@ -39,7 +39,7 @@
         text-transform: uppercase;
         overflow: hidden;
     }
-    
+
     #CVImage {
         scale: 80%;
         margin-top: 0%;
@@ -64,11 +64,11 @@
         padding-top: 10%;
     }
 
-    .ContainerLogo{
+    .ContainerLogo {
         scale: 80%;
     }
 
-    .NameApp{
+    .NameApp {
         font-size: 1.5em
     }
 }
@@ -1050,7 +1050,23 @@
         z-index: 0;
     }
 
+    footer {
+        flex-direction: column;
+    }
 
+    #LanguageSelect {
+  margin-top: 2%;
+  padding: 2%;
+  appearance: none;
+  width: 15%;
+  text-align: center;
+  border-radius: 10px;
+  color: white;
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  background: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
 }
 
 

@@ -7,13 +7,14 @@
 }
 
 footer {
-  background: #116242;
+  background: #072b1c;
   padding: 1%;
-  gap: 30%;
+  gap: 40%;
   width: 98%;
   display: flex;
   justify-content: flex-end;
   text-align: center;
+  align-items: center;
   color: white;
 }
 
@@ -25,8 +26,29 @@ body::-webkit-scrollbar {
 }
 
 #LanguageSelect {
-  margin-right: 5%;
+  /* margin-right: 5%; */
   padding: 0.5%;
+  appearance: none;
+  width: 4%;
+  text-align: center;
+  border-radius: 10px;
+  color: white;
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  background: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+#LanguageSelect:hover {
+  cursor: pointer;
+}
+
+option {
+  color: black;
+}
+
+option:hover{
+  cursor: pointer;
 }
 
 #BodyIndex {

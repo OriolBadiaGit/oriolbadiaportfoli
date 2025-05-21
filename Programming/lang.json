@@ -1,0 +1,41 @@
+{
+  "ca": {
+    "title": "Oriol Badia | Portfoli",
+    "menu_home": "Inici",
+    "menu_projects": "Projectes",
+    "menu_skills": "Coneixements",
+    "menu_about": "Sobre mi",
+    "button_contact": "Contacta'm",
+    "main_title": "PORTFOLI",
+    "main_subtitle": "Oriol Badia",
+    "main_tags": "Modelador 3D<br>Dissenyador Web<br>Texturitzador 3D<br>Desenvolupador de videojocs 2D i 3D<br>Editor d'imatges i video<br>Modelador 3D<br>",
+    "see_cv": "Veure CV",
+    "copyright": "Copyright 2025-2026 Oriol Badia"
+  },
+  "es": {
+    "title": "Oriol Badia | Portafolio",
+    "menu_home": "Inicio",
+    "menu_projects": "Proyectos",
+    "menu_skills": "Conocimientos",
+    "menu_about": "Sobre mí",
+    "button_contact": "Contáctame",
+    "main_title": "PORTAFOLIO",
+    "main_subtitle": "Oriol Badia",
+    "main_tags": "Modelador 3D<br>Diseñador Web<br>Texturizador 3D<br>Desarrollador de videojuegos 2D y 3D<br>Editor de imágenes y vídeo<br>Modelador 3D<br>",
+    "see_cv": "Ver CV",
+    "copyright": "Copyright 2025-2026 Oriol Badia"
+  },
+  "en": {
+    "title": "Oriol Badia | Portfolio",
+    "menu_home": "Home",
+    "menu_projects": "Projects",
+    "menu_skills": "Skills",
+    "menu_about": "About Me",
+    "button_contact": "Contact Me",
+    "main_title": "PORTFOLIO",
+    "main_subtitle": "Oriol Badia",
+    "main_tags": "3D Modeler<br>Web Designer<br>3D Texturer<br>2D & 3D Game Developer<br>Image & Video Editor<br>3D Modeler<br>",
+    "see_cv": "View CV",
+    "copyright": "Copyright 2025-2026 Oriol Badia"
+  }
+}

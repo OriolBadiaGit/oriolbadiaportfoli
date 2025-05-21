@@ -20,6 +20,11 @@
 
     <!--* FRAMEWORKS I PLUGINS LINKS *-->
     <script src="Frameworks/Jquery/jquery.js"></script>
+    <!-- CSS de Select2 -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+    <!-- JS de Select2 (després de jQuery) -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="Plugins/IziModal/node_modules/izimodal/css/iziModal.css">
     <script src="Plugins/Parsley/parsley.min.js"></script>
@@ -49,18 +54,18 @@
             <a href="index.html"><img id="LogoHeader" src="ImagesVideos/LogoWhite.png" alt="Logo de la web"></a>
             <ul id="MenuItems">
                 <li id="Active">
-                    <a href="index.html">Inici</a>
+                    <a href="index.html" data-i18n="menu_home">Inici</a>
                 </li>
                 <li>
-                    <a href="projectes.html">Projectes</a>
+                    <a href="projectes.html" data-i18n="menu_projects">Projectes</a>
                 </li>
-                <li><a href="coneixaments.html">Coneixements</a></li>
+                <li><a href="coneixaments.html" data-i18n="menu_skills">Coneixements</a></li>
                 <li>
-                    <a href="sobremi.html">Sobre mi</a>
+                    <a href="sobremi.html" data-i18n="menu_about">Sobre mi</a>
                 </li>
 
             </ul>
-            <button class="ButtonContact">Contacta'm</button>
+            <button class="ButtonContact" data-i18n="button_contact">Contacta'm</button>
         </div>
     </header>
     <div id="HeaderMobile">
@@ -68,11 +73,11 @@
     </div>
     <main class="MainIndex">
         <div class="ContainerTitles">
-            <h1 class="Title">PORTFOLI</h1>
-            <h2 class="Subtitle">Oriol Badia</h2>
+            <h1 class="Title" data-i18n="main_title">PORTFOLI</h1>
+            <h2 class="Subtitle" data-i18n="main_subtitle">Oriol Badia</h2>
         </div>
         <div class="inner-headings">
-            <span>
+            <span data-i18n="main_tags">
                 Modelador 3D <br>
                 Dissenyador Web <br>
                 Texturitzador 3D <br>
@@ -83,7 +88,7 @@
         </div>
 
         <div class="ButtonCurriculum">
-            <p>Veure CV</p><i class="fa-solid fa-angle-down"></i>
+            <p data-i18n="see_cv">Veure CV</p><i class="fa-solid fa-angle-down"></i>
         </div>
     </main>
 
@@ -93,8 +98,8 @@
     </section>
 
     <footer>
-        <p>&#169; Copyright 2025-2026 Oriol Badia</p>
-        <select name="LanguageSelect" id="LanguageSelect">
+        <p data-i18n="copyright">&#169; Copyright 2025-2026 Oriol Badia</p>
+        <select id="LanguageSelect">
             <option value="ca">CA</option>
             <option value="es">ES</option>
             <option value="en">EN</option>
