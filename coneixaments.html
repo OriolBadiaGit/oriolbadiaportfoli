@@ -20,6 +20,8 @@
 
     <!--* FRAMEWORKS Y PLUGINS LINKS *-->
     <script src="Frameworks/Jquery/jquery.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="Plugins/IziModal/node_modules/izimodal/css/iziModal.css">
     <script src="Plugins/Parsley/parsley.min.js"></script>
@@ -28,7 +30,8 @@
     <link rel="stylesheet" href="Plugins/Swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="Plugins/Tippy/Animations/scale.css">
     <script defer src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
     <!--*------------------------------------------------------------------------*-->
 
     <link rel="stylesheet" href="Styles/Styles.css">
@@ -45,23 +48,29 @@
             <div class="ContainerXMobile">
                 <i class="fa-solid fa-xmark"></i>
             </div>
-            <a href="index.html">
-                <img id="LogoHeader" src="ImagesVideos/LogoWhite.png" alt="Logo de la web">
-            </a>
+            <a href="index.html"><img id="LogoHeader" src="ImagesVideos/LogoWhite.png" alt="Logo de la web"></a>
             <ul id="MenuItems">
                 <li>
-                    <a href="index.html">Inici</a>
+                    <a href="index.html" data-i18n="menu_home">Inici</a>
                 </li>
                 <li>
-                    <a href="projectes.html">Projectes</a>
+                    <a href="projectes.html" data-i18n="menu_projects">Projectes</a>
                 </li>
-                <li id="Active"><a href="coneixaments.html">Coneixements</a></li>
+                <li id="Active">
+                    <a href="coneixaments.html" data-i18n="menu_skills">Coneixements</a>
+                </li>
                 <li>
-                    <a href="sobremi.html">Sobre mi</a>
+                    <a href="sobremi.html" data-i18n="menu_about">Sobre mi</a>
                 </li>
+
             </ul>
-            <button class="ButtonContact">Contacta'm</button>
+            <button class="ButtonContact" data-i18n="button_contact">Contacta'm</button>
         </div>
+        <select id="LanguageSelect">
+            <option value="ca">CA</option>
+            <option value="es">ES</option>
+            <option value="en">EN</option>
+        </select>
     </header>
     <div id="HeaderMobile">
         <img id="LogoMobile" src="ImagesVideos/LogoWhite.png" alt="Logo de la web al movil">
@@ -75,6 +84,18 @@
                     </div>
                     <div class="NameApp">Blender</div>
                     <hr>
+                    <div class="ContainerTextApp">
+                        <p class="TextApp">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio qui excepturi
+                            neque nam soluta
+                            sapiente, vel ut pariatur asperiores mollitia incidunt sed dignissimos tempora, recusandae
+                            enim
+                            eum quam natus. Quo
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio qui excepturi
+                            neque nam soluta
+                            sapiente, vel ut pariatur asperiores mollitia incidunt sed dignissimos tempora, recusandae
+                            enim
+                            eum quam natus. Quo?</p>
+                    </div>
                 </div>
                 <div class="Card">
                     <div class="ContainerLogo">
@@ -82,31 +103,227 @@
                     </div>
                     <div class="NameApp">Photoshop</div>
                     <hr>
+                    <div class="ContainerTextApp">
+                        <p class="TextApp">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio qui excepturi
+                            neque nam soluta
+                            sapiente, vel ut pariatur asperiores mollitia incidunt sed dignissimos tempora, recusandae
+                            enim
+                            eum quam natus. Quo
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio qui excepturi
+                            neque nam soluta
+                            sapiente, vel ut pariatur asperiores mollitia incidunt sed dignissimos tempora, recusandae
+                            enim
+                            eum quam natus. Quo?</p>
+                    </div>
                 </div>
-                <div class="Card">hola</div>
+                <div class="Card">
+                    <div class="ContainerLogo">
+                        <img src="ImagesVideos/SubstancePainter_logo_no_text.png" width="130" height="120" alt="">
+                    </div>
+                    <div class="NameApp">Substance Painter</div>
+                    <hr>
+                    <div class="ContainerTextApp">
+                        <p class="TextApp">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio qui excepturi
+                            neque nam soluta
+                            sapiente, vel ut pariatur asperiores mollitia incidunt sed dignissimos tempora, recusandae
+                            enim
+                            eum quam natus. Quo
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio qui excepturi
+                            neque nam soluta
+                            sapiente, vel ut pariatur asperiores mollitia incidunt sed dignissimos tempora, recusandae
+                            enim
+                            eum quam natus. Quo?</p>
+                    </div>
+                </div>
             </div>
             <div id="ContainerFlexCards">
                 <div class="Card">
                     <div class="ContainerLogo">
-                        <img src="ImagesVideos/Blender_logo_no_text.png" width="150" height="120" alt="">
+                        <img src="ImagesVideos/VisualStudioCode_logo.png" width="150" height="120" alt="">
                     </div>
-                    <div class="NameApp">Blender</div>
+                    <div class="NameApp">Visual Studio Code</div>
                     <hr>
+                    <div class="ContainerTextApp">
+                        <p class="TextApp">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio qui excepturi
+                            neque nam soluta
+                            sapiente, vel ut pariatur asperiores mollitia incidunt sed dignissimos tempora, recusandae
+                            enim
+                            eum quam natus. Quo
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio qui excepturi
+                            neque nam soluta
+                            sapiente, vel ut pariatur asperiores mollitia incidunt sed dignissimos tempora, recusandae
+                            enim
+                            eum quam natus. Quo?</p>
+                    </div>
                 </div>
-                <div class="Card">hola</div>
-                <div class="Card">hola</div>
+                <div class="Card">
+                    <div class="ContainerLogo">
+                        <img src="ImagesVideos/DavinciResolve_logo.png" width="130" height="120" alt="">
+                    </div>
+                    <div class="NameApp">DaVinci Resolve</div>
+                    <hr>
+                    <div class="ContainerTextApp">
+                        <p class="TextApp">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio qui excepturi
+                            neque nam soluta
+                            sapiente, vel ut pariatur asperiores mollitia incidunt sed dignissimos tempora, recusandae
+                            enim
+                            eum quam natus. Quo
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio qui excepturi
+                            neque nam soluta
+                            sapiente, vel ut pariatur asperiores mollitia incidunt sed dignissimos tempora, recusandae
+                            enim
+                            eum quam natus. Quo?</p>
+                    </div>
+                </div>
+                <div class="Card">
+                    <div class="ContainerLogo">
+                        <img src="ImagesVideos/Illustrator_logo.png" width="130" height="120" alt="">
+                    </div>
+                    <div class="NameApp">Illustrator</div>
+                    <hr>
+                    <div class="ContainerTextApp">
+                        <p class="TextApp">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio qui excepturi
+                            neque nam soluta
+                            sapiente, vel ut pariatur asperiores mollitia incidunt sed dignissimos tempora, recusandae
+                            enim
+                            eum quam natus. Quo
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio qui excepturi
+                            neque nam soluta
+                            sapiente, vel ut pariatur asperiores mollitia incidunt sed dignissimos tempora, recusandae
+                            enim
+                            eum quam natus. Quo?</p>
+                    </div>
+                </div>
+            </div>
+            <div id="ContainerFlexCards">
+                <div class="Card">
+                    <div class="ContainerLogo">
+                        <img src="ImagesVideos/Indesign_logo.png" width="150" height="120" alt="">
+                    </div>
+                    <div class="NameApp">Indesign</div>
+                    <hr>
+                    <div class="ContainerTextApp">
+                        <p class="TextApp">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio qui excepturi
+                            neque nam soluta
+                            sapiente, vel ut pariatur asperiores mollitia incidunt sed dignissimos tempora, recusandae
+                            enim
+                            eum quam natus. Quo
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio qui excepturi
+                            neque nam soluta
+                            sapiente, vel ut pariatur asperiores mollitia incidunt sed dignissimos tempora, recusandae
+                            enim
+                            eum quam natus. Quo?</p>
+                    </div>
+                </div>
+                <div class="Card">
+                    <div class="ContainerLogo">
+                        <img src="ImagesVideos/Unity_logo.png" width="130" height="120" alt="">
+                    </div>
+                    <div class="NameApp">Unity</div>
+                    <hr>
+                    <div class="ContainerTextApp">
+                        <p class="TextApp">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio qui excepturi
+                            neque nam soluta
+                            sapiente, vel ut pariatur asperiores mollitia incidunt sed dignissimos tempora, recusandae
+                            enim
+                            eum quam natus. Quo
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio qui excepturi
+                            neque nam soluta
+                            sapiente, vel ut pariatur asperiores mollitia incidunt sed dignissimos tempora, recusandae
+                            enim
+                            eum quam natus. Quo?</p>
+                    </div>
+                </div>
+                <div class="Card">
+                    <div class="ContainerLogo">
+                        <img src="ImagesVideos/UnrealEngine_logo.png" width="130" height="120" alt="">
+                    </div>
+                    <div class="NameApp">Unreal Engine</div>
+                    <hr>
+                    <div class="ContainerTextApp">
+                        <p class="TextApp">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio qui excepturi
+                            neque nam soluta
+                            sapiente, vel ut pariatur asperiores mollitia incidunt sed dignissimos tempora, recusandae
+                            enim
+                            eum quam natus. Quo
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio qui excepturi
+                            neque nam soluta
+                            sapiente, vel ut pariatur asperiores mollitia incidunt sed dignissimos tempora, recusandae
+                            enim
+                            eum quam natus. Quo?</p>
+                    </div>
+                </div>
+            </div>
+            <div id="ContainerFlexCards">
+                <div class="Card">
+                    <div class="ContainerLogo">
+                        <img src="ImagesVideos/Office_logo.png" width="150" height="120" alt="">
+                    </div>
+                    <div class="NameApp">Ofimàtica</div>
+                    <hr>
+                    <div class="ContainerTextApp">
+                        <p class="TextApp">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio qui excepturi
+                            neque nam soluta
+                            sapiente, vel ut pariatur asperiores mollitia incidunt sed dignissimos tempora, recusandae
+                            enim
+                            eum quam natus. Quo
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio qui excepturi
+                            neque nam soluta
+                            sapiente, vel ut pariatur asperiores mollitia incidunt sed dignissimos tempora, recusandae
+                            enim
+                            eum quam natus. Quo?</p>
+                    </div>
+                </div>
+                <div class="Card">
+                    <div class="ContainerLogo">
+                        <img src="ImagesVideos/Maya_logo.png" width="130" height="120" alt="">
+                    </div>
+                    <div class="NameApp">Maya</div>
+                    <hr>
+                    <div class="ContainerTextApp">
+                        <p class="TextApp">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio qui excepturi
+                            neque nam soluta
+                            sapiente, vel ut pariatur asperiores mollitia incidunt sed dignissimos tempora, recusandae
+                            enim
+                            eum quam natus. Quo
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio qui excepturi
+                            neque nam soluta
+                            sapiente, vel ut pariatur asperiores mollitia incidunt sed dignissimos tempora, recusandae
+                            enim
+                            eum quam natus. Quo?</p>
+                    </div>
+                </div>
+                <div class="Card">
+                    <div class="ContainerLogo">
+                        <img src="ImagesVideos/UnrealEngine_logo.png" width="130" height="120" alt="">
+                    </div>
+                    <div class="NameApp">Unreal Engine</div>
+                    <hr>
+                    <div class="ContainerTextApp">
+                        <p class="TextApp">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio qui excepturi
+                            neque nam soluta
+                            sapiente, vel ut pariatur asperiores mollitia incidunt sed dignissimos tempora, recusandae
+                            enim
+                            eum quam natus. Quo
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio qui excepturi
+                            neque nam soluta
+                            sapiente, vel ut pariatur asperiores mollitia incidunt sed dignissimos tempora, recusandae
+                            enim
+                            eum quam natus. Quo?</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <!--*-------------------------*-->
-    <footer>
+    <!--<footer>
         <p>&#169; Copyright 2025-2026 Oriol Badia</p>
-        <select name="LanguageSelect" id="LanguageSelect">
+         <select name="LanguageSelect" id="LanguageSelect">
             <option value="ca">CA</option>
             <option value="es">ES</option>
             <option value="en">EN</option>
-        </select>
-    </footer>
+        </select> 
+    </footer>-->
     <script src="https://kit.fontawesome.com/008e638cf2.js" crossorigin="anonymous"></script>
     <script src="Plugins/AOS/AOS.js"></script>
     <script src="Plugins/IziModal/node_modules/izimodal/js/iziModal.js"></script>
@@ -121,6 +338,7 @@
     <script src="Plugins/Tippy/Production/core@2.js"></script>
     <script src="Plugins/Tippy/Production/tippy@6.js"></script>
     <script src="Plugins/Tippy/PersonalTippy.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
     <script src="Programming/Program.js"></script>
 </body>
 
