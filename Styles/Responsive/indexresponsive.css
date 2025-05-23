@@ -350,6 +350,19 @@
         font-size: 120%;
     }
 
+    button {
+        padding: 1%;
+        width: 17%;
+    }
+
+    #LanguageSelect {
+        margin-left: 85%;
+        margin-top: 10%;
+        padding: 1%;
+        width: 6%;
+
+    }
+
     .ContainerTitles {
         width: 60%;
         margin-left: 20%;
@@ -383,7 +396,7 @@
     .ButtonCurriculum {
         display: flex;
         flex-direction: column;
-        margin-top: 36%;
+        margin-top: 47%;
         margin-left: 40%;
         text-align: center;
         font-size: 200%;
@@ -471,6 +484,14 @@
         flex-direction: column;
     }
 
+    #LanguageSelect {
+        margin-left: 85%;
+        margin-top: 2%;
+        padding: 2%;
+        width: 10%;
+
+    }
+
     .fa-xmark {
         visibility: visible;
         font-size: 3rem;
@@ -488,7 +509,7 @@
     #LogoMobile {
         display: flex;
         position: absolute;
-        margin-left: 42%;
+        margin-left: 46%;
         margin-top: 8%;
         width: 90px;
         height: 90px;
@@ -629,7 +650,7 @@
     #LogoMobile {
         display: flex;
         position: absolute;
-        margin-left: 42%;
+        margin-left: 46%;
         margin-top: 8%;
         width: 90px;
         height: 90px;
@@ -803,7 +824,7 @@
     #LogoMobile {
         display: flex;
         position: absolute;
-        margin-left: 42%;
+        margin-left: 46%;
         margin-top: 8%;
         width: 90px;
         height: 90px;
@@ -943,7 +964,7 @@
     #LogoMobile {
         display: flex;
         position: absolute;
-        margin-left: 42%;
+        margin-left: 46%;
         margin-top: 8%;
         width: 90px;
         height: 90px;
@@ -1004,6 +1025,14 @@
         color: white;
     }
 
+    #LanguageSelect {
+        margin-left: 85%;
+        margin-top: 2%;
+        padding: 2%;
+        width: 10%;
+
+    }
+
     .ContainerTitles {
         width: 100%;
         margin-left: 0%;
@@ -1037,7 +1066,7 @@
     .ButtonCurriculum {
         display: flex;
         flex-direction: column;
-        margin-top: 50.5%;
+        margin-top: 55.5%;
         margin-left: 36%;
         text-align: center;
         font-size: 200%;
@@ -1056,20 +1085,6 @@
 
     footer {
         flex-direction: column;
-    }
-
-    #LanguageSelect {
-        margin-top: 2%;
-        padding: 2%;
-        appearance: none;
-        width: 15%;
-        text-align: center;
-        border-radius: 10px;
-        color: white;
-        border: 1.5px solid rgba(255, 255, 255, 0.2);
-        background: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
     }
 }
 
@@ -1101,7 +1116,7 @@
     #LogoMobile {
         display: flex;
         position: absolute;
-        margin-left: 42%;
+        margin-left: 46%;
         margin-top: 8%;
         width: 90px;
         height: 90px;
@@ -1242,7 +1257,7 @@
     #LogoMobile {
         display: flex;
         position: absolute;
-        margin-left: 42%;
+        margin-left: 46%;
         margin-top: 8%;
         width: 90px;
         height: 90px;
@@ -1382,7 +1397,7 @@
     #LogoMobile {
         display: flex;
         position: absolute;
-        margin-left: 42%;
+        margin-left: 46%;
         margin-top: 8%;
         width: 90px;
         height: 90px;
@@ -1523,7 +1538,7 @@
     #LogoMobile {
         display: flex;
         position: absolute;
-        margin-left: 42%;
+        margin-left: 46%;
         margin-top: 8%;
         width: 90px;
         height: 90px;
@@ -1664,7 +1679,7 @@
     #LogoMobile {
         display: flex;
         position: absolute;
-        margin-left: 42%;
+        margin-left: 46%;
         margin-top: 8%;
         width: 90px;
         height: 90px;
@@ -1805,7 +1820,7 @@
     #LogoMobile {
         display: flex;
         position: absolute;
-        margin-left: 42%;
+        margin-left: 46%;
         margin-top: 8%;
         width: 90px;
         height: 90px;
@@ -2031,7 +2046,7 @@
     .ButtonCurriculum {
         display: flex;
         flex-direction: column;
-        margin-top: 50.5%;
+        margin-top: 60.5%;
         margin-left: 36%;
         text-align: center;
         font-size: 200%;
@@ -2476,6 +2491,18 @@
     }
 
 
+}
+
+
+
+@media (max-width: 590px) {
+    #CVImage {
+        scale: 30%;
+        margin-top: -120%;
+        margin-bottom: -120%;
+        border-radius: 30px;
+        z-index: 0;
+    }
 }
 
 @media (max-width: 558px) {
@@ -3681,6 +3708,8 @@
         font-size: 2rem;
     }
 
+
+
     button {
         background: none;
         padding: 2%;
@@ -3692,10 +3721,18 @@
         color: white;
     }
 
+    #LanguageSelect {
+        margin-left: 80%;
+        margin-top: 3%;
+        padding: 3%;
+        width: 15%;
+
+    }
+
     .ContainerTitles {
         width: 100%;
         margin-left: 0%;
-        margin-top: 45%;
+        margin-top: 120%;
     }
 
     .Title {
@@ -3725,7 +3762,7 @@
     .ButtonCurriculum {
         display: flex;
         flex-direction: column;
-        margin-top: 50%;
+        margin-top: 100%;
         margin-left: 29%;
         text-align: center;
         font-size: 200%;
