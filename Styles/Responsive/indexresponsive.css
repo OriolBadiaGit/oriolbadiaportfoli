@@ -647,6 +647,11 @@
         padding: 12% 0%;
     }
 
+    .GeneralContainerSlider {
+        /* background-color: #ddd; */
+        margin-top: 30%;
+    }
+
 }
 
 @media (max-width: 736px) {
@@ -3695,6 +3700,13 @@
 
 }
 
+
+@media (max-width: 412px) {
+    .GeneralContainerSlider {
+        background-color: #ddd;
+        margin-top: 50%;
+    }
+}
 
 @media (max-width: 392px) {
     #LogoHeader {
