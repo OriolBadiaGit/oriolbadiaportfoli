@@ -64,6 +64,11 @@
 
     }
 
+    #GeneralContainerCards {
+        /* background-color: #ddd; */
+        margin-top: 8%;
+    }
+
     #ContainerFlexCards {
         padding-bottom: 7%;
     }
@@ -3790,12 +3795,9 @@
 
 }
 
-
-@media (max-width: 436px) {}
-
 @media (max-width: 412px) {
     .GeneralContainerSlider {
-        background-color: #ddd;
+        /* background-color: #ddd; */
         margin-top: 50%;
     }
 }
@@ -4455,6 +4457,13 @@
 }
 
 @media (max-width: 360px) {
+
+    .Copyright {
+        /* background-color: darkgray; */
+        padding-left: 0%;
+        width: 100%;
+    }
+
     #LogoHeader {
         display: none;
     }
@@ -4624,18 +4633,24 @@
         flex: 0 1 100%;
     }
 
-    #ContainerFlexCards {
-        width: 100%;
-        /* background-color: #111962; */
-        height: 70%;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12%;
-        justify-content: space-evenly;
-        margin-top: 2%;
-        padding-bottom: 40%;
+    #GeneralContainerCards {
+        /* background-color: #ddd; */
+        margin-top: 25%;
     }
 
+    #ContainerFlexCards {
+        margin-top: 2%;
+        padding-bottom: 200%;
+    }
+
+    .TextApp {
+        font-size: 70%;
+    }
+
+    .TxtAboutMe {
+        width: 80%;
+        padding: 2%;
+    }
 }
 
 @media (max-width: 358px) {
