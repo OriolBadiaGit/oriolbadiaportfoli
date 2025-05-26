@@ -26,6 +26,7 @@ footer {
 
 .Copyright {
   /* background-color: darkgray; */
+  padding-left: 10%;
   width: 55%;
 }
 
@@ -659,6 +660,10 @@ hr {
   overflow: scroll;
   display: flex;
   justify-content: center;
+}
+.ContainerTextApp::-webkit-scrollbar {
+  display: none;
+
 }
 
 .TextApp {
