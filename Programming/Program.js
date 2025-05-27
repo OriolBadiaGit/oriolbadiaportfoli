@@ -1,3 +1,45 @@
+$("#modal").iziModal({
+    background: 'null',
+    theme: '',  // light
+    icon: null,
+    iconText: null,
+    iconColor: '',
+    rtl: false,
+    width: 900,
+    top: null,
+    bottom: null,
+    borderBottom: true,
+    padding: 0,
+    radius: 3,
+    zindex: 999,
+    iframe: false,
+    iframeHeight: 400,
+    iframeURL: null,
+    focusInput: true,
+    group: '',
+    loop: false,
+    arrowKeys: true,
+    navigateCaption: true,
+    navigateArrows: true, // Boolean, 'closeToModal', 'closeScreenEdge'
+    history: false,
+    restoreDefaultContent: false,
+    autoOpen: 1, // Boolean, Number
+    bodyOverflow: false,
+    fullscreen: false,
+    openFullscreen: false,
+    closeOnEscape: true,
+    closeButton: true,
+    appendTo: 'body', // or false
+    appendToOverlay: 'body', // or false
+    overlay: true,
+    overlayClose: true,
+    overlayColor: 'rgba(0, 0, 0, 0.4)',
+    transitionIn: 'comingIn',
+    transitionOut: 'comingOut',
+    transitionInOverlay: 'fadeIn',
+    transitionOutOverlay: 'fadeOut',
+});
+
 const toggle = document.getElementById ('LogoMobile');
 const menu = document.getElementById ('Menu');
 const logomobilecontainer = document.getElementById ('HeaderMobile');

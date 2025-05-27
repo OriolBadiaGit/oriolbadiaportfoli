@@ -173,6 +173,118 @@ button {
   color: white;
 }
 
+#modal {
+  background-color: #116242;
+}
+
+#nom:invalid,
+#correu_e:invalid {
+  border-color: #a72828;
+}
+
+#nom:valid {
+  border-color: #28a745;
+  transition: 0.5s;
+}
+
+#SubmitButton {
+  background: none;
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  margin: 2% 0%;
+  padding: 1%;
+  width: 9%;
+}
+
+
+form {
+  text-align: center;
+}
+
+.TitleForm {
+  margin-top: 4%;
+}
+
+.TitleForm,
+.SubtitleForm {
+  text-align: center;
+  color: white;
+  /* background-color: #072b1c; */
+}
+
+.ContainerFormFlex {
+  display: flex;
+  /* background-color: #22ce89; */
+  gap: 5%;
+  width: 45%;
+  justify-content: flex-start;
+}
+
+#nom,
+#correu_e {
+  border: none;
+  outline: none;
+  background: none;
+  border-bottom: 1px solid white;
+  width: 50%;
+  text-align: center;
+  color: white;
+  padding: 1%;
+}
+
+label {
+  color: white;
+}
+
+#nom::placeholder,
+#correu_e::placeholder,
+#comentaris::placeholder {
+  color: rgba(255, 255, 255, 0.326);
+
+}
+
+#servei {
+  padding: 1%;
+  width: 85%;
+  border: none;
+  outline: none;
+  background: none;
+  border-bottom: 1px solid white;
+  -moz-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: '';
+  color: rgb(255, 255, 255);
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
+#Names_emailContainerForm {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5%;
+}
+
+#Names_emailContainerForm,
+#ServiceContainerForm,
+#CommentsContainerForm {
+  /* background-color: #116241; */
+  margin-top: 2%;
+  padding: 2%;
+}
+
+#comentaris {
+  border: none;
+  outline: none;
+  background: none;
+  resize: none;
+  width: 85%;
+  border-bottom: 1px solid white;
+}
+
+
+
 button:hover {
   cursor: pointer;
   background-color: #5e967b;
@@ -752,6 +864,7 @@ hr {
   display: flex;
   justify-content: center;
 }
+
 .ContainerTextApp::-webkit-scrollbar {
   display: none;
 
