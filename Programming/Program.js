@@ -23,7 +23,7 @@ $("#modal").iziModal({
     navigateArrows: true, // Boolean, 'closeToModal', 'closeScreenEdge'
     history: false,
     restoreDefaultContent: false,
-    autoOpen: 1, // Boolean, Number
+    autoOpen: 0, // Boolean, Number
     bodyOverflow: false,
     fullscreen: false,
     openFullscreen: false,
