@@ -549,6 +549,37 @@ button:hover {
 /*------------------*/
 
 
+/* Code for background section project Car Rigging */
+
+#BGoptionPlatformerGame {
+  position: relative;
+  overflow: hidden;
+}
+
+#BGoptionPlatformerGame::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../ImagesVideos/BG_ProjectPlatformerGame.png);
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px) grayscale(100%);
+  transition: 0.5s;
+  z-index: 0;
+}
+
+#BGoptionPlatformerGame:hover::before {
+  cursor: pointer;
+  filter: blur(0px) grayscale(0%);
+  transition: 0.5s;
+}
+
+/*------------------*/
+
+
 .ContainerSliderCompar {
   width: 100%;
   /* background-color: antiquewhite; */
