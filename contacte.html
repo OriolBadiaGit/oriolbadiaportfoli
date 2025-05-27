@@ -59,12 +59,12 @@
                 <li>
                     <a class="linkmenu" href="coneixaments.html" data-i18n="menu_skills">Coneixements</a>
                 </li>
-                <li id="Active">
+                <li>
                     <a class="linkmenu" href="sobremi.html" data-i18n="menu_about">Sobre mi</a>
                 </li>
 
             </ul>
-            <div class="ButtonContact"><a class="linkcontact" href="contacte.html">Contacta'm</a></div>
+            <div class="ButtonContact" id="Active"><a class="linkcontact" href="contacte.html">Contacta'm</a></div>
         </div>
         <select id="LanguageSelect">
             <option value="ca">CA</option>
@@ -75,13 +75,46 @@
     <div id="HeaderMobile">
         <img id="LogoMobile" src="ImagesVideos/LogoWhite.png" alt="Logo de la web al movil">
     </div>
-    <div class="ContainerTextAbtMe">
-        <div class="TxtAboutMe" data-i18n="textaboutme">Hola! Em dic Oriol Badia. Tinc 21 anys i visc a Girona, la meva
-            passió és el món 3D, els
-            videojocs i el desenvolupament web. Afable, amb ganes
-            d’aprendre i tenir reptes. M’agrada treballar en equip i aportar idees als projectes. Com a estudiant que
-            soc, busco una feina per als mesos d’estiu que m’aporti experiència laboral, preferentment a Calonge-Sant
-            Antoni o Palamós.</div>
+    <div id="FormGeneral">
+        <div class="ContainerForm">
+            <h1 class="TitleForm">Formulari de contacte</h1>
+            <p class="SubtitleForm">Contacta'm a través d'aquest formulari per si necessites els meus serveis! </p>
+            <div class="GeneralContainerForm">
+                <form>
+                    <div id="NameContainerForm">
+                        <label for="nom">Nom i cognoms*</label><br>
+                        <input
+                            pattern="^([A-ZÀ-Ÿ][a-zà-ÿ]+(?:-[A-ZÀ-Ÿ][a-zà-ÿ]+)?)+ ([A-ZÀ-Ÿ][a-zà-ÿ]+(?:-[A-ZÀ-Ÿ][a-zà-ÿ]+)?)+ ([A-ZÀ-Ÿ][a-zà-ÿ]+(?:-[A-ZÀ-Ÿ][a-zà-ÿ]+)?)$"
+                            data-parsley-error-message="Si us plau, introdueix un nom vàlid." type="text" id="nom"
+                            name="nom" placeholder="Jordi Comas Ardates" required> <br>
+                    </div>
+
+                    <div id="EmailContainerForm">
+                        <label for="correu_e">Correu electrònic*</label><br>
+                        <input pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                            data-parsley-error-message="Si us plau, introdueix un correu elctrònic vàlid." type="email"
+                            id="correu_e" name="correu_e" placeholder="nomcognom@gmail.com" required>
+                    </div>
+                    <div id="ServiceContainerForm">
+                        <label for="quin_servei_requereixes">Quin servei requereixes?*</label><br>
+                        <select id="servei" name="quin_servei_requereixes" required>
+                            <option hidden value="" disabled selected>Selecciona una opció</option>
+                            <option value="Mod3d">Modelador 3D</option>
+                            <option value="DissWeb">Dissenyor web</option>
+                            <option value="Text3D">Texturitzador 3D</option>
+                            <option value="DesJoc2D3D">Desenvolupament videojoc 2D / 3D</option>
+                            <option value="EditImagVid">Editor d'imatge / vídeo</option>
+                        </select>
+                    </div>
+                    <div id="CommentsContainerForm">
+                        <label for="comentaris">Comentaris</label> <br>
+                        <textarea id="comentaris" name="comentaris" placeholder="Deixa un comentari."
+                            required></textarea>
+                    </div>
+                    <button id="SubmitButton" type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
     </div>
     <!--*-------------------------*-->
     <footer>

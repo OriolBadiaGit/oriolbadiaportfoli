@@ -51,57 +51,19 @@
             <a href="index.html"><img id="LogoHeader" src="ImagesVideos/LogoWhite.png" alt="Logo de la web"></a>
             <ul id="MenuItems">
                 <li id="Active">
-                    <a href="index.html" data-i18n="menu_home">Inici</a>
+                    <a class="linkmenu" href="index.html" data-i18n="menu_home">Inici</a>
                 </li>
                 <li>
-                    <a href="projectes.html" data-i18n="menu_projects">Projectes</a>
+                    <a class="linkmenu" href="projectes.html" data-i18n="menu_projects">Projectes</a>
                 </li>
-                <li><a href="coneixaments.html" data-i18n="menu_skills">Coneixements</a></li>
+                <li><a class="linkmenu" href="coneixaments.html" data-i18n="menu_skills">Coneixements</a></li>
                 <li>
-                    <a href="sobremi.html" data-i18n="menu_about">Sobre mi</a>
+                    <a class="linkmenu" href="sobremi.html" data-i18n="menu_about">Sobre mi</a>
                 </li>
 
             </ul>
-            <button class="ButtonContact" data-i18n="button_contact" data-izimodal-open="#modal">Contacta'm</button>
-            <div id="modal">
-                <h1 class="TitleForm">Formulari de contacte</h1>
-                <p class="SubtitleForm">Contacta'm a través d'aquest formulari per si necessites els meus serveis! </p>
-                <div class="GeneralContainerForm">
-                    <form>
-                        <div id="NameContainerForm">
-                            <label for="nom">Nom i cognoms*</label><br>
-                            <input
-                                pattern="^([A-ZÀ-Ÿ][a-zà-ÿ]+(?:-[A-ZÀ-Ÿ][a-zà-ÿ]+)?)+ ([A-ZÀ-Ÿ][a-zà-ÿ]+(?:-[A-ZÀ-Ÿ][a-zà-ÿ]+)?)+ ([A-ZÀ-Ÿ][a-zà-ÿ]+(?:-[A-ZÀ-Ÿ][a-zà-ÿ]+)?)$"
-                                data-parsley-error-message="Si us plau, introdueix un nom vàlid." type="text" id="nom"
-                                name="nom" placeholder="Jordi Comas Ardates" required> <br>
-                        </div>
+            <div class="ButtonContact"><a class="linkcontact" href="contacte.html">Contacta'm</a></div>
 
-                        <div id="EmailContainerForm">
-                            <label for="correu_e">Correu-e*</label><br>
-                            <input pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-                                data-parsley-error-message="Si us plau, introdueix un correu elctrònic vàlid."
-                                type="email" id="correu_e" name="correu_e" placeholder="nomcognom@gmail.com" required>
-                        </div>
-                        <div id="ServiceContainerForm">
-                            <label for="quin_servei_requereixes">Quin servei requereixes?*</label><br>
-                            <select id="servei" name="quin_servei_requereixes" required>
-                                <option hidden value="" disabled selected>Selecciona una opció</option>
-                                <option value="Mod3d">Modelador 3D</option>
-                                <option value="DissWeb">Dissenyor web</option>
-                                <option value="Text3D">Texturitzador 3D</option>
-                                <option value="DesJoc2D3D">Desenvolupament videojoc 2D / 3D</option>
-                                <option value="EditImagVid">Editor d'imatge / vídeo</option>
-                            </select>
-                        </div>
-                        <div id="CommentsContainerForm">
-                            <label for="comentaris">Comentaris</label> <br>
-                            <textarea id="comentaris" name="comentaris" placeholder="Deixa un comentari."
-                                required></textarea>
-                        </div>
-                        <button id="SubmitButton" type="submit">Enviar</button>
-                    </form>
-                </div>
-            </div>
         </div>
         <select id="LanguageSelect">
             <option value="ca">CA</option>
@@ -127,7 +89,6 @@
                 Modelador 3D <br>
             </span>
         </div>
-
         <div class="ButtonCurriculum">
             <p data-i18n="see_cv">Veure CV</p><i class="fa-solid fa-angle-down"></i>
         </div>

@@ -90,14 +90,15 @@ header {
   justify-content: center;
 }
 
-a {
+.linkmenu {
   text-decoration: none;
 }
 
-#MenuItems #Active a {
+#MenuItems #Active .linkcontact {
   color: #22ce89;
   font-weight: bolder;
 }
+
 
 #MenuItems a {
   color: white;
@@ -162,7 +163,8 @@ li:hover {
   transition: 0.5s;
 }
 
-button {
+.ButtonContact {
+  text-align: center;
   background: none;
   padding: 1%;
   width: 9%;
@@ -172,13 +174,39 @@ button {
   color: white;
 }
 
-#modal {
-  background-color: #116242;
+a {
+  color: white;
+  text-decoration: none;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #5e967b;
+}
+
+#FormGeneral {
+  width: 100%;
+  height: 100vh;
+  /* display: block; */
+  display: flex;
+  justify-content: center;
+  /* background-color: #a72828; */
+  padding-bottom: 5%;
+}
+
+.ContainerForm {
+  /* background-color: #22ce89; */
+  backdrop-filter: blur(5px);
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  width: 90%;
+  text-align: center;
+  margin-top: 6.5%;
 }
 
 #nom:invalid,
 #correu_e:invalid #servei:invalid {
-  border-color: #a72828;
+  border-color: #c95757;
   transition: 0.5s;
 }
 
@@ -187,13 +215,6 @@ button {
 #servei:valid {
   border-color: #28a745;
   transition: 0.5s;
-}
-
-
-
-
-form {
-  text-align: center;
 }
 
 .TitleForm {
@@ -212,10 +233,9 @@ form {
   border: none;
   outline: none;
   background: none;
-
   border-bottom: 1px solid white;
-  width: 85%;
-  text-align: center;
+  width: 83%;
+  /* text-align: center; */
   color: white;
   padding: 1%;
 
@@ -261,7 +281,7 @@ label {
 #ServiceContainerForm,
 #CommentsContainerForm {
   /* background-color: #116241; */
-  margin-top: 2%;
+  margin-top: 1%;
   padding: 2%;
 }
 
@@ -280,13 +300,11 @@ label {
   border: 1.5px solid rgba(255, 255, 255, 0.2);
   margin: 2% 0%;
   padding: 1%;
+  color: white;
   width: 9%;
 }
 
-button:hover {
-  cursor: pointer;
-  background-color: #5e967b;
-}
+
 
 .MainIndex {
 
