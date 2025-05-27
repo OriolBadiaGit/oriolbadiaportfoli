@@ -549,7 +549,7 @@ button:hover {
 /*------------------*/
 
 
-/* Code for background section project Car Rigging */
+/* Code for background section project PlatformerGame */
 
 #BGoptionPlatformerGame {
   position: relative;
@@ -572,6 +572,66 @@ button:hover {
 }
 
 #BGoptionPlatformerGame:hover::before {
+  cursor: pointer;
+  filter: blur(0px) grayscale(0%);
+  transition: 0.5s;
+}
+
+/*------------------*/
+
+/* Code for background section project WebserieTWD */
+
+#BGoptionWebserieTWD {
+  position: relative;
+  overflow: hidden;
+}
+
+#BGoptionWebserieTWD::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../ImagesVideos/BG_ProjectWebserieTWDOption.jpeg);
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px) grayscale(100%);
+  transition: 0.5s;
+  z-index: 0;
+}
+
+#BGoptionWebserieTWD:hover::before {
+  cursor: pointer;
+  filter: blur(0px) grayscale(0%);
+  transition: 0.5s;
+}
+
+/*------------------*/
+
+/* Code for background section project WebHypercars */
+
+#BGoptionWebHypercars {
+  position: relative;
+  overflow: hidden;
+}
+
+#BGoptionWebHypercars::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../ImagesVideos/BG_ProjectWebHypercarsOption.jpeg);
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px) grayscale(100%);
+  transition: 0.5s;
+  z-index: 0;
+}
+
+#BGoptionWebHypercars:hover::before {
   cursor: pointer;
   filter: blur(0px) grayscale(0%);
   transition: 0.5s;
