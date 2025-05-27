@@ -177,22 +177,19 @@ button {
 }
 
 #nom:invalid,
-#correu_e:invalid {
+#correu_e:invalid #servei:invalid {
   border-color: #a72828;
+  transition: 0.5s;
 }
 
-#nom:valid {
+#nom:valid,
+#correu_e:valid,
+#servei:valid {
   border-color: #28a745;
   transition: 0.5s;
 }
 
-#SubmitButton {
-  background: none;
-  border: 1.5px solid rgba(255, 255, 255, 0.2);
-  margin: 2% 0%;
-  padding: 1%;
-  width: 9%;
-}
+
 
 
 form {
@@ -210,24 +207,23 @@ form {
   /* background-color: #072b1c; */
 }
 
-.ContainerFormFlex {
-  display: flex;
-  /* background-color: #22ce89; */
-  gap: 5%;
-  width: 45%;
-  justify-content: flex-start;
-}
-
 #nom,
 #correu_e {
   border: none;
   outline: none;
   background: none;
+
   border-bottom: 1px solid white;
-  width: 50%;
+  width: 85%;
   text-align: center;
   color: white;
   padding: 1%;
+
+}
+
+#nom:invalid:placeholder-shown,
+#correu_e:invalid:placeholder-shown {
+  border-color: #ccc;
 }
 
 label {
@@ -258,14 +254,10 @@ label {
   appearance: none;
 }
 
-#Names_emailContainerForm {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 5%;
-}
 
-#Names_emailContainerForm,
+
+#NameContainerForm,
+#EmailContainerForm,
 #ServiceContainerForm,
 #CommentsContainerForm {
   /* background-color: #116241; */
@@ -282,7 +274,13 @@ label {
   border-bottom: 1px solid white;
 }
 
-
+#SubmitButton {
+  background: none;
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  margin: 2% 0%;
+  padding: 1%;
+  width: 9%;
+}
 
 button:hover {
   cursor: pointer;

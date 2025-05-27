@@ -68,21 +68,19 @@
                 <p class="SubtitleForm">Contacta'm a través d'aquest formulari per si necessites els meus serveis! </p>
                 <div class="GeneralContainerForm">
                     <form>
-                        <div id="Names_emailContainerForm">
-                            <div class="ContainerFormFlex">
-                                <label for="nom">Nom i cognoms*</label><br>
-                                <input
-                                    pattern="^([A-ZÀ-Ÿ][a-zà-ÿ]+(?:-[A-ZÀ-Ÿ][a-zà-ÿ]+)?)+ ([A-ZÀ-Ÿ][a-zà-ÿ]+(?:-[A-ZÀ-Ÿ][a-zà-ÿ]+)?)+ ([A-ZÀ-Ÿ][a-zà-ÿ]+(?:-[A-ZÀ-Ÿ][a-zà-ÿ]+)?)$"
-                                    data-parsley-error-message="Si us plau, introdueix un nom vàlid." type="text"
-                                    id="nom" name="nom" placeholder="Jordi Comas Ardates" required> <br>
-                            </div>
-                            <div class="ContainerFormFlex">
-                                <label for="correu_e">Correu-e*</label><br>
-                                <input pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-                                    data-parsley-error-message="Si us plau, introdueix un correu elctrònic vàlid."
-                                    type="email" id="correu_e" name="correu_e" placeholder="nomcognom@gmail.com"
-                                    required>
-                            </div>
+                        <div id="NameContainerForm">
+                            <label for="nom">Nom i cognoms*</label><br>
+                            <input
+                                pattern="^([A-ZÀ-Ÿ][a-zà-ÿ]+(?:-[A-ZÀ-Ÿ][a-zà-ÿ]+)?)+ ([A-ZÀ-Ÿ][a-zà-ÿ]+(?:-[A-ZÀ-Ÿ][a-zà-ÿ]+)?)+ ([A-ZÀ-Ÿ][a-zà-ÿ]+(?:-[A-ZÀ-Ÿ][a-zà-ÿ]+)?)$"
+                                data-parsley-error-message="Si us plau, introdueix un nom vàlid." type="text" id="nom"
+                                name="nom" placeholder="Jordi Comas Ardates" required> <br>
+                        </div>
+
+                        <div id="EmailContainerForm">
+                            <label for="correu_e">Correu-e*</label><br>
+                            <input pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                                data-parsley-error-message="Si us plau, introdueix un correu elctrònic vàlid."
+                                type="email" id="correu_e" name="correu_e" placeholder="nomcognom@gmail.com" required>
                         </div>
                         <div id="ServiceContainerForm">
                             <label for="quin_servei_requereixes">Quin servei requereixes?*</label><br>
