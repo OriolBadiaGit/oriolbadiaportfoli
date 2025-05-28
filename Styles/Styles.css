@@ -892,4 +892,5 @@ hr {
 .TextApp {
   text-align: justify;
   width: 95%;
+  line-height: 2em;
 }
