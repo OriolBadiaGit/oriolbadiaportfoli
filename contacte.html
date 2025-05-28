@@ -77,12 +77,13 @@
     </div>
     <div id="FormGeneral">
         <div class="ContainerForm">
-            <h1 class="TitleForm">Formulari de contacte</h1>
-            <p class="SubtitleForm">Contacta'm a través d'aquest formulari per si necessites els meus serveis! </p>
+            <h1 class="TitleForm" data-i18n="Contact_TitleForm">Formulari de contacte</h1>
+            <p class="SubtitleForm" data-i18n="Contact_SubTitleForm">Contacta'm a través d'aquest formulari per si
+                necessites els meus serveis! </p>
             <div class="GeneralContainerForm">
                 <form>
                     <div id="NameContainerForm">
-                        <label for="nom">Nom i cognoms*</label><br>
+                        <label for="nom" data-i18n="Name_SurnameForm">Nom i cognoms*</label><br>
                         <input
                             pattern="^([A-ZÀ-Ÿ][a-zà-ÿ]+(?:-[A-ZÀ-Ÿ][a-zà-ÿ]+)?)+ ([A-ZÀ-Ÿ][a-zà-ÿ]+(?:-[A-ZÀ-Ÿ][a-zà-ÿ]+)?)+ ([A-ZÀ-Ÿ][a-zà-ÿ]+(?:-[A-ZÀ-Ÿ][a-zà-ÿ]+)?)$"
                             data-parsley-error-message="Si us plau, introdueix un nom vàlid." type="text" id="nom"
@@ -90,24 +91,26 @@
                     </div>
 
                     <div id="EmailContainerForm">
-                        <label for="correu_e">Correu electrònic*</label><br>
+                        <label for="correu_e" data-i18n="EmailForm">Correu electrònic*</label><br>
                         <input pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
                             data-parsley-error-message="Si us plau, introdueix un correu elctrònic vàlid." type="email"
-                            id="correu_e" name="correu_e" placeholder="nomcognom@gmail.com" required>
+                            id="correu_e" name="correu_e" placeholder="marblau@gmail.com" required>
                     </div>
                     <div id="ServiceContainerForm">
-                        <label for="quin_servei_requereixes">Quin servei requereixes?*</label><br>
+                        <label for="quin_servei_requereixes" data-i18n="ServicesForm">Quin servei
+                            requereixes?*</label><br>
                         <select id="servei" name="quin_servei_requereixes" required>
-                            <option hidden value="" disabled selected>Selecciona una opció</option>
-                            <option value="Mod3d">Modelador 3D</option>
-                            <option value="DissWeb">Dissenyor web</option>
-                            <option value="Text3D">Texturitzador 3D</option>
-                            <option value="DesJoc2D3D">Desenvolupament videojoc 2D / 3D</option>
-                            <option value="EditImagVid">Editor d'imatge / vídeo</option>
+                            <option value="" disabled selected data-i18n="OptionHiddenSelectForm">Selecciona una opció
+                            </option>
+                            <option value="Mod3d" data-i18n="OptionSelectMod3dForm">Modelador 3D</option>
+                            <option value="DissWeb" data-i18n="OptionSelectDissWebForm">Dissenyador Web</option>
+                            <option value="Text3D" data-i18n="OptionSelectText3DForm">Texturitzador 3D</option>
+                            <option value="DesJoc2D3D" data-i18n="OptionSelectDevGame2D3DForm">Desenvolupament videojoc 2D / 3D</option>
+                            <option value="EditImagVid" data-i18n="OptionSelectEditImagVidForm">Editor d'imatge, vídeo i so</option>
                         </select>
                     </div>
                     <div id="CommentsContainerForm">
-                        <label for="comentaris">Comentaris</label> <br>
+                        <label for="comentaris" data-i18n="CommentsForm">Comentaris</label> <br>
                         <textarea id="comentaris" name="comentaris" placeholder="Deixa un comentari."
                             required></textarea>
                     </div>

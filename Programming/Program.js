@@ -57,6 +57,28 @@ function loadLanguage(lang) {
     ).innerHTML = `&#169; ${t.copyright}`;
     document.querySelector('[data-i18n="textaboutme"]').textContent =
       t.textaboutme;
+    document.querySelector('[data-i18n="Contact_TitleForm"]').textContent =
+      t.Contact_TitleForm;
+    document.querySelector('[data-i18n="Name_SurnameForm"]').textContent =
+      t.Name_SurnameForm;
+    document.querySelector('[data-i18n="EmailForm"]').textContent =
+      t.EmailForm;
+    document.querySelector('[data-i18n="ServicesForm"]').textContent =
+      t.ServicesForm;
+    document.querySelector('[data-i18n="OptionHiddenSelectForm"]').textContent =
+      t.OptionHiddenSelectForm;
+    document.querySelector('[data-i18n="OptionSelectMod3dForm"]').textContent =
+      t.OptionSelectMod3dForm;
+    document.querySelector('[data-i18n="OptionSelectDissWebForm"]').textContent =
+      t.OptionSelectDissWebForm;
+    document.querySelector('[data-i18n="OptionSelectText3DForm"]').textContent =
+      t.OptionSelectText3DForm;
+    document.querySelector('[data-i18n="OptionSelectDevGame2D3DForm"]').textContent =
+      t.OptionSelectDevGame2D3DForm;
+    document.querySelector('[data-i18n="OptionSelectEditImagVidForm"]').textContent =
+      t.OptionSelectEditImagVidForm;
+    document.querySelector('[data-i18n="CommentsForm"]').textContent =
+      t.CommentsForm;
   });
 }
 
@@ -66,11 +88,9 @@ function loadLanguage(lang) {
     .then(data => {
       const t = data[lang];
 
-      // Recorre totes les claus del JSON i aplica el text si l'element existeix
       for (const key in t) {
         const el = document.querySelector(`[data-i18n="${key}"]`);
         if (el) {
-          // Si és un camp amb HTML, fem servir innerHTML
           if (key === "main_tags" || key === "copyright") {
             el.innerHTML = t[key];
           } else {
@@ -79,7 +99,6 @@ function loadLanguage(lang) {
         }
       }
 
-      // També pots actualitzar el <title> per separat
       document.title = t.title;
     });
 }

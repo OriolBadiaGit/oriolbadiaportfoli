@@ -156,7 +156,10 @@ li:hover {
   cursor: pointer;
 }
 
-
+#MenuItems #Active a {
+  color: #22ce89;
+  font-weight: bolder;
+}
 
 #MenuItems #Active:hover {
   transform: scale(1);
