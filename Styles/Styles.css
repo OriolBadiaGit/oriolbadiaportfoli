@@ -38,6 +38,11 @@ footer {
   justify-content: space-around;
 }
 
+.fa-brands:hover{
+  cursor: pointer;
+  scale: 1.2;
+}
+
 /*------------------------*/
 /*STYLES INDEX*/
 body::-webkit-scrollbar {
