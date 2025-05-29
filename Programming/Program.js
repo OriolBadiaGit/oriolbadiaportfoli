@@ -55,6 +55,16 @@ function loadLanguage(lang) {
     document.querySelector(
       '[data-i18n="copyright"]'
     ).innerHTML = `&#169; ${t.copyright}`;
+    document.querySelector('[data-i18n="TextAppBlender"]').textContent =
+      t.TextAppBlender;
+    document.querySelector('[data-i18n="TextAppPhotoshop"]').textContent =
+      t.TextAppPhotoshop;
+    document.querySelector('[data-i18n="TextAppSubstancePainter"]').textContent =
+      t.TextAppSubstancePainter;
+    document.querySelector('[data-i18n="TextAppVisualStudioCode"]').textContent =
+      t.TextAppVisualStudioCode;
+    document.querySelector('[data-i18n="DaVinciResolve"]').textContent =
+      t.DaVinciResolve;
     document.querySelector('[data-i18n="textaboutme"]').textContent =
       t.textaboutme;
     document.querySelector('[data-i18n="Contact_TitleForm"]').textContent =
