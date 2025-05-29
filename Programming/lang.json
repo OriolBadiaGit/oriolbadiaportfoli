@@ -1,6 +1,5 @@
 {
   "ca": {
-    "title": "Oriol Badia | Portfoli",
     "menu_home": "Inici",
     "menu_projects": "Projectes",
     "menu_skills": "Coneixements",
@@ -36,7 +35,6 @@
     "CommentsForm": "Comentaris"
   },
   "es": {
-    "title": "Oriol Badia | Portafolio",
     "menu_home": "Inicio",
     "menu_projects": "Proyectos",
     "menu_skills": "Conocimientos",
@@ -73,7 +71,6 @@
     "CommentsForm": "Comentarios"
   },
   "en": {
-    "title": "Oriol Badia | Portfolio",
     "menu_home": "Home",
     "menu_projects": "Projects",
     "menu_skills": "Skills",
@@ -95,6 +92,7 @@
     "TextAppUnrealEngine": "With this application... almost 3/4 of the same with unity, the difference is that I haven't developed any games, I've only discovered it based on tutorials, I could say that I know how to move, add objects, import 3D models, put textures or create them but not much more. I hope to be able to use it in the near future to develop a video game.",
     "TextAppOfimatica": "I suppose that everyone who has studied computer science has been able to learn knowledge about office software. Word, Excel, PowerPoint and a little bit of Access. I think I have a good level of the first 3 programs mentioned and that I would have no problem using them in any case.",
     "TextAppMaya": "The latest program of the most recent ones on the list. I had to use this one in the higher degree of 3D Animation, video games and interactive environments to do modeling (although I did it in blender) and rigging. I think the interface could be improved, I see it a bit old-fashioned and almost everything is done with the mouse, which I prefer the keyboard, apart from that I think the rigging issue is very comfortable to do with maya.",
+    "textaboutme": "I'm passionate about the 3D world, video games, and web development. My interest in this world began towards the end of secondary school, when I discovered everything that can be created with imagination and digital tools. Since then, whenever I have free time, I like to experiment, learn new techniques, and develop my own projects. They've been a fundamental part of my life since I was 7 or 8 years old. They've been a source of inspiration, fun, and curiosity.",
     "Contact_TitleForm": "Contact Form",
     "Contact_SubTitleForm": "Contact me through this form if you need my services!",
     "Name_SurnameForm": "Name and surname*",
