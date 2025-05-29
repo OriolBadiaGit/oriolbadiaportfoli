@@ -88,6 +88,27 @@
     .ContainerTextApp {
         height: 60%;
     }
+
+    .ContainerForm {
+        /* background-color: #22ce89; */
+        backdrop-filter: blur(5px);
+        border: 1.5px solid rgba(255, 255, 255, 0.2);
+        border-radius: 30px;
+        width: 90%;
+        height: 72%;
+        padding-bottom: 10%;
+        text-align: center;
+        margin-top: 6.5%;
+    }
+
+    #SubmitButton {
+        background: none;
+        border: 1.5px solid rgba(255, 255, 255, 0.2);
+        margin: 0% 0%;
+        padding: 1%;
+        color: white;
+        width: 9%;
+    }
 }
 
 @media (max-width: 1298px) {
