@@ -90,6 +90,19 @@
     }
 }
 
+@media (max-width: 1298px) {
+    .ButtonContact {
+        text-align: center;
+        background: none;
+        padding: 1%;
+        width: 9%;
+        border: 1.5px solid rgba(255, 255, 255, 0.2);
+        font-size: 1em;
+        border-radius: 10px;
+        color: white;
+    }
+}
+
 
 @media (max-width: 1278px) {
 
@@ -165,6 +178,19 @@
     }
 }
 
+@media (max-width: 1202px) {
+    .ButtonContact {
+        text-align: center;
+        background: none;
+        padding: 1%;
+        width: 20%;
+        margin-right: 1%;
+        border: 1.5px solid rgba(255, 255, 255, 0.2);
+        font-size: 1em;
+        border-radius: 10px;
+        color: white;
+    }
+}
 
 @media (max-width: 1156px) {
 
@@ -367,6 +393,45 @@
     .TextApp {
         text-align: justify;
         font-size: 1.5vw;
+    }
+}
+
+@media (max-width: 905px) {
+    #Menu {
+        display: flex;
+        position: fixed;
+        justify-content: space-between;
+        border-radius: 16px;
+        background: #116242a2;
+        box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.40),
+            0 4px 20px #116242a2;
+        backdrop-filter: blur(5px);
+        border: 1.5px solid rgba(255, 255, 255, 0.2);
+        color: white;
+        align-items: center;
+        padding: 0% 1%;
+        margin-top: 1%;
+        width: 95%;
+        z-index: 1;
+    }
+
+    #MenuItems {
+        display: flex;
+        margin: 1%;
+        width: 100%;
+        gap: 10%;
+        justify-content: center;
+        text-decoration: none;
+        padding: 1%;
+        font-size: 120%;
+    }
+
+    #LanguageSelect {
+        margin-left: 85%;
+        margin-top: 10%;
+        padding: 1%;
+        width: 6%;
+
     }
 }
 
@@ -998,7 +1063,7 @@
         text-align: center;
         width: 99%;
         height: 100%;
-        z-index: 1;
+        z-index: 2;
         touch-action: none;
     }
 
@@ -1140,7 +1205,7 @@
         text-align: center;
         width: 99%;
         height: 100%;
-        z-index: 1;
+        z-index: 2;
         touch-action: none;
     }
 
@@ -1318,7 +1383,7 @@
         text-align: center;
         width: 99%;
         height: 100%;
-        z-index: 1;
+        z-index: 2;
         touch-action: none;
     }
 
@@ -1461,7 +1526,7 @@
         text-align: center;
         width: 99%;
         height: 100%;
-        z-index: 1;
+        z-index: 2;
         touch-action: none;
     }
 
@@ -1603,7 +1668,7 @@
         text-align: center;
         width: 99%;
         height: 100%;
-        z-index: 1;
+        z-index: 2;
         touch-action: none;
     }
 
@@ -2165,7 +2230,7 @@
         text-align: center;
         width: 99%;
         height: 100%;
-        z-index: 1;
+        z-index: 2;
         touch-action: none;
     }
 
@@ -5432,12 +5497,17 @@
 }
 
 @media (max-width: 312px) {
+
     #CVImage {
         scale: 18%;
         margin-top: -230%;
         margin-bottom: -230%;
         border-radius: 30px;
         z-index: 0;
+    }
+
+    #ContainerFlexCards {
+        padding-bottom: 260%;
     }
 }
 
@@ -5554,7 +5624,7 @@
         position: absolute;
     }
 
-     #Menu {
+    #Menu {
         display: none;
         flex-direction: column;
         position: fixed;
