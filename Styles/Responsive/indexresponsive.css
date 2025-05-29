@@ -405,6 +405,7 @@
         font-size: 120%;
     }
 
+
     button {
         padding: 1%;
         width: 17%;
@@ -556,8 +557,13 @@
     #MenuItems {
         display: flex;
         flex-direction: column;
-        font-size: 4rem;
+        font-size: 6rem;
         height: 100%;
+    }
+
+    .linkmenu {
+        text-decoration: none;
+        font-size: 4em;
     }
 
     #Menu.show {
@@ -606,13 +612,15 @@
     }
 
 
-    button {
+    .ButtonContact {
+        text-align: center;
         background: none;
-        padding: 2%;
+        padding: 1%;
+        width: 50%;
         margin-bottom: 10%;
-        font-size: 3rem;
-        border-radius: 10px;
         border: 1.5px solid rgba(255, 255, 255, 0.2);
+        font-size: 3em;
+        border-radius: 10px;
         color: white;
     }
 
@@ -815,24 +823,25 @@
         text-align: center;
         width: 99%;
         height: 100%;
-        z-index: 1;
+        z-index: 2;
         touch-action: none;
     }
 
     #MenuItems {
         display: flex;
         flex-direction: column;
-        font-size: 4rem;
         height: 100%;
     }
 
-    button {
+    .ButtonContact {
+        text-align: center;
         background: none;
-        padding: 2%;
+        padding: 1%;
+        width: 50%;
         margin-bottom: 10%;
-        font-size: 3rem;
-        border-radius: 10px;
         border: 1.5px solid rgba(255, 255, 255, 0.2);
+        font-size: 3em;
+        border-radius: 10px;
         color: white;
     }
 
@@ -996,19 +1005,21 @@
     #MenuItems {
         display: flex;
         flex-direction: column;
-        font-size: 4rem;
         height: 100%;
     }
 
-    button {
+    .ButtonContact {
+        text-align: center;
         background: none;
-        padding: 2%;
+        padding: 1%;
+        width: 50%;
         margin-bottom: 10%;
-        font-size: 3rem;
-        border-radius: 10px;
         border: 1.5px solid rgba(255, 255, 255, 0.2);
+        font-size: 3em;
+        border-radius: 10px;
         color: white;
     }
+
 
     .ContainerTitles {
         width: 100%;
@@ -1136,20 +1147,22 @@
     #MenuItems {
         display: flex;
         flex-direction: column;
-        font-size: 4rem;
         height: 100%;
     }
 
-    button {
+    .ButtonContact {
+        text-align: center;
         background: none;
-        padding: 2%;
+        padding: 1%;
+        width: 50%;
         margin-bottom: 10%;
-        font-size: 3rem;
-
-        border-radius: 10px;
         border: 1.5px solid rgba(255, 255, 255, 0.2);
+        font-size: 3em;
+        border-radius: 10px;
         color: white;
     }
+
+
 
     #LanguageSelect {
         margin-left: 85%;
@@ -1312,20 +1325,22 @@
     #MenuItems {
         display: flex;
         flex-direction: column;
-        font-size: 4rem;
         height: 100%;
     }
 
-    button {
+    .ButtonContact {
+        text-align: center;
         background: none;
-        padding: 2%;
+        padding: 1%;
+        width: 50%;
         margin-bottom: 10%;
-        font-size: 3rem;
-
-        border-radius: 10px;
         border: 1.5px solid rgba(255, 255, 255, 0.2);
+        font-size: 3em;
+        border-radius: 10px;
         color: white;
     }
+
+
 
     .ContainerTitles {
         width: 100%;
@@ -1453,19 +1468,21 @@
     #MenuItems {
         display: flex;
         flex-direction: column;
-        font-size: 4rem;
         height: 100%;
     }
 
-    button {
+    .ButtonContact {
+        text-align: center;
         background: none;
-        padding: 2%;
+        padding: 1%;
+        width: 50%;
         margin-bottom: 10%;
-        font-size: 3rem;
-        border-radius: 10px;
         border: 1.5px solid rgba(255, 255, 255, 0.2);
+        font-size: 3em;
+        border-radius: 10px;
         color: white;
     }
+
 
     .ContainerTitles {
         width: 100%;
@@ -1593,19 +1610,22 @@
     #MenuItems {
         display: flex;
         flex-direction: column;
-        font-size: 4rem;
         height: 100%;
     }
 
-    button {
+    .ButtonContact {
+        text-align: center;
         background: none;
-        padding: 2%;
+        padding: 1%;
+        width: 50%;
         margin-bottom: 10%;
-        font-size: 3rem;
-        border-radius: 10px;
         border: 1.5px solid rgba(255, 255, 255, 0.2);
+        font-size: 3em;
+        border-radius: 10px;
         color: white;
     }
+
+
 
     .ContainerTitles {
         width: 100%;
@@ -1727,27 +1747,28 @@
         text-align: center;
         width: 99%;
         height: 100%;
-        z-index: 1;
+        z-index: 2;
         touch-action: none;
     }
 
     #MenuItems {
         display: flex;
         flex-direction: column;
-        font-size: 4rem;
         height: 100%;
     }
 
-    button {
+    .ButtonContact {
+        text-align: center;
         background: none;
-        padding: 2%;
+        padding: 1%;
+        width: 50%;
         margin-bottom: 10%;
-        font-size: 3rem;
-
-        border-radius: 10px;
         border: 1.5px solid rgba(255, 255, 255, 0.2);
+        font-size: 3em;
+        border-radius: 10px;
         color: white;
     }
+
 
     .ContainerTitles {
         width: 100%;
@@ -1868,27 +1889,29 @@
         text-align: center;
         width: 99%;
         height: 100%;
-        z-index: 1;
+        z-index: 2;
         touch-action: none;
     }
 
     #MenuItems {
         display: flex;
         flex-direction: column;
-        font-size: 4rem;
         height: 100%;
     }
 
-    button {
+    .ButtonContact {
+        text-align: center;
         background: none;
-        padding: 2%;
+        padding: 1%;
+        width: 50%;
         margin-bottom: 10%;
-        font-size: 3rem;
-        display: flex;
-        border-radius: 10px;
         border: 1.5px solid rgba(255, 255, 255, 0.2);
+        font-size: 3em;
+        border-radius: 10px;
         color: white;
     }
+
+
 
     .ContainerTitles {
         width: 100%;
@@ -2009,27 +2032,28 @@
         text-align: center;
         width: 99%;
         height: 100%;
-        z-index: 1;
+        z-index: 2;
         touch-action: none;
     }
 
     #MenuItems {
         display: flex;
         flex-direction: column;
-        font-size: 4rem;
         height: 100%;
     }
 
-    button {
+    .ButtonContact {
+        text-align: center;
         background: none;
-        padding: 2%;
+        padding: 1%;
+        width: 50%;
         margin-bottom: 10%;
-        font-size: 3rem;
-        display: flex;
-        border-radius: 10px;
         border: 1.5px solid rgba(255, 255, 255, 0.2);
+        font-size: 3em;
+        border-radius: 10px;
         color: white;
     }
+
 
     .ContainerTitles {
         width: 100%;
@@ -2148,20 +2172,21 @@
     #MenuItems {
         display: flex;
         flex-direction: column;
-        font-size: 4rem;
         height: 100%;
     }
 
-    button {
+    .ButtonContact {
+        text-align: center;
         background: none;
-        padding: 2%;
+        padding: 1%;
+        width: 50%;
         margin-bottom: 10%;
-        font-size: 3rem;
-        display: flex;
-        border-radius: 10px;
         border: 1.5px solid rgba(255, 255, 255, 0.2);
+        font-size: 3em;
+        border-radius: 10px;
         color: white;
     }
+
 
     .ContainerTitles {
         width: 100%;
@@ -2283,27 +2308,28 @@
         text-align: center;
         width: 99%;
         height: 100%;
-        z-index: 1;
+        z-index: 2;
         touch-action: none;
     }
 
     #MenuItems {
         display: flex;
         flex-direction: column;
-        font-size: 4rem;
         height: 100%;
     }
 
-    button {
+    .ButtonContact {
+        text-align: center;
         background: none;
-        padding: 2%;
+        padding: 1%;
+        width: 50%;
         margin-bottom: 10%;
-        font-size: 3rem;
-        display: flex;
-        border-radius: 10px;
         border: 1.5px solid rgba(255, 255, 255, 0.2);
+        font-size: 3em;
+        border-radius: 10px;
         color: white;
     }
+
 
     .ContainerTitles {
         width: 100%;
@@ -2426,25 +2452,25 @@
         text-align: center;
         width: 99%;
         height: 100%;
-        z-index: 1;
+        z-index: 2;
         touch-action: none;
     }
 
     #MenuItems {
         display: flex;
         flex-direction: column;
-        font-size: 4rem;
         height: 100%;
     }
 
-    button {
+    .ButtonContact {
+        text-align: center;
         background: none;
-        padding: 2%;
+        padding: 1%;
+        width: 50%;
         margin-bottom: 10%;
-        font-size: 3rem;
-        display: flex;
-        border-radius: 10px;
         border: 1.5px solid rgba(255, 255, 255, 0.2);
+        font-size: 3em;
+        border-radius: 10px;
         color: white;
     }
 
@@ -2568,25 +2594,25 @@
         text-align: center;
         width: 99%;
         height: 100%;
-        z-index: 1;
+        z-index: 2;
         touch-action: none;
     }
 
     #MenuItems {
         display: flex;
         flex-direction: column;
-        font-size: 4rem;
         height: 100%;
     }
 
-    button {
+    .ButtonContact {
+        text-align: center;
         background: none;
-        padding: 2%;
+        padding: 1%;
+        width: 50%;
         margin-bottom: 10%;
-        font-size: 3rem;
-        display: flex;
-        border-radius: 10px;
         border: 1.5px solid rgba(255, 255, 255, 0.2);
+        font-size: 3em;
+        border-radius: 10px;
         color: white;
     }
 
@@ -2700,9 +2726,9 @@
         align-items: center;
         padding: 0% 1%;
         margin-top: 1%;
-        width: 95%;
-        height: 98%;
-        z-index: 1;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
         display: none;
     }
 
@@ -2715,17 +2741,17 @@
         justify-content: center;
         text-decoration: none;
         padding: 1%;
-        font-size: 4rem;
     }
 
-    button {
+    .ButtonContact {
+        text-align: center;
         background: none;
-        padding: 2%;
+        padding: 1%;
+        width: 70%;
         margin-bottom: 10%;
-        font-size: 3rem;
-        display: flex;
-        border-radius: 10px;
         border: 1.5px solid rgba(255, 255, 255, 0.2);
+        font-size: 3em;
+        border-radius: 10px;
         color: white;
     }
 
@@ -2827,9 +2853,9 @@
         align-items: center;
         padding: 0% 1%;
         margin-top: 1%;
-        width: 95%;
-        height: 98%;
-        z-index: 1;
+        width: 102%;
+        height: 100%;
+        z-index: 2;
     }
 
     #MenuItems {
@@ -2838,20 +2864,21 @@
         text-align: center;
         width: 100%;
         gap: 10%;
+        font-size: 0.8em;
         justify-content: center;
         text-decoration: none;
         padding: 1%;
-        font-size: 3rem;
     }
 
-    button {
+    .ButtonContact {
+        text-align: center;
         background: none;
-        padding: 2%;
+        padding: 1%;
+        width: 80%;
         margin-bottom: 10%;
-        font-size: 2rem;
-        display: flex;
-        border-radius: 10px;
         border: 1.5px solid rgba(255, 255, 255, 0.2);
+        font-size: 2.5em;
+        border-radius: 10px;
         color: white;
     }
 
@@ -2954,9 +2981,9 @@
         align-items: center;
         padding: 0% 1%;
         margin-top: 1%;
-        width: 95%;
-        height: 98%;
-        z-index: 1;
+        width: 102%;
+        height: 100%;
+        z-index: 2;
     }
 
     #MenuItems {
@@ -2965,20 +2992,21 @@
         text-align: center;
         width: 100%;
         gap: 10%;
+        font-size: 0.8em;
         justify-content: center;
         text-decoration: none;
         padding: 1%;
-        font-size: 3rem;
     }
 
-    button {
+    .ButtonContact {
+        text-align: center;
         background: none;
-        padding: 2%;
+        padding: 1%;
+        width: 80%;
         margin-bottom: 10%;
-        font-size: 2rem;
-        display: flex;
-        border-radius: 10px;
         border: 1.5px solid rgba(255, 255, 255, 0.2);
+        font-size: 2.5em;
+        border-radius: 10px;
         color: white;
     }
 
@@ -3081,9 +3109,9 @@
         align-items: center;
         padding: 0% 1%;
         margin-top: 1%;
-        width: 95%;
-        height: 98%;
-        z-index: 1;
+        width: 102%;
+        height: 100%;
+        z-index: 2;
     }
 
     #MenuItems {
@@ -3092,20 +3120,21 @@
         text-align: center;
         width: 100%;
         gap: 10%;
+        font-size: 0.8em;
         justify-content: center;
         text-decoration: none;
         padding: 1%;
-        font-size: 3rem;
     }
 
-    button {
+    .ButtonContact {
+        text-align: center;
         background: none;
-        padding: 2%;
+        padding: 1%;
+        width: 80%;
         margin-bottom: 10%;
-        font-size: 2rem;
-        display: flex;
-        border-radius: 10px;
         border: 1.5px solid rgba(255, 255, 255, 0.2);
+        font-size: 2.5em;
+        border-radius: 10px;
         color: white;
     }
 
@@ -3193,6 +3222,7 @@
         color: white;
     }
 
+
     #Menu {
         display: none;
         flex-direction: column;
@@ -3207,9 +3237,9 @@
         align-items: center;
         padding: 0% 1%;
         margin-top: 1%;
-        width: 95%;
-        height: 98%;
-        z-index: 1;
+        width: 102%;
+        height: 100%;
+        z-index: 2;
     }
 
     #MenuItems {
@@ -3218,20 +3248,21 @@
         text-align: center;
         width: 100%;
         gap: 10%;
+        font-size: 0.8em;
         justify-content: center;
         text-decoration: none;
         padding: 1%;
-        font-size: 3rem;
     }
 
-    button {
+    .ButtonContact {
+        text-align: center;
         background: none;
-        padding: 2%;
+        padding: 1%;
+        width: 80%;
         margin-bottom: 10%;
-        font-size: 2rem;
-        display: flex;
-        border-radius: 10px;
         border: 1.5px solid rgba(255, 255, 255, 0.2);
+        font-size: 2.5em;
+        border-radius: 10px;
         color: white;
     }
 
@@ -3333,10 +3364,9 @@
         align-items: center;
         padding: 0% 1%;
         margin-top: 1%;
-        width: 95%;
-        height: 98%;
-        z-index: 1;
-
+        width: 102%;
+        height: 100%;
+        z-index: 2;
     }
 
     #MenuItems {
@@ -3345,20 +3375,21 @@
         text-align: center;
         width: 100%;
         gap: 10%;
+        font-size: 0.8em;
         justify-content: center;
         text-decoration: none;
         padding: 1%;
-        font-size: 3rem;
     }
 
-    button {
+    .ButtonContact {
+        text-align: center;
         background: none;
-        padding: 2%;
+        padding: 1%;
+        width: 80%;
         margin-bottom: 10%;
-        font-size: 2rem;
-        display: flex;
-        border-radius: 10px;
         border: 1.5px solid rgba(255, 255, 255, 0.2);
+        font-size: 2.5em;
+        border-radius: 10px;
         color: white;
     }
 
@@ -3446,6 +3477,7 @@
         color: white;
     }
 
+
     #Menu {
         display: none;
         flex-direction: column;
@@ -3460,10 +3492,9 @@
         align-items: center;
         padding: 0% 1%;
         margin-top: 1%;
-        width: 95%;
-        height: 98%;
-        z-index: 1;
-
+        width: 102%;
+        height: 100%;
+        z-index: 2;
     }
 
     #MenuItems {
@@ -3472,20 +3503,21 @@
         text-align: center;
         width: 100%;
         gap: 10%;
+        font-size: 0.8em;
         justify-content: center;
         text-decoration: none;
         padding: 1%;
-        font-size: 3rem;
     }
 
-    button {
+    .ButtonContact {
+        text-align: center;
         background: none;
-        padding: 2%;
+        padding: 1%;
+        width: 80%;
         margin-bottom: 10%;
-        font-size: 2rem;
-        display: flex;
-        border-radius: 10px;
         border: 1.5px solid rgba(255, 255, 255, 0.2);
+        font-size: 2.5em;
+        border-radius: 10px;
         color: white;
     }
 
@@ -3574,6 +3606,7 @@
         color: white;
     }
 
+
     #Menu {
         display: none;
         flex-direction: column;
@@ -3588,9 +3621,9 @@
         align-items: center;
         padding: 0% 1%;
         margin-top: 1%;
-        width: 95%;
-        height: 98%;
-        z-index: 1;
+        width: 102%;
+        height: 100%;
+        z-index: 2;
     }
 
     #MenuItems {
@@ -3599,20 +3632,21 @@
         text-align: center;
         width: 100%;
         gap: 10%;
+        font-size: 0.8em;
         justify-content: center;
         text-decoration: none;
         padding: 1%;
-        font-size: 3rem;
     }
 
-    button {
+    .ButtonContact {
+        text-align: center;
         background: none;
-        padding: 2%;
+        padding: 1%;
+        width: 80%;
         margin-bottom: 10%;
-        font-size: 2rem;
-        display: flex;
-        border-radius: 10px;
         border: 1.5px solid rgba(255, 255, 255, 0.2);
+        font-size: 2.5em;
+        border-radius: 10px;
         color: white;
     }
 
@@ -3700,6 +3734,7 @@
         color: white;
     }
 
+
     #Menu {
         display: none;
         flex-direction: column;
@@ -3714,9 +3749,9 @@
         align-items: center;
         padding: 0% 1%;
         margin-top: 1%;
-        width: 95%;
-        height: 98%;
-        z-index: 1;
+        width: 102%;
+        height: 100%;
+        z-index: 2;
     }
 
     #MenuItems {
@@ -3725,20 +3760,21 @@
         text-align: center;
         width: 100%;
         gap: 10%;
+        font-size: 0.8em;
         justify-content: center;
         text-decoration: none;
         padding: 1%;
-        font-size: 3rem;
     }
 
-    button {
+    .ButtonContact {
+        text-align: center;
         background: none;
-        padding: 2%;
+        padding: 1%;
+        width: 80%;
         margin-bottom: 10%;
-        font-size: 2rem;
-        display: flex;
-        border-radius: 10px;
         border: 1.5px solid rgba(255, 255, 255, 0.2);
+        font-size: 2.5em;
+        border-radius: 10px;
         color: white;
     }
 
@@ -3833,6 +3869,7 @@
         color: white;
     }
 
+
     #Menu {
         display: none;
         flex-direction: column;
@@ -3847,9 +3884,9 @@
         align-items: center;
         padding: 0% 1%;
         margin-top: 1%;
-        width: 95%;
-        height: 98%;
-        z-index: 1;
+        width: 102%;
+        height: 100%;
+        z-index: 2;
     }
 
     #MenuItems {
@@ -3858,22 +3895,21 @@
         text-align: center;
         width: 100%;
         gap: 10%;
+        font-size: 0.8em;
         justify-content: center;
         text-decoration: none;
         padding: 1%;
-        font-size: 2rem;
     }
 
-
-
-    button {
+    .ButtonContact {
+        text-align: center;
         background: none;
-        padding: 2%;
+        padding: 1%;
+        width: 80%;
         margin-bottom: 10%;
-        font-size: 2.5rem;
-        display: flex;
-        border-radius: 10px;
         border: 1.5px solid rgba(255, 255, 255, 0.2);
+        font-size: 2.5em;
+        border-radius: 10px;
         color: white;
     }
 
@@ -3969,12 +4005,12 @@
         color: white;
     }
 
+
     #Menu {
         display: none;
         flex-direction: column;
         position: fixed;
         justify-content: space-between;
-        background: rgba(0, 30, 11, 0.774);
         border-radius: 16px;
         background: #116242a2;
         box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.40),
@@ -3984,9 +4020,9 @@
         align-items: center;
         padding: 0% 1%;
         margin-top: 1%;
-        width: 95%;
-        height: 98%;
-        z-index: 1;
+        width: 102%;
+        height: 100%;
+        z-index: 2;
     }
 
     #MenuItems {
@@ -3995,20 +4031,21 @@
         text-align: center;
         width: 100%;
         gap: 10%;
+        font-size: 0.8em;
         justify-content: center;
         text-decoration: none;
         padding: 1%;
-        font-size: 2rem;
     }
 
-    button {
+    .ButtonContact {
+        text-align: center;
         background: none;
-        padding: 2%;
+        padding: 1%;
+        width: 80%;
         margin-bottom: 10%;
-        font-size: 2.5rem;
-        display: flex;
-        border-radius: 10px;
         border: 1.5px solid rgba(255, 255, 255, 0.2);
+        font-size: 2.5em;
+        border-radius: 10px;
         color: white;
     }
 
@@ -4096,12 +4133,12 @@
         color: white;
     }
 
+
     #Menu {
         display: none;
         flex-direction: column;
         position: fixed;
         justify-content: space-between;
-        background: rgba(0, 30, 11, 0.774);
         border-radius: 16px;
         background: #116242a2;
         box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.40),
@@ -4111,9 +4148,9 @@
         align-items: center;
         padding: 0% 1%;
         margin-top: 1%;
-        width: 95%;
-        height: 98%;
-        z-index: 1;
+        width: 102%;
+        height: 100%;
+        z-index: 2;
     }
 
     #MenuItems {
@@ -4122,20 +4159,21 @@
         text-align: center;
         width: 100%;
         gap: 10%;
+        font-size: 0.7em;
         justify-content: center;
         text-decoration: none;
         padding: 1%;
-        font-size: 4rem;
     }
 
-    button {
+    .ButtonContact {
+        text-align: center;
         background: none;
-        padding: 2%;
-        margin-bottom: 10%;
-        font-size: 3rem;
-        display: flex;
-        border-radius: 10px;
+        padding: 1%;
+        width: 80%;
+        margin-bottom: 20%;
         border: 1.5px solid rgba(255, 255, 255, 0.2);
+        font-size: 2em;
+        border-radius: 10px;
         color: white;
     }
 
@@ -4193,8 +4231,6 @@
 }
 
 @media (max-width: 374px) {
-
-
     .TextApp {
         width: 80%;
         font-size: 40%;
@@ -4232,12 +4268,12 @@
         color: white;
     }
 
+
     #Menu {
         display: none;
         flex-direction: column;
         position: fixed;
         justify-content: space-between;
-        background: rgba(0, 30, 11, 0.774);
         border-radius: 16px;
         background: #116242a2;
         box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.40),
@@ -4247,9 +4283,9 @@
         align-items: center;
         padding: 0% 1%;
         margin-top: 1%;
-        width: 95%;
-        height: 98%;
-        z-index: 1;
+        width: 102%;
+        height: 100%;
+        z-index: 2;
     }
 
     #MenuItems {
@@ -4258,20 +4294,21 @@
         text-align: center;
         width: 100%;
         gap: 10%;
+        font-size: 0.8em;
         justify-content: center;
         text-decoration: none;
         padding: 1%;
-        font-size: 4rem;
     }
 
-    button {
+    .ButtonContact {
+        text-align: center;
         background: none;
-        padding: 2%;
+        padding: 1%;
+        width: 80%;
         margin-bottom: 10%;
-        font-size: 3rem;
-        display: flex;
-        border-radius: 10px;
         border: 1.5px solid rgba(255, 255, 255, 0.2);
+        font-size: 2.5em;
+        border-radius: 10px;
         color: white;
     }
 
@@ -4365,7 +4402,6 @@
         flex-direction: column;
         position: fixed;
         justify-content: space-between;
-        background: rgba(0, 30, 11, 0.774);
         border-radius: 16px;
         background: #116242a2;
         box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.40),
@@ -4375,9 +4411,9 @@
         align-items: center;
         padding: 0% 1%;
         margin-top: 1%;
-        width: 95%;
-        height: 98%;
-        z-index: 1;
+        width: 102%;
+        height: 100%;
+        z-index: 2;
     }
 
     #MenuItems {
@@ -4386,20 +4422,21 @@
         text-align: center;
         width: 100%;
         gap: 10%;
+        font-size: 0.6em;
         justify-content: center;
         text-decoration: none;
         padding: 1%;
-        font-size: 3rem;
     }
 
-    button {
+    .ButtonContact {
+        text-align: center;
         background: none;
-        padding: 2%;
-        margin-bottom: 10%;
-        font-size: 3rem;
-        display: flex;
-        border-radius: 10px;
+        padding: 1%;
+        width: 80%;
+        margin-bottom: 30%;
         border: 1.5px solid rgba(255, 255, 255, 0.2);
+        font-size: 2.5em;
+        border-radius: 10px;
         color: white;
     }
 
@@ -4499,7 +4536,6 @@
         flex-direction: column;
         position: fixed;
         justify-content: space-between;
-        background: rgba(0, 30, 11, 0.774);
         border-radius: 16px;
         background: #116242a2;
         box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.40),
@@ -4509,9 +4545,9 @@
         align-items: center;
         padding: 0% 1%;
         margin-top: 1%;
-        width: 95%;
-        height: 98%;
-        z-index: 1;
+        width: 102%;
+        height: 100%;
+        z-index: 2;
     }
 
     #MenuItems {
@@ -4520,20 +4556,21 @@
         text-align: center;
         width: 100%;
         gap: 10%;
+        font-size: 0.6em;
         justify-content: center;
         text-decoration: none;
         padding: 1%;
-        font-size: 2rem;
     }
 
-    button {
+    .ButtonContact {
+        text-align: center;
         background: none;
-        padding: 2%;
-        margin-bottom: 10%;
-        font-size: 2.5rem;
-        display: flex;
-        border-radius: 10px;
+        padding: 1%;
+        width: 80%;
+        margin-bottom: 30%;
         border: 1.5px solid rgba(255, 255, 255, 0.2);
+        font-size: 2.5em;
+        border-radius: 10px;
         color: white;
     }
 
@@ -4680,7 +4717,6 @@
         flex-direction: column;
         position: fixed;
         justify-content: space-between;
-        background: rgba(0, 30, 11, 0.774);
         border-radius: 16px;
         background: #116242a2;
         box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.40),
@@ -4690,9 +4726,9 @@
         align-items: center;
         padding: 0% 1%;
         margin-top: 1%;
-        width: 95%;
-        height: 98%;
-        z-index: 1;
+        width: 102%;
+        height: 100%;
+        z-index: 2;
     }
 
     #MenuItems {
@@ -4701,20 +4737,21 @@
         text-align: center;
         width: 100%;
         gap: 10%;
+        font-size: 0.6em;
         justify-content: center;
         text-decoration: none;
         padding: 1%;
-        font-size: 4rem;
     }
 
-    button {
+    .ButtonContact {
+        text-align: center;
         background: none;
-        padding: 2%;
-        margin-bottom: 10%;
-        font-size: 3rem;
-        display: flex;
-        border-radius: 10px;
+        padding: 1%;
+        width: 80%;
+        margin-bottom: 30%;
         border: 1.5px solid rgba(255, 255, 255, 0.2);
+        font-size: 2.5em;
+        border-radius: 10px;
         color: white;
     }
 
@@ -4798,7 +4835,6 @@
         flex-direction: column;
         position: fixed;
         justify-content: space-between;
-        background: rgba(0, 30, 11, 0.774);
         border-radius: 16px;
         background: #116242a2;
         box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.40),
@@ -4808,9 +4844,9 @@
         align-items: center;
         padding: 0% 1%;
         margin-top: 1%;
-        width: 95%;
-        height: 98%;
-        z-index: 1;
+        width: 102%;
+        height: 100%;
+        z-index: 2;
     }
 
     #MenuItems {
@@ -4819,20 +4855,21 @@
         text-align: center;
         width: 100%;
         gap: 10%;
+        font-size: 0.6em;
         justify-content: center;
         text-decoration: none;
         padding: 1%;
-        font-size: 4rem;
     }
 
-    button {
+    .ButtonContact {
+        text-align: center;
         background: none;
-        padding: 2%;
-        margin-bottom: 10%;
-        font-size: 3rem;
-        display: flex;
-        border-radius: 10px;
+        padding: 1%;
+        width: 80%;
+        margin-bottom: 30%;
         border: 1.5px solid rgba(255, 255, 255, 0.2);
+        font-size: 2.5em;
+        border-radius: 10px;
         color: white;
     }
 
@@ -4949,7 +4986,6 @@
         flex-direction: column;
         position: fixed;
         justify-content: space-between;
-        background: rgba(0, 30, 11, 0.774);
         border-radius: 16px;
         background: #116242a2;
         box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.40),
@@ -4959,9 +4995,9 @@
         align-items: center;
         padding: 0% 1%;
         margin-top: 1%;
-        width: 95%;
-        height: 98%;
-        z-index: 1;
+        width: 102%;
+        height: 100%;
+        z-index: 2;
     }
 
     #MenuItems {
@@ -4970,20 +5006,21 @@
         text-align: center;
         width: 100%;
         gap: 10%;
+        font-size: 0.6em;
         justify-content: center;
         text-decoration: none;
         padding: 1%;
-        font-size: 4rem;
     }
 
-    button {
+    .ButtonContact {
+        text-align: center;
         background: none;
-        padding: 2%;
-        margin-bottom: 10%;
-        font-size: 3rem;
-        display: flex;
-        border-radius: 10px;
+        padding: 1%;
+        width: 80%;
+        margin-bottom: 30%;
         border: 1.5px solid rgba(255, 255, 255, 0.2);
+        font-size: 2.5em;
+        border-radius: 10px;
         color: white;
     }
 
@@ -5067,7 +5104,6 @@
         flex-direction: column;
         position: fixed;
         justify-content: space-between;
-        background: rgba(0, 30, 11, 0.774);
         border-radius: 16px;
         background: #116242a2;
         box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.40),
@@ -5077,9 +5113,9 @@
         align-items: center;
         padding: 0% 1%;
         margin-top: 1%;
-        width: 95%;
-        height: 98%;
-        z-index: 1;
+        width: 102%;
+        height: 100%;
+        z-index: 2;
     }
 
     #MenuItems {
@@ -5088,20 +5124,21 @@
         text-align: center;
         width: 100%;
         gap: 10%;
+        font-size: 0.6em;
         justify-content: center;
         text-decoration: none;
         padding: 1%;
-        font-size: 4rem;
     }
 
-    button {
+    .ButtonContact {
+        text-align: center;
         background: none;
-        padding: 2%;
-        margin-bottom: 10%;
-        font-size: 3rem;
-        display: flex;
-        border-radius: 10px;
+        padding: 1%;
+        width: 80%;
+        margin-bottom: 30%;
         border: 1.5px solid rgba(255, 255, 255, 0.2);
+        font-size: 2.5em;
+        border-radius: 10px;
         color: white;
     }
 
@@ -5185,7 +5222,6 @@
         flex-direction: column;
         position: fixed;
         justify-content: space-between;
-        background: rgba(0, 30, 11, 0.774);
         border-radius: 16px;
         background: #116242a2;
         box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.40),
@@ -5195,9 +5231,9 @@
         align-items: center;
         padding: 0% 1%;
         margin-top: 1%;
-        width: 95%;
-        height: 98%;
-        z-index: 1;
+        width: 102%;
+        height: 100%;
+        z-index: 2;
     }
 
     #MenuItems {
@@ -5206,20 +5242,21 @@
         text-align: center;
         width: 100%;
         gap: 10%;
+        font-size: 0.6em;
         justify-content: center;
         text-decoration: none;
         padding: 1%;
-        font-size: 4rem;
     }
 
-    button {
+    .ButtonContact {
+        text-align: center;
         background: none;
-        padding: 2%;
-        margin-bottom: 10%;
-        font-size: 3rem;
-        display: flex;
-        border-radius: 10px;
+        padding: 1%;
+        width: 80%;
+        margin-bottom: 30%;
         border: 1.5px solid rgba(255, 255, 255, 0.2);
+        font-size: 2.5em;
+        border-radius: 10px;
         color: white;
     }
 
@@ -5303,7 +5340,6 @@
         flex-direction: column;
         position: fixed;
         justify-content: space-between;
-        background: rgba(0, 30, 11, 0.774);
         border-radius: 16px;
         background: #116242a2;
         box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.40),
@@ -5313,9 +5349,9 @@
         align-items: center;
         padding: 0% 1%;
         margin-top: 1%;
-        width: 95%;
-        height: 98%;
-        z-index: 1;
+        width: 102%;
+        height: 100%;
+        z-index: 2;
     }
 
     #MenuItems {
@@ -5324,20 +5360,21 @@
         text-align: center;
         width: 100%;
         gap: 10%;
+        font-size: 0.6em;
         justify-content: center;
         text-decoration: none;
         padding: 1%;
-        font-size: 4rem;
     }
 
-    button {
+    .ButtonContact {
+        text-align: center;
         background: none;
-        padding: 2%;
-        margin-bottom: 10%;
-        font-size: 3rem;
-        display: flex;
-        border-radius: 10px;
+        padding: 1%;
+        width: 80%;
+        margin-bottom: 30%;
         border: 1.5px solid rgba(255, 255, 255, 0.2);
+        font-size: 2.5em;
+        border-radius: 10px;
         color: white;
     }
 
@@ -5415,6 +5452,51 @@
         position: absolute;
     }
 
+    #Menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        justify-content: space-between;
+        border-radius: 16px;
+        background: #116242a2;
+        box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.40),
+            0 4px 20px #116242a2;
+        backdrop-filter: blur(5px);
+        border: 1.5px solid rgba(255, 255, 255, 0.2);
+        align-items: center;
+        padding: 0% 1%;
+        margin-top: 1%;
+        width: 120%;
+        height: 100%;
+        z-index: 2;
+    }
+
+    #MenuItems {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        gap: 10%;
+        font-size: 0.6em;
+        justify-content: center;
+        margin-left: 15%;
+        text-decoration: none;
+        padding: 1%;
+    }
+
+    .ButtonContact {
+        text-align: center;
+        background: none;
+        padding: 1%;
+        width: 80%;
+        margin-bottom: 30%;
+        margin-left: 16%;
+        border: 1.5px solid rgba(255, 255, 255, 0.2);
+        font-size: 2.5em;
+        border-radius: 10px;
+        color: white;
+    }
+
     .GeneralContainer {
         position: absolute;
         /* background-color: aquamarine; */
@@ -5472,12 +5554,11 @@
         position: absolute;
     }
 
-    #Menu {
+     #Menu {
         display: none;
         flex-direction: column;
         position: fixed;
         justify-content: space-between;
-        background: rgba(0, 30, 11, 0.774);
         border-radius: 16px;
         background: #116242a2;
         box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.40),
@@ -5487,9 +5568,9 @@
         align-items: center;
         padding: 0% 1%;
         margin-top: 1%;
-        width: 95%;
-        height: 98%;
-        z-index: 1;
+        width: 120%;
+        height: 100%;
+        z-index: 2;
     }
 
     #MenuItems {
@@ -5498,20 +5579,23 @@
         text-align: center;
         width: 100%;
         gap: 10%;
+        font-size: 0.4em;
         justify-content: center;
+        margin-left: 2%;
         text-decoration: none;
         padding: 1%;
-        font-size: 1rem;
     }
 
-    button {
+    .ButtonContact {
+        text-align: center;
         background: none;
-        padding: 2%;
-        margin-bottom: 10%;
-        font-size: 1.5rem;
-        display: flex;
-        border-radius: 10px;
+        padding: 1%;
+        width: 80%;
+        margin-bottom: 30%;
+        margin-right: 16%;
         border: 1.5px solid rgba(255, 255, 255, 0.2);
+        font-size: 1.5em;
+        border-radius: 10px;
         color: white;
     }
 
