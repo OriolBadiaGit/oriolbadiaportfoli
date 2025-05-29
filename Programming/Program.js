@@ -63,8 +63,20 @@ function loadLanguage(lang) {
       t.TextAppSubstancePainter;
     document.querySelector('[data-i18n="TextAppVisualStudioCode"]').textContent =
       t.TextAppVisualStudioCode;
-    document.querySelector('[data-i18n="DaVinciResolve"]').textContent =
-      t.DaVinciResolve;
+    document.querySelector('[data-i18n="TextAppDaVinciResolve"]').textContent =
+      t.TextAppDaVinciResolve;
+    document.querySelector('[data-i18n="TextAppIllustrator"]').textContent =
+      t.TextAppIllustrator;
+    document.querySelector('[data-i18n="TextAppIndesign"]').textContent =
+      t.TextAppIndesign;
+    document.querySelector('[data-i18n="TextAppUnity"]').textContent =
+      t.TextAppUnity;
+    document.querySelector('[data-i18n="TextAppUnrealEngine"]').textContent =
+      t.TextAppUnrealEngine;
+    document.querySelector('[data-i18n="TextAppOfimatica"]').textContent =
+      t.TextAppOfimatica;
+    document.querySelector('[data-i18n="TextAppMaya"]').textContent =
+      t.TextAppMaya;
     document.querySelector('[data-i18n="textaboutme"]').textContent =
       t.textaboutme;
     document.querySelector('[data-i18n="Contact_TitleForm"]').textContent =
