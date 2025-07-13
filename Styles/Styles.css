@@ -8,10 +8,10 @@
 footer {
   background: #072b1c;
   padding: 1%;
-  gap: 20%;
+  gap: 7%;
   width: 98%;
   display: flex;
-  justify-content: center;
+  justify-content: end;
   text-align: center;
   align-items: center;
   color: white;
