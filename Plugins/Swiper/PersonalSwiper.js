@@ -1,16 +1,16 @@
 var swiper = new Swiper(".mySwiper", {
-  effect: "coverflow",
-  centeredSlides: true,
-  slidesPerView: "3",
-  coverflowEffect: {
-    rotate: 50,
-    stretch: 0,
-    depth: 100,
-    modifier: 1,
-    slideShadows: true,
-  },
-  autoplay: {
-    delay: 4000,
-  },
-  loop: true,
+    spaceBetween: 2,
+    slidesPerView: 5,
+    freeMode: true,
+    watchSlidesProgress: false,
+});
+var swiper2 = new Swiper(".mySwiper2", {
+    spaceBetween: 20,
+    // navigation: {
+    //     nextEl: ".swiper-button-next",
+    //     prevEl: ".swiper-button-prev",
+    // },
+    thumbs: {
+        swiper: swiper,
+    },
 });

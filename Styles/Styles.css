@@ -45,380 +45,325 @@ footer {
 
 /*------------------------*/
 /*STYLES INDEX*/
-body::-webkit-scrollbar {
-  display: none;
-}
-
-#LanguageSelect {
-  margin-left: 91%;
-  margin-top: 2.2%;
-  padding: 0.5%;
-  appearance: none;
-  z-index: 1;
-  width: 4%;
-  position: fixed;
-  text-align: center;
-  border-radius: 10px;
-  color: white;
-  border: 1.5px solid rgba(255, 255, 255, 0.2);
-  background: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-}
-
-#LanguageSelect:hover {
-  cursor: pointer;
-}
-
-option {
-  color: black;
-}
-
-option:hover {
-  cursor: pointer;
-}
-
-#BodyIndex {
-  background-image: url(../ImagesVideos/Artboard\ 1.png);
-  background-position: center;
-  background-size: cover;
-  /* position: static; */
-  background-repeat: no-repeat;
-
-  width: 100vw;
-  height: 100vh;
-}
-
-header {
-  /* background-color: aqua; */
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.linkmenu {
-  text-decoration: none;
-}
-
-#MenuItems #Active .linkcontact {
-  color: #22ce89;
-  font-weight: bolder;
-}
-
-
-#MenuItems a {
-  color: white;
-}
-
-.HeaderMobile,
-#LogoMobile {
-  display: none;
-}
-
-.fa-xmark {
-  visibility: hidden;
-}
-
-#LogoHeader {
-  width: 50px;
-  height: 50px;
-}
-
-#Menu {
-  display: flex;
-  position: fixed;
-  justify-content: space-between;
-  border-radius: 16px;
-  background: #116242a2;
-  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.40),
-    0 4px 20px #116242a2;
-  backdrop-filter: blur(5px);
-  border: 1.5px solid rgba(255, 255, 255, 0.2);
-  align-items: center;
-  padding: 0% 1%;
-  margin-top: 1%;
-  width: 80%;
-  z-index: 2;
-}
-
-#MenuItems {
-  display: flex;
-  margin: 1%;
-  width: 100%;
-  gap: 15%;
-  justify-content: center;
-  padding: 1%;
-  font-size: 120%;
-}
-
-li {
-  list-style: none;
-  transition: 0.5s;
-}
-
-
-li:hover {
-  transform: scale(1.2);
-  cursor: pointer;
-}
-
-#MenuItems #Active a {
-  color: #22ce89;
-  font-weight: bolder;
-}
-
-#MenuItems #Active:hover {
-  transform: scale(1);
-  transition: 0.5s;
-}
-
-.ButtonContact {
-  text-align: center;
-  background: none;
-  padding: 1%;
-  width: 9%;
-  border: 1.5px solid rgba(255, 255, 255, 0.2);
-  font-size: 110%;
-  border-radius: 10px;
-  color: white;
+* {
+    margin: 0;
+    padding: 0;
 }
 
 a {
-  color: white;
-  text-decoration: none;
+    text-decoration: none;
+    color: white;
 }
 
-button:hover {
-  cursor: pointer;
-  background-color: #5e967b;
+html {
+    scroll-behavior: smooth;
 }
 
-#FormGeneral {
-  width: 100%;
-  height: 100vh;
-  /* display: block; */
-  display: flex;
-  justify-content: center;
-  /* background-color: #a72828; */
-  padding-bottom: 5%;
+body {
+    margin: 0;
+    /* background: url('../media/Fondo.jpeg') center/cover no-repeat; */
+    height: 100vh;
+    scroll-behavior: smooth;
+    overflow: hidden;
 }
 
-.ContainerForm {
-  /* background-color: #22ce89; */
-  backdrop-filter: blur(5px);
-  border: 1.5px solid rgba(255, 255, 255, 0.2);
-  border-radius: 30px;
-  width: 90%;
-  text-align: center;
-  margin-top: 6.5%;
-}
-
-#nom:invalid,
-#correu_e:invalid #servei:invalid {
-  border-color: #c95757;
-  transition: 0.5s;
-}
-
-#nom:valid,
-#correu_e:valid,
-#servei:valid {
-  border-color: #28a745;
-  transition: 0.5s;
-}
-
-.TitleForm {
-  margin-top: 4%;
-}
-
-.TitleForm,
-.SubtitleForm {
-  text-align: center;
-  color: white;
-  /* background-color: #072b1c; */
-}
-
-#nom,
-#correu_e {
-  border: none;
-  outline: none;
-  background: none;
-  border-bottom: 1px solid white;
-  width: 83%;
-  /* text-align: center; */
-  color: white;
-  padding: 1%;
-
-}
-
-#nom:invalid:placeholder-shown,
-#correu_e:invalid:placeholder-shown {
-  border-color: #ccc;
-}
-
-label {
-  color: white;
-}
-
-#nom::placeholder,
-#correu_e::placeholder,
-#comentaris::placeholder {
-  color: rgba(255, 255, 255, 0.326);
-
-}
-
-#servei {
-  padding: 1%;
-  width: 85%;
-  border: none;
-  outline: none;
-  background: none;
-  border-bottom: 1px solid white;
-  -moz-appearance: none;
-  text-indent: 0.01px;
-  text-overflow: '';
-  color: rgb(255, 255, 255);
-  -webkit-appearance: none;
-  -ms-appearance: none;
-  -o-appearance: none;
-  appearance: none;
-}
-
-
-
-#NameContainerForm,
-#EmailContainerForm,
-#ServiceContainerForm,
-#CommentsContainerForm {
-  /* background-color: #116241; */
-  margin-top: 1%;
-  padding: 2%;
-}
-
-#comentaris {
-  border: none;
-  outline: none;
-  background: none;
-  color: white;
-  resize: none;
-  width: 85%;
-  border-bottom: 1px solid white;
-}
-
-#SubmitButton {
-  background: none;
-  border: 1.5px solid rgba(255, 255, 255, 0.2);
-  margin: 2% 0%;
-  padding: 1%;
-  color: white;
-  width: 9%;
-}
-
-
-
-.MainIndex {
-
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.ContainerTitles {
-  margin-top: 18%;
-  display: flex;
-  flex-direction: column;
-  gap: 10%;
-  text-align: center;
-  color: white;
-  margin-left: 37%;
-  /* background-color: aliceblue; */
-  width: 26%;
-}
-
-.Title {
-  font-size: 8rem;
-}
-
-.Subtitle {
-  font-size: 4rem;
-}
-
-.inner-headings {
-  text-align: center;
-  /* background-color: aquamarine; */
-  width: 55%;
-  font-size: 400%;
-  color: white;
-  z-index: 0;
-  margin-top: 0%;
-  margin-left: 23%;
-  border: 0px solid #ddd;
-  height: 80px;
-  line-height: 80px;
-  text-transform: uppercase;
-  overflow: hidden;
-}
-
-.inner-headings span {
-  position: relative;
-  animation: TextRotating 13s ease-in-out infinite;
-  color: #116241;
-  font-weight: bolder;
-}
-
-@keyframes TextRotating {
-
-  20% {
+header {
+    position: fixed;
     top: 0;
-  }
-
-  40% {
-    top: -80px
-  }
-
-  60% {
-    top: -160px;
-  }
-
-  80% {
-    top: -240px;
-  }
-
-  90% {
-    top: -320px;
-  }
-
-  100% {
-    top: -400px;
-  }
+    left: 0;
+    width: 100%;
+    display: flex;
+    width: 100%;
+    color: white;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    text-transform: uppercase;
+    justify-content: space-around;
+    align-items: center;
+    gap: 23%;
+    background-color: rgba(0, 0, 0, 0.0);
+    transition: background-color 0.6s ease;
+    z-index: 2;
 }
 
-.ButtonCurriculum {
-  display: flex;
-  flex-direction: column;
-  margin-top: 15.5%;
-  margin-left: 45%;
-  scroll-behavior: smooth;
-  text-align: center;
-  font-size: 200%;
-  color: white;
-  width: 10%;
-  /* background-color: brown; */
-
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+    width: 30%;
+    font-size: 1.5em;
+    /* background-color: antiquewhite; */
 }
 
-.CVsection {
-  display: flex;
-  justify-content: center;
-  background-color: #116241;
+nav>ul {
+    list-style: none;
 }
 
-#CVImage {
-  margin-top: 10%;
-  margin-bottom: 5%;
-  border-radius: 30px;
+button {
+    padding: 0.8%;
+    text-transform: uppercase;
+    border: none;
+    font-size: 120%;
+    border-radius: 0px 20px 0px 20px;
 }
 
+#video_container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -2;
+    overflow: hidden;
+}
+
+#video_background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+#video_container::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top,
+            rgb(0, 39, 24) 0%,
+
+            rgb(0, 39, 24) 5%,
+
+            transparent 100%);
+    pointer-events: none;
+}
+
+
+#InfoBody {
+    /* background-color: green; */
+    color: white;
+    max-height: 40%;
+    display: flex;
+    text-align: center;
+    margin: 18% 0% 0% 17%;
+}
+
+/* ESTILS YING*/
+
+#Ying {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+#Ying>#ContainerYingName {
+    width: 83%;
+}
+
+#Ying>#ContainerYingName>.Name {
+    font-size: 17em;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: transparent;
+
+    -webkit-text-stroke: 4px white;
+    width: 100%;
+    /* background-color: aqua; */
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+#Ying>#ContainerYangTextName {
+    /* background-color: blue; */
+    width: 96%;
+}
+
+#Ying>#ContainerYangTextName>.TextYing {
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 2em;
+    width: 100%;
+    text-align: justify;
+}
+
+/*------------------------------*/
+
+
+#Yang {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    margin-right: 14%;
+}
+
+#Yang>#ContainerYingTextSurName>.TextYang {
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 2em;
+    width: 100%;
+    text-align: justify;
+    align-self: center;
+}
+
+#Yang>#ContainerYingTextSurName {
+    /* background-color: blue; */
+    width: 85%;
+    display: flex;
+    margin-top: 5%;
+    height: 100%;
+}
+
+
+#Yang>#ContainerYangSurName>.SurName {
+    font-size: 17em;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    width: 100%;
+    /* background-color: aqua; */
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+#Yang>#ContainerYangSurName {
+    width: 90%;
+}
+#BtnCVsect {
+    margin-top: 10%;
+    /* background-color: aliceblue; */
+    color: white;
+    display: flex;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    justify-content: center;
+}
+
+/* SECCIÓ CV */
+#ProjectsSection {
+    background-color: rgb(0, 39, 24);
+    margin-top: 3.5%;
+    height: 102%;
+}
+
+.MarmosetContainer {
+    /* display: flex; */
+    justify-content: center;
+    padding-top: 1%;
+}
+
+.MarmosetContainer {
+    border: none !important;
+    outline: none !important;
+    background: transparent !important;
+}
+
+/* Per assegurar-nos que el canvas no té marge */
+.MarmosetContainer iframe,
+.MarmosetContainer canvas {
+    border: none !important;
+    outline: none !important;
+    background: transparent !important;
+}
+
+/* SWIPER */
+.swiper {
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    height: 100%;
+}
+
+.swiper-slide {
+    height: 100%;
+    display: flex;
+    margin-top: 4%;
+    justify-content: center;
+    /* background-size: cover; */
+    background-position: center;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+.mySwiper2 {
+    width: 100%;
+    z-index: 0;
+}
+
+.mySwiper {
+    z-index: 1;
+    /* opacity: 0.4; */
+    bottom: -100%;
+    height: 30%;
+    box-sizing: border-box;
+}
+
+.mySwiper .swiper-slide {
+    width: 25%;
+    height: 100%;
+    z-index: -1;
+    filter: grayscale(10);
+    transition: 0.5s;
+}
+
+.mySwiper .swiper-slide:hover {
+    scale: 90%;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+    filter: grayscale(0);
+    transition: 0.5s;
+}
+
+.mySwiper .swiper-slide-thumb-active:hover {
+    scale: 100%;
+}
+
+.mySwiper .swiper-slide-thumb-active:hover {
+    cursor: default;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+#scrollTopBtn {
+    position: fixed;
+    bottom: 25%;
+    right: 30px;
+    /* width: 50px; */
+    padding: 1%;
+    height: 5.5%;
+    border: none;
+
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    z-index: 2000;
+    /* per sobre del swiper i del vídeo */
+}
+
+#scrollTopBtn.show {
+    opacity: 1;
+    pointer-events: auto;
+}
 /*------------------------*/
 
 /* STYLES PROJECTES */
