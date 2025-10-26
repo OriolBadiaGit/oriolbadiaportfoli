@@ -54,7 +54,6 @@ body {
 }
 
 header {
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -133,7 +132,7 @@ button {
   max-height: 40%;
   display: flex;
   text-align: center;
-  margin: 18% 0% 0% 17%;
+  margin: 10% 0% 0% 17%;
 }
 
 /* ESTILS YING*/
@@ -225,8 +224,8 @@ button {
 }
 
 #BtnCVsect {
-  margin-top: 10%;
-  margin-bottom: 3.8%;
+  margin-top: 12%;
+  margin-bottom: 4.45%;
   /* background-color: aliceblue; */
   color: white;
   display: flex;
