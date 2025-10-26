@@ -225,7 +225,7 @@ button {
 
 #BtnCVsect {
   margin-top: 12%;
-  margin-bottom: 4.45%;
+  margin-bottom: 4%;
   /* background-color: aliceblue; */
   color: white;
   display: flex;
@@ -237,6 +237,7 @@ button {
 
 /* SECCIÓ CV */
 #ProjectsSection {
+  width: 100%;
   background-color: rgb(0, 39, 24);
   height: 100%;
 }
@@ -244,9 +245,6 @@ button {
 .MarmosetContainer {
   /* display: flex; */
   justify-content: center;
-}
-
-.MarmosetContainer {
   border: none !important;
   outline: none !important;
   background: transparent !important;
@@ -321,7 +319,7 @@ button {
 }
 
 .mySwiper .swiper-slide-thumb-active .titlethumb:hover {
- display:flex;
+  display: flex;
 }
 
 
