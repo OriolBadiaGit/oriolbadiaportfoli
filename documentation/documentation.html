@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Artist Portfolio – Documentation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: #e2e8f0;
+            background: linear-gradient(145deg, #0a0c15 0%, #0f111a 100%);
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: rgba(15, 25, 35, 0.92);
+            backdrop-filter: blur(12px);
+            border-radius: 48px;
+            padding: 60px 60px;
+            box-shadow: 0 30px 60px -15px rgba(108, 99, 255, 0.3);
+            border: 1px solid rgba(108, 99, 255, 0.3);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Space Grotesk', 'Inter', sans-serif;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #ffffff;
+        }
+
+        h1 {
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+            padding-bottom: 18px;
+            border-bottom: 4px solid #6c63ff;
+            display: inline-block;
+            background: linear-gradient(135deg, #a855f7, #6c63ff, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+        }
+
+        h1::after {
+            content: '🎨';
+            position: absolute;
+            right: -60px;
+            top: 0;
+            font-size: 2.8rem;
+            background: none;
+            -webkit-text-fill-color: initial;
+            color: #ec4899;
+            animation: pulse 2s infinite;
+        }
+
+        h2 {
+            font-size: 2.3rem;
+            margin: 60px 0 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px dashed #6c63ff;
+            position: relative;
+        }
+
+        h2::before {
+            content: '✨';
+            position: absolute;
+            left: -45px;
+            top: 0;
+            font-size: 2rem;
+            opacity: 0.8;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            margin: 35px 0 18px;
+            color: #a78bfa;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        h4 {
+            font-size: 1.3rem;
+            margin: 20px 0 10px;
+            color: #e2e8f0;
+            border-left: 6px solid #6c63ff;
+            padding-left: 18px;
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: #cbd5e1;
+            font-size: 1.08rem;
+        }
+
+        code {
+            background: #1e1b4b;
+            color: #c4b5fd;
+            padding: 4px 12px;
+            border-radius: 40px;
+            font-family: 'Space Grotesk', 'Courier New', monospace;
+            font-size: 0.9rem;
+            border: 1px solid #6c63ff;
+            white-space: nowrap;
+        }
+
+        pre {
+            background: #0a0a14;
+            color: #e2e8f0;
+            padding: 28px;
+            border-radius: 28px;
+            overflow-x: auto;
+            margin: 25px 0;
+            border-left: 8px solid #6c63ff;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            position: relative;
+        }
+
+        pre code {
+            background: none;
+            color: inherit;
+            padding: 0;
+            border-radius: 0;
+            white-space: pre;
+            border: none;
+        }
+
+        mark {
+            background: linear-gradient(120deg, rgba(108, 99, 255, 0.3) 0%, rgba(236, 72, 153, 0.3) 100%);
+            padding: 3px 10px;
+            border-radius: 30px;
+            color: #c4b5fd;
+            font-weight: 600;
+        }
+
+        .note, .warning, .tip, .important {
+            padding: 26px 30px;
+            margin: 35px 0;
+            border-radius: 28px;
+            position: relative;
+            padding-left: 85px;
+            border: 1px solid rgba(108, 99, 255, 0.3);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .note::before, .warning::before, .tip::before, .important::before {
+            position: absolute;
+            left: 25px;
+            top: 22px;
+            font-size: 2.5rem;
+        }
+
+        .note { background: linear-gradient(135deg, #1e1b4b 0%, #2e2a5e 100%); border-left: 6px solid #6c63ff; }
+        .note::before { content: '📘'; }
+
+        .warning { background: linear-gradient(135deg, #451a1a 0%, #5e2a2a 100%); border-left: 6px solid #f97316; }
+        .warning::before { content: '⚠️'; }
+
+        .tip { background: linear-gradient(135deg, #1a3a2a 0%, #2a5e3e 100%); border-left: 6px solid #22c55e; }
+        .tip::before { content: '💡'; }
+
+        .important { background: linear-gradient(135deg, #4a1a4a 0%, #6e2a6e 100%); border-left: 6px solid #ec4899; }
+        .important::before { content: '🔥'; }
+
+        .file-structure {
+            background: #0a0a14;
+            color: #cbd5e1;
+            padding: 35px;
+            border-radius: 32px;
+            font-family: 'Space Grotesk', 'SF Mono', 'Courier New', monospace;
+            font-size: 1rem;
+            line-height: 2.2;
+            margin: 30px 0;
+            border: 1px solid #6c63ff;
+            box-shadow: 0 25px 40px rgba(108, 99, 255, 0.15);
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        .file-structure::before {
+            content: "🎨 3D ARTIST PORTFOLIO — PROJECT STRUCTURE";
+            display: block;
+            font-weight: 700;
+            color: #a78bfa;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #6c63ff;
+            padding-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #6c63ff;
+            color: white;
+            padding: 6px 22px;
+            border-radius: 60px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            margin-right: 12px;
+        }
+
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .card {
+            background: rgba(20, 20, 40, 0.7);
+            padding: 32px 28px;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(108, 99, 255, 0.2);
+            transition: all 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: #6c63ff;
+            box-shadow: 0 20px 40px rgba(108, 99, 255, 0.2);
+        }
+
+        .card-icon {
+            font-size: 2.6rem;
+            margin-bottom: 15px;
+        }
+
+        .color-swatch {
+            display: inline-block;
+            width: 28px;
+            height: 28px;
+            border-radius: 10px;
+            margin-right: 10px;
+            vertical-align: middle;
+            border: 2px solid rgba(255,255,255,0.2);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        ul, ol {
+            margin: 15px 0 15px 30px;
+        }
+        li { margin-bottom: 6px; color: #cbd5e1; }
+
+        hr {
+            margin: 60px 0;
+            border: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #6c63ff, #ec4899, #a855f7, #22c55e);
+            opacity: 0.4;
+            border-radius: 4px;
+        }
+
+        @keyframes pulse {
+            0%,100% { transform: scale(1); opacity: 0.9; }
+            50% { transform: scale(1.1); opacity: 1; }
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        th {
+            background: #6c63ff;
+            color: white;
+            padding: 16px;
+            font-weight: 600;
+        }
+        td {
+            padding: 16px;
+            background: rgba(20, 20, 40, 0.8);
+            border-bottom: 1px solid rgba(108, 99, 255, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 35px 20px; }
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+            h3 { font-size: 1.5rem; }
+            .note, .warning, .tip, .important { padding: 20px 20px 20px 70px; }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+        <h1>3D Artist · Immersive Portfolio</h1>
+        <span style="background: #6c63ff; color: white; padding: 14px 32px; border-radius: 60px; font-weight: 600; letter-spacing: 1.5px; box-shadow: 0 10px 20px rgba(108,99,255,0.4); border: 1px solid #ec4899;">✨ v1.0 · 3D INTERACTIVE</span>
+    </div>
+    <p style="font-size: 1.4rem; color: #e2e8f0; font-weight: 500; margin: 25px 0 15px;">Modern 3D artist portfolio with Three.js background, sidebar navigation, and complete sections for showcasing creative work.</p>
+    
+    <div class="note" style="margin-top: 20px;">
+        <p style="margin: 0; font-size: 1.15rem;"><strong>Thank you for choosing the 3D Artist Portfolio.</strong> This documentation covers every component, variable, and customization option. Use the quick navigation below.</p>
+    </div>
+
+    <!-- QUICK NAV -->
+    <div style="background: rgba(20, 20, 40, 0.8); border-radius: 40px; padding: 30px; margin: 40px 0; border: 1px solid rgba(108, 99, 255, 0.3);">
+        <h3 style="margin-top: 0;">🎨 Quick Navigation</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 15px;">
+            <a href="#structure" style="background:#1e1b4b; padding:12px 24px; border-radius:60px; text-decoration:none; color:#c4b5fd; font-weight:600;">📁 1. Structure</a>
+            <a href="#setup" style="background:#1e1b4b; padding:12px 24px; border-radius:60px; text-decoration:none; color:#c4b5fd; font-weight:600;">⚙️ 2. Setup</a>
+            <a href="#personalization" style="background:#1e1b4b; padding:12px 24px; border-radius:60px; text-decoration:none; color:#c4b5fd; font-weight:600;">🎨 3. Personalization</a>
+            <a href="#sections" style="background:#1e1b4b; padding:12px 24px; border-radius:60px; text-decoration:none; color:#c4b5fd; font-weight:600;">🧩 4. Sections</a>
+            <a href="#styling" style="background:#1e1b4b; padding:12px 24px; border-radius:60px; text-decoration:none; color:#c4b5fd; font-weight:600;">🎭 5. CSS Variables</a>
+            <a href="#threejs" style="background:#1e1b4b; padding:12px 24px; border-radius:60px; text-decoration:none; color:#c4b5fd; font-weight:600;">✨ 6. Three.js 3D</a>
+            <a href="#components" style="background:#1e1b4b; padding:12px 24px; border-radius:60px; text-decoration:none; color:#c4b5fd; font-weight:600;">🧰 7. Components</a>
+            <a href="#forms" style="background:#1e1b4b; padding:12px 24px; border-radius:60px; text-decoration:none; color:#c4b5fd; font-weight:600;">📬 8. Forms</a>
+            <a href="#navigation" style="background:#1e1b4b; padding:12px 24px; border-radius:60px; text-decoration:none; color:#c4b5fd; font-weight:600;">🧭 9. Navigation</a>
+        </div>
+    </div>
+
+    <!-- 1. FILE STRUCTURE -->
+    <h2 id="structure">1. Full File Structure</h2>
+    <p>Production-ready 3D artist portfolio with organized assets and modular CSS/JS.</p>
+    <div class="file-structure">3d-artist-portfolio/
+│
+├── 📁 <span style="color:#a78bfa;">css/</span>
+│   ├── styles.css                # Main stylesheet (all sections + responsive)
+│   ├── bootstrap.min.css         # Bootstrap 5 grid utilities
+│   ├── swiper-bundle.min.css     # Swiper for clients & testimonials
+│   ├── themify-icons.css         # Icon font (ti-*)
+│   └── simplebar.css             # Custom scrollbar styling
+│
+├── 📁 <span style="color:#a78bfa;">js/</span>
+│   ├── main.js                   # All custom JS (navigation, filters, forms, swipers)
+│   ├── three.module.js           # Three.js core library
+│   ├── GLTFLoader.js             # GLTF model loader
+│   ├── swiper-bundle.min.js      # Swiper library
+│   ├── jquery.min.js             # jQuery dependency
+│   ├── bootstrap.min.js          # Bootstrap components
+│   └── simplebar.min.js          # Custom scrollbar
+│
+├── 📁 <span style="color:#fbbf24;">3dfile/</span>
+│   └── Astronaut.glb             # 3D model for background (GLTF format)
+│
+├── 📁 <span style="color:#fbbf24;">images/</span>
+│   ├── 📁 sidebar/               # avatar.png
+│   ├── 📁 about/                 # about.jpg
+│   ├── 📁 clients/               # client-1.png ... client-6.png
+│   ├── 📁 testimonials/          # avatar-1.png ... avatar-5.png
+│   ├── 📁 work/                  # portfolio-1.png ... portfolio-8.png
+│   ├── 📁 team/                  # alex.jpeg, sarah.jpeg, mike.jpeg, emma.jpeg
+│   ├── 📁 blog/                  # blog-1.png ... blog-6.png
+│   └── 📁 (any other assets)
+│
+└── 📄 <span style="color:#4ade80;">index.html</span>                # Master HTML (all sections combined)</div>
+
+    <div class="tip">
+        <p><strong>3D Model Tip:</strong> The background uses <code>Astronaut.glb</code> from the <code>3dfile/</code> folder. Replace it with your own GLTF/GLB model, or remove the loader to use only the particle system.</p>
+    </div>
+
+    <!-- 2. INITIAL SETUP -->
+    <h2 id="setup">2. Quick Start / Setup</h2>
+    <p>Open <code>index.html</code> in a modern browser – it works immediately. For local development:</p>
+    <ol>
+        <li>Place the folder in your web server root (or use <code>Live Server</code> in VS Code).</li>
+        <li>All paths are relative (<code>images/team/alex.jpeg</code>, <code>3dfile/Astronaut.glb</code>).</li>
+        <li>The Three.js background runs as a module – ensure <code>three.module.js</code> and <code>GLTFLoader.js</code> are present.</li>
+        <li>Sidebar navigation uses single-page section toggling (only one section visible at a time).</li>
+    </ol>
+    <pre>&lt;!-- Required Scripts (order matters) --&gt;
+&lt;script src="js/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/bootstrap.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/swiper-bundle.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/simplebar.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/three.module.js"&gt;&lt;/script&gt;
+&lt;script type="importmap"&gt;
+  {
+    "imports": {
+      "three": "./js/three.module.js"
+    }
+  }
+&lt;/script&gt;
+&lt;script type="module" src="js/main.js"&gt;&lt;/script&gt;</pre>
+
+    <!-- 3. PERSONALIZATION -->
+    <h2 id="personalization">3. Personalization – Make It Yours</h2>
+    
+    <h3>3.1 Profile & Brand Identity</h3>
+    <p>Edit sidebar profile information (name, role, avatar) in <code>index.html</code>:</p>
+    <pre>&lt;div class="sidebar-profile"&gt;
+    &lt;div class="profile-avatar"&gt;
+        &lt;img src="images/sidebar/<mark>your-avatar.png</mark>" alt="Profile"&gt;
+    &lt;/div&gt;
+    &lt;h3 class="profile-name"&gt;<mark>Your Name</mark>&lt;/h3&gt;
+    &lt;p class="profile-role"&gt;<mark>Your Title</mark>&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- Footer brand --&gt;
+&lt;span class="brand-text"&gt;<mark>Your Brand</mark>&lt;span class="brand-dot"&gt;.&lt;/span&gt;&lt;/span&gt;
+&lt;p class="footer-tagline"&gt;<mark>Your tagline</mark>&lt;/p&gt;</pre>
+
+    <h3>3.2 Hero Section & Personal Info</h3>
+    <pre>&lt;h1 class="hero-greeting"&gt;Hey!, I am &lt;span class="highlight"&gt;<mark>Your Name</mark>&lt;/span&gt;&lt;/h1&gt;
+&lt;h2 class="hero-title"&gt;
+    &lt;span class="typed-text"&gt;<mark>3D Artist</mark>&lt;/span&gt;
+    &lt;span class="title-separator"&gt;&amp;&lt;/span&gt;
+    &lt;span class="typed-text-secondary"&gt;<mark>Digital Sculptor</mark>&lt;/span&gt;
+&lt;/h2&gt;
+&lt;p class="hero-description"&gt;<mark>Your unique value proposition...</mark>&lt;/p&gt;</pre>
+
+    <h3>3.3 Contact Information</h3>
+    <p>Update contact details in the contact section (~line 500 in HTML):</p>
+    <pre>&lt;div class="contact-card"&gt;
+    &lt;div class="contact-card-icon"&gt;&lt;i class="ti-email"&gt;&lt;/i&gt;&lt;/div&gt;
+    &lt;div class="contact-card-content"&gt;
+        &lt;h4&gt;Email Me&lt;/h4&gt;
+        &lt;p&gt;<mark>your@email.com</mark>&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Google Maps location --&gt;
+&lt;iframe src="<mark>https://maps.google.com/?q=Your+Location</mark>"&gt;</pre>
+
+    <!-- 4. SECTIONS OVERVIEW -->
+    <h2 id="sections">4. Sections & How to Edit</h2>
+    <div class="grid-cards">
+        <div class="card"><span class="card-icon">🏠</span><h4>Home / Hero</h4>lines ~70-130: greeting, stats, CTA, client slider</div>
+        <div class="card"><span class="card-icon">👤</span><h4>About</h4>lines ~135-200: bio, stats, expertise tags, testimonials</div>
+        <div class="card"><span class="card-icon">🛠️</span><h4>Skills</h4>lines ~205-270: 4 skill categories with progress bars</div>
+        <div class="card"><span class="card-icon">🎨</span><h4>Work / Portfolio</h4>lines ~275-350: filterable 3D portfolio cards (flip effect)</div>
+        <div class="card"><span class="card-icon">💎</span><h4>Services</h4>lines ~355-430: 6 service cards with pricing</div>
+        <div class="card"><span class="card-icon">👥</span><h4>Team</h4>lines ~435-490: 4 team members with 3D tilt effect</div>
+        <div class="card"><span class="card-icon">📰</span><h4>Blog</h4>lines ~495-560: blog posts with category filter + newsletter</div>
+        <div class="card"><span class="card-icon">📬</span><h4>Contact</h4>lines ~565-620: compact form, contact cards, map</div>
+    </div>
+
+    <h3>4.1 Client Slider (Swiper)</h3>
+    <p>Add/remove clients by editing the <code>.swiper-slide</code> elements inside <code>.client-swiper</code>:</p>
+    <pre>&lt;div class="swiper-slide client-slide"&gt;
+    &lt;div class="client-card"&gt;
+        &lt;img src="images/clients/<mark>your-logo.png</mark>" alt="Client Name"&gt;
+        &lt;span class="client-name"&gt;<mark>Client Name</mark>&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+    <h3>4.2 Testimonials Carousel</h3>
+    <p>Edit testimonial cards inside <code>.testimonial-swiper .swiper-wrapper</code>:</p>
+    <pre>&lt;div class="swiper-slide testimonial-slide"&gt;
+    &lt;div class="testimonial-card"&gt;
+        &lt;div class="testimonial-header"&gt;
+            &lt;div class="client-avatar"&gt;&lt;img src="images/testimonials/<mark>avatar.png</mark>"&gt;&lt;/div&gt;
+            &lt;div class="client-info"&gt;
+                &lt;h4&gt;<mark>Client Name</mark>&lt;/h4&gt;
+                &lt;span&gt;<mark>Title</mark>&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;p&gt;"<mark>Testimonial text...</mark>"&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+    <h3>4.3 Portfolio Filter & Cards</h3>
+    <p>Portfolio cards use <code>data-category</code> attribute for filtering (sculpture, motion, environment, vr):</p>
+    <pre>&lt;div class="portfolio-card" data-category="<mark>sculpture</mark>"&gt;
+    &lt;div class="card-inner"&gt;
+        &lt;div class="card-front"&gt;
+            &lt;div class="card-image"&gt;
+                &lt;img src="images/work/<mark>your-image.png</mark>"&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="card-back"&gt;
+            &lt;h4&gt;<mark>Project Title</mark>&lt;/h4&gt;
+            &lt;p&gt;<mark>Description</mark>&lt;/p&gt;
+            &lt;div class="card-tech-stack"&gt;
+                &lt;span&gt;<mark>ZBrush</mark>&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+    <!-- 5. CSS VARIABLES -->
+    <h2 id="styling">5. CSS Variables – Complete Theme Control</h2>
+    <p>All colors, spacing, and effects are controlled via <code>:root</code> in <code>styles.css</code>:</p>
+    <pre style="max-height: 400px;">:root {
+    --primary: #6c63ff;           /* Main brand color */
+    --primary-dark: #5a52d6;      /* Darker primary */
+    --primary-light: #8b84ff;     /* Lighter primary */
+    --secondary: #ff44aa;         /* Accent color */
+    --dark-bg: #050510;           /* Base dark background */
+    --darker-bg: #03030f;         /* Darker background */
+    --card-bg: rgba(20, 20, 50, 0.6);   /* Card background with opacity */
+    --text-light: #ffffff;        /* Light text */
+    --text-muted: rgba(255, 255, 255, 0.7);
+    --glass-effect: rgba(5, 5, 20, 0.85);
+    --transition: all 0.3s ease;
+    --border-radius: 1rem;
+    --border-radius-lg: 2rem;
+    --sidebar-width: 260px;
+}</pre>
+
+    <div class="tip">
+        <p>To create a light version, replace background colors with light values and set text to dark. Change <code>--primary</code> to your brand color for instant rebranding.</p>
+    </div>
+
+    <!-- 6. THREE.JS 3D BACKGROUND -->
+    <h2 id="threejs">6. Three.js 3D Background Configuration</h2>
+    <p>The 3D background includes an animated GLTF model, particle system, and stars. Edit <code>main.js</code> (~line 800 onward):</p>
+    <ul>
+        <li><mark>3D Model Path</mark>: Change <code>'../3dfile/Astronaut.glb'</code> to your own GLTF/GLB file.</li>
+        <li><mark>Model Scale & Position</mark>: Adjust <code>face.scale.set(2,2,2)</code> and <code>face.position.set(0,-2.2,0)</code>.</li>
+        <li><mark>Colors</mark>: Modify <code>neonLight1</code> (cyan), <code>neonLight2</code> (pink), or star/particle colors.</li>
+        <li><mark>Particle Count</mark>: Change <code>particleCount</code> (800) for performance tuning.</li>
+        <li><mark>Camera Movement</mark>: Adjust <code>camera.position.x</code> and <code>camera.position.y</code> animation.</li>
+    </ul>
+    <pre>// Load your custom 3D model
+loader.load('<mark>../3dfile/YourModel.glb</mark>', function (gltf) {
+    face = gltf.scene;
+    face.scale.set(<mark>2, 2, 2</mark>);
+    face.position.set(<mark>0, -2.2, 0</mark>);
+    scene.add(face);
+});
+
+// Customize particle colors
+const particles = new THREE.Points(particleGeo, 
+    new THREE.PointsMaterial({ color: <mark>0xff66cc</mark>, size: 0.08 })
+);</pre>
+
+    <div class="warning">
+        <strong>3D Model Not Loading?</strong> Ensure the GLTF file path is correct and CORS is not blocking. Check browser console for errors. The model must be in the <code>3dfile/</code> folder.
+    </div>
+
+    <!-- 7. COMPONENTS BREAKDOWN -->
+    <h2 id="components">7. Reusable Components</h2>
+    <h3>Buttons</h3>
+    <p>Use <code>.btn .btn-primary</code> (purple gradient) or <code>.btn-outline-light</code> (ghost). Icons from Themify (<code>ti-arrow-right</code>, etc).</p>
+    
+    <h3>Cards</h3>
+    <p><code>.service-card-enhanced</code>, <code>.portfolio-card</code>, <code>.team-card</code>, <code>.blog-card-enhanced</code> – all share consistent hover effects, glassmorphism styling, and smooth transitions.</p>
+    
+    <h3>Swipers (Carousels)</h3>
+    <p>Two Swiper instances: <code>.client-swiper</code> (logos, autoplay) and <code>.testimonial-swiper</code> (testimonials). Configuration in <code>main.js</code> (<code>initSwipers</code> function).</p>
+
+    <h3>Filter Systems</h3>
+    <p>Work section filter: buttons with <code>data-filter</code> attribute matching portfolio card <code>data-category</code>. Blog filter: <code>data-blog-filter</code> matching <code>data-category</code> on blog cards.</p>
+
+    <!-- 8. FORM HANDLING -->
+    <h2 id="forms">8. Contact Form & Validation</h2>
+    <p>Enhanced contact form with real-time validation and simulated submission (no backend by default).</p>
+    <p>To connect to your backend, edit the <code>submit</code> event in <code>main.js</code> (~line 700):</p>
+    <pre>// Replace simulated submission with real API call
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    // ... validation ...
+    
+    // Replace setTimeout with fetch
+    const response = await fetch('<mark>https://your-api.com/contact</mark>', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, subject, message, service })
+    });
+    
+    if (response.ok) {
+        // Show success message
+    }
+});</pre>
+
+    <!-- 9. NAVIGATION SYSTEM -->
+    <h2 id="navigation">9. Single-Page Navigation</h2>
+    <p>The portfolio uses a unique single-section display system:</p>
+    <ul>
+        <li>Only <strong>one section is visible at a time</strong> (Home, About, Skills, Work, Services, Team, Blog, Contact).</li>
+        <li>Sidebar menu links use <code>data-section-id</code> to target the section.</li>
+        <li>Buttons with <code>data-nav-section</code> also trigger section changes.</li>
+        <li>Section switching includes smooth fade-in/up animation.</li>
+        <li>Mobile sidebar toggle appears on screens &lt; 992px.</li>
+    </ul>
+    <pre>// Add custom navigation button
+&lt;a href="#" data-nav-section="<mark>work</mark>"&gt;View My Work&lt;/a&gt;
+
+// To add a new section:
+// 1. Add new &lt;section id="new-section" class="horizontal-section"&gt;
+// 2. Add menu item with data-section-id="new-section"
+// 3. CSS will handle the rest</pre>
+
+    <div class="tip">
+        <p><strong>Adding a new section?</strong> Copy an existing section structure, give it a unique ID, and add a corresponding menu item in <code>#verticalNavMenu</code>. The navigation system automatically handles the rest.</p>
+    </div>
+
+    <!-- 10. DEPENDENCIES & CREDITS -->
+    <h2>10. Dependencies & Credits</h2>
+    <table>
+        <tr><th>Library</th><th>Usage</th><th>Version</th></tr>
+        <tr><td>Bootstrap 5</td><td>Grid, navbar utilities</td><td>5.3+</td></tr>
+        <tr><td>Swiper</td><td>Clients & testimonials carousels</td><td>11.0+</td></tr>
+        <tr><td>Three.js</td><td>3D background, GLTF model</td><td>r128+</td></tr>
+        <tr><td>GLTFLoader</td><td>Load GLTF 3D models</td><td>Three.js addon</td></tr>
+        <tr><td>SimpleBar</td><td>Custom scrollbar styling</td><td>6.0+</td>
+        <tr>
+        
+        <tr><td>Themify Icons</td><td>Icon set (ti-*)</td><td>1.0.1</td>
+        <tr>
+    </table>
+
+    <div class="note">
+        <strong>3D Model Credit:</strong> The included Astronaut model is for demo purposes. Replace with your own models for production use.
+    </div>
+
+    <!-- 11. SUPPORT & TROUBLESHOOTING -->
+    <h2>11. Support & Common Issues</h2>
+    <div class="warning">
+        <strong>Section not showing?</strong> Check that the section has <code>id="section-name"</code> and menu item has <code>data-section-id="section-name"</code>. The JavaScript looks for exact matches.
+    </div>
+    <div class="warning">
+        <strong>Swiper not working?</strong> Ensure <code>swiper-bundle.min.js</code> and <code>swiper-bundle.min.css</code> are loaded before <code>main.js</code>. Check console for errors.
+    </div>
+    <div class="tip">
+        <strong>3D model not appearing?</strong> Verify the path to <code>Astronaut.glb</code> is correct. The file should be in <code>3dfile/</code> folder. Use browser dev tools Network tab to check if the file loads.
+    </div>
+    <div class="important">
+        <strong>Mobile sidebar not toggling?</strong> Check that <code>menu-toggle-btn</code> exists and <code>dashboardSidebar</code> ID is correct. The toggle uses CSS class <code>.mobile-open</code>.
+    </div>
+
+    <hr>
+
+    <!-- CLOSING -->
+    <div style="background: linear-gradient(145deg, #1e1b4b, #2e2a5e); border-radius: 42px; padding: 50px; text-align: center;">
+        <span style="font-size: 4.5rem;">🎨</span>
+        <h2 style="color: white; font-size: 2.8rem; margin: 15px 0;">Ready to showcase your art?</h2>
+        <p style="color: #c4b5fd; font-size: 1.2rem; max-width: 700px; margin: 0 auto;">Every section is fully customizable. Replace images, update copy, swap 3D models, and deploy your unique portfolio in minutes.</p>
+        <div style="margin-top: 35px; display: flex; gap: 25px; justify-content: center; flex-wrap: wrap;">
+            <span style="background: #6c63ff; padding: 15px 35px; border-radius: 60px; font-weight: 700;">📘 3dartist.dev/docs</span>
+            <span style="background: rgba(255,255,255,0.1); backdrop-filter: blur(8px); padding: 15px 35px; border-radius: 60px;">📧 hello@3dartist.io</span>
+        </div>
+    </div>
+
+    <div style="display: flex; justify-content: space-between; margin-top: 50px; color: #94a3b8;">
+        <p>© 2025 Tippitoes Template. All rights reserved.</p>
+        <p>Built with 🎨 Three.js immersive 3D experiences</p>
+    </div>
+</div>
+
+<!-- floating back-to-top button -->
+<div style="position: fixed; bottom: 30px; right: 30px; background: #6c63ff; color: white; width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; box-shadow: 0 10px 30px rgba(108,99,255,0.5); cursor: pointer; z-index: 999; transition: all 0.3s ease;" onclick="window.scrollTo({top:0,behavior:'smooth'});" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">↑</div>
+
+<script>
+    // smooth anchor scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', function(e){
+            e.preventDefault();
+            const id = this.getAttribute('href');
+            if(id==='#') return;
+            const el = document.querySelector(id);
+            if(el) el.scrollIntoView({behavior:'smooth'});
+        });
+    });
+</script>
+</body>
+</html>

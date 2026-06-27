@@ -3,184 +3,1194 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Oriol Badia | Portfoli Artista 3D</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Artista 3D que s’especialitza en els àmbits de modelatge, il·luminació, texturització, i animació.">
+    <meta name="keywords" content="Artista 3D, art digital, portfli 3d, dissenyador 3D">
+    <meta name="author" content="Oriol Badia">
 
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="Plugins/Swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="Plugins/Swiper/PersonalSwiper.css">
-    <link rel="stylesheet" href="Plugins/Tippy/Animations/scale.css">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Oriol Badia | Portfoli Artista 3D">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/LogoWhite.ico">
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="Styles/Styles.css">
-    <link rel="stylesheet" href="Styles/Responsive/indexresponsive.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <script src="https://viewer.marmoset.co/main/marmoset.js"></script>
 
-    <title>Inici</title>
+    <!-- SimpleBar CSS -->
+    <link rel="stylesheet" href="css/simplebar.css" />
+
+    <!-- Local CSS Files -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/styles.css">
+
 </head>
 
-<body id="Body"">
-    <!--* MENÚ *-->
-    <header>
-        <img id="LogoHeader" src=" media/LogoWhite.png" alt="" width="90" height="90">
-    <nav>
-        <ul>
-            <li>Inici</li>
-        </ul>
-        <ul>
-            <li>Sobre mi</li>
-        </ul>
-        <ul>
-            <li>Currículum Vitae</li>
-        </ul>
-        <ul>
-            <li>Coneixaments</li>
-        </ul>
-    </nav>
-    <button>Contacta'm</button>
-    </header>
-    <!--*-------------------------------------------------------------*-->
-    <!--!CONTINGUT BODY*-->
-    <div id="video_container">
-        <video autoplay loop muted id="video_background">
-            <source src="media/BGVideo.mp4" type="video/mp4">
-        </video>
-    </div>
-    <div id="InfoBody">
-        <div id="Ying">
-            <div id="ContainerYingName">
-                <h1 class="Name">oriol</h1>
-            </div>
-            <div id="ContainerYangTextName">
+<body>
 
-                <p class="TextYing">
-                    Sóc un artista 3D que s’especialitza en els àmbits de modelatge, il·luminació, texturització, i
-                    animació. El meu propòsit és poder millorar en cada projecte i aportar valor a l’empresa.</p>
+    <!-- 3D Background Container (fixed behind everything) -->
+    <div id="three-canvas-container"></div>
 
+    <!-- Mobile Menu Toggle Button -->
+    <button class="menu-toggle-btn" id="mobileMenuToggle">
+        <i class="ti-menu"></i>
+    </button>
+
+    <!-- Main Layout: Sidebar + Main Content -->
+    <div class="main-layout">
+        <!-- Sidebar (Fixed Left) -->
+        <aside class="dashboard-sidebar" id="dashboardSidebar">
+            <div class="sidebar-profile">
+                <div class="profile-avatar">
+                    <img src="images/FotoCV.jpg" alt="Profile">
+                </div>
+                <h3 class="profile-name">Oriol Badia</h3>
+                <p class="profile-role">
+                    Artista 3D
+                </p>
             </div>
-        </div>
-        <div id="Yang">
-            <div id="ContainerYingTextSurName">
-                <p class="TextYang">
-                    Així mateix, l’edició d’imatge video i so, el disseny web i el desenvolupament de
-                    videojocs 2D i 3D són temes que em desperten l’interés per poder ampliar el meu
-                    ventall d’habilitats</p>
+            <div class="sidebar-nav">
+                <ul class="nav-menu-vertical" id="verticalNavMenu">
+                    <li><a href="#" data-section-id="home"><i class="ti-home"></i> Inici</a></li>
+                    <li><a href="#" data-section-id="about"><i class="ti-user"></i> Sobre Mi</a></li>
+                    <li><a href="#" data-section-id="skills"><i class="ti-panel"></i> Habilitats</a></li>
+                    <li><a href="#" data-section-id="work"><i class="ti-briefcase"></i> Projectes</a></li>
+                    <!-- <li><a href="#" data-section-id="services"><i class="ti-layout"></i> Serveis</a></li>
+                    <li><a href="#" data-section-id="team"><i class="ti-user"></i> Equip</a></li>
+                    <li><a href="#" data-section-id="blog"><i class="ti-write"></i> Blog</a></li> -->
+                    <li><a href="#" data-section-id="contact"><i class="ti-email"></i> Contacte</a></li>
+                </ul>
             </div>
-            <div id="ContainerYangSurName">
-                <h1 class="SurName">badia</h1>
+            <!-- Sidebar Footer -->
+            <div class="sidebar-footer">
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="ti-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="ti-dribbble"></i></a>
+                    <a href="#" class="social-link"><i class="ti-github"></i></a>
+                    <a href="#" class="social-link"><i class="ti-linkedin"></i></a>
+                </div>
+                <p class="copyright">© <span id="current-year"></span> Oriol Badia. Tots els drets reservats.</p>
             </div>
-        </div>
-    </div>
-    <h1 id="BtnCVsect"><a href="#ProjectsSection">Veure projectes</a></h1>
-    <!--* SECCIÓ PROJECTES *-->
-    <section id="ProjectsSection">
-        <div class="MarmosetContainer">
-            <!-- Aquí pots canviar el model o afegir-ne més -->
-            <!-- <iframe src="ModelPerson.html" name="viewerframe" allowfullscreen="true" height="1000"
-                width="2000"></iframe> -->
-            <div style="--swiper-navigation-color: #cc2424; --swiper-pagination-color: #fff" class="swiper mySwiper2">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <iframe class="iframeslide" src="Bench.html" name="viewerframe" allowfullscreen="true" height="1440"
-                            width="2560"></iframe>
-                    </div>
-                    <div class="swiper-slide">
-                        <iframe class="iframeslide" src="ModelPerson.html" name="viewerframe" allowfullscreen="true" height="1440"
-                            width="2560"></iframe>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://images5.alphacoders.com/139/thumb-1920-1390300.jpg" alt="" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://images3.alphacoders.com/225/thumb-1920-225467.jpg" alt="" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://images5.alphacoders.com/318/thumb-1920-318459.jpg" alt="" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://images.alphacoders.com/650/thumb-1920-650678.jpg" alt="" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://images6.alphacoders.com/139/thumb-1920-1390427.jpg" alt="" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://images8.alphacoders.com/138/thumb-1920-1387562.jpg" alt="" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://images8.alphacoders.com/139/thumb-1920-1391440.png" alt="" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://images7.alphacoders.com/136/thumb-1920-1367603.jpeg" alt="" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://images2.alphacoders.com/116/thumb-1920-1166094.jpg" alt="" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-10.jpg" alt="" />
-                    </div>
+        </aside>
+
+        <!-- Main Content Area with SimpleBar scroll wrapper -->
+        <div class="dashboard-main">
+            <div id="app-scroll" data-simplebar>
+                <div class="vertical-content-wrapper">
+
+                    <!-- HOME -->
+                    <section id="home" class="hero-section horizontal-section">
+                        <div class="container">
+                            <div class="hero-content">
+                                <div class="hero-text">
+                                    <span class="hero-badge">✅ Disponible per a treballar</span>
+                                    <h1 class="hero-greeting">
+                                        <span class="highlight">Oriol Badia</span>
+                                    </h1>
+                                    <!-- <h2 class="hero-title">
+                                        <span class="typed-text">Artista 3D</span>
+                                    </h2> -->
+                                    <p class="hero-description">
+                                        <span class="highlight-text">Artista 3D</span> que s’especialitza en els àmbits
+                                        de modelatge, il·luminació, texturització, i animació. El meu propòsit és poder
+                                        millorar en cada projecte i aportar valor a l’empresa.
+                                    </p>
+                                    <!-- <div class="hero-stats-mini">
+                                        <div class="stat-mini">
+                                            <span class="stat-mini-number">6+</span>
+                                            <span class="stat-mini-label">Years</span>
+                                        </div>
+                                        <div class="stat-mini">
+                                            <span class="stat-mini-number">50+</span>
+                                            <span class="stat-mini-label">Projects</span>
+                                        </div>
+                                        <div class="stat-mini">
+                                            <span class="stat-mini-number">15+</span>
+                                            <span class="stat-mini-label">Clients</span>
+                                        </div>
+                                    </div> -->
+                                    <div class="hero-buttons">
+                                        <a href="#" class="btn btn-primary btn-lg" data-nav-section="work">
+                                            <i class="ti-arrow-right"></i> Els meus projectes
+                                        </a>
+                                        <a href="#" class="btn btn-outline-light btn-lg" data-nav-section="contact">
+                                            <i class="ti-email"></i> Contacta'm
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ABOUT -->
+                    <section id="about" class="about-section horizontal-section">
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 about-content">
+                                    <div class="section-header">
+                                        <span class="section-tag">Sobre mi</span>
+                                        <h2 class="section-title">Passió per a l' <span class="highlight">Art 3D</span>
+                                        </h2>
+                                    </div>
+                                    <div class="about-intro">
+                                        <p class="about-text">
+                                            <i class="ti-star about-icon"></i>
+                                            I'm a passionate 3D artist and designer with over 6 years of experience
+                                            creating stunning digital visuals for games, films, and immersive
+                                            installations. My work blends technical precision with artistic expression
+                                            to craft memorable experiences.
+                                        </p>
+                                        <p class="about-text">
+                                            <i class="ti-palette about-icon"></i>
+                                            When I'm not modeling or animating, you'll find me exploring new software,
+                                            contributing to open-source projects, or sharing my knowledge through
+                                            tutorials and workshops.
+                                        </p>
+                                    </div>
+                                    <div class="about-stats">
+                                        <div class="stat-item">
+                                            <div class="stat-icon-wrapper"><i class="ti-time"></i></div>
+                                            <span class="stat-number">6+</span>
+                                            <span class="stat-label">Years Experience</span>
+                                        </div>
+                                        <div class="stat-item">
+                                            <div class="stat-icon-wrapper"><i class="ti-layers"></i></div>
+                                            <span class="stat-number">50+</span>
+                                            <span class="stat-label">Projects Completed</span>
+                                        </div>
+                                        <div class="stat-item">
+                                            <div class="stat-icon-wrapper"><i class="ti-face-smile"></i></div>
+                                            <span class="stat-number">15+</span>
+                                            <span class="stat-label">Happy Clients</span>
+                                        </div>
+                                    </div>
+                                    <div class="expertise-tags">
+                                        <span class="expertise-tag">3D Modeling</span>
+                                        <span class="expertise-tag">Digital Sculpting</span>
+                                        <span class="expertise-tag">Motion Graphics</span>
+                                        <span class="expertise-tag">VR/AR</span>
+                                        <span class="expertise-tag">Texturing</span>
+                                        <span class="expertise-tag">Animation</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 about-image">
+                                    <div class="image-wrapper">
+                                        <img src="images/about/about.png" alt="3D Artist" class="img-fluid rounded-4">
+                                        <div class="experience-badge">
+                                            <span class="exp-years">6+</span>
+                                            <span class="exp-text">Years of Excellence</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Testimonials -->
+                            <div class="row mt-5">
+                                <div class="col-12">
+                                    <div class="section-header text-center">
+                                        <span class="section-tag">TESTIMONIALS</span>
+                                        <h3 class="section-title">What My <span class="highlight">Clients</span> Say
+                                        </h3>
+                                        <p class="section-subtitle">Don't just take my word for it — hear from my
+                                            amazing clients</p>
+                                    </div>
+                                    <div class="testimonial-swiper swiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide testimonial-slide">
+                                                <div class="testimonial-card">
+                                                    <div class="testimonial-header">
+                                                        <div class="client-avatar">
+                                                            <img src="images/testimonials/avatar-1.png"
+                                                                alt="Sarah Johnson" loading="lazy">
+                                                        </div>
+                                                        <div class="client-info">
+                                                            <h4>Sarah Johnson</h4>
+                                                            <span>Creative Director, Art Studio</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="testimonial-rating">
+                                                        <i class="ti-star"></i><i class="ti-star"></i><i
+                                                            class="ti-star"></i><i class="ti-star"></i><i
+                                                            class="ti-star"></i>
+                                                    </div>
+                                                    <i class="ti-quote-left quote-icon"></i>
+                                                    <p>"Alex is an exceptional 3D artist who brought our vision to life
+                                                        with stunning visuals. Highly recommended!"</p>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide testimonial-slide">
+                                                <div class="testimonial-card">
+                                                    <div class="testimonial-header">
+                                                        <div class="client-avatar">
+                                                            <img src="images/testimonials/avatar-2.png"
+                                                                alt="Marcus Chen" loading="lazy">
+                                                        </div>
+                                                        <div class="client-info">
+                                                            <h4>Marcus Chen</h4>
+                                                            <span>Game Producer, PixelForge</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="testimonial-rating">
+                                                        <i class="ti-star"></i><i class="ti-star"></i><i
+                                                            class="ti-star"></i><i class="ti-star"></i><i
+                                                            class="ti-star"></i>
+                                                    </div>
+                                                    <i class="ti-quote-left quote-icon"></i>
+                                                    <p>"The level of detail and creativity in Alex's work is
+                                                        outstanding. A true professional and visionary!"</p>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide testimonial-slide">
+                                                <div class="testimonial-card">
+                                                    <div class="testimonial-header">
+                                                        <div class="client-avatar">
+                                                            <img src="images/testimonials/avatar-3.png"
+                                                                alt="Elena Martinez" loading="lazy">
+                                                        </div>
+                                                        <div class="client-info">
+                                                            <h4>Elena Martinez</h4>
+                                                            <span>Art Curator, Digital Gallery</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="testimonial-rating">
+                                                        <i class="ti-star"></i><i class="ti-star"></i><i
+                                                            class="ti-star"></i><i class="ti-star"></i><i
+                                                            class="ti-star"></i>
+                                                    </div>
+                                                    <i class="ti-quote-left quote-icon"></i>
+                                                    <p>"Working with Alex was a breeze. Fast turnaround, amazing
+                                                        quality, and great communication. A rare talent!"</p>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide testimonial-slide">
+                                                <div class="testimonial-card">
+                                                    <div class="testimonial-header">
+                                                        <div class="client-avatar">
+                                                            <img src="images/testimonials/avatar-4.png" alt="David Kim"
+                                                                loading="lazy">
+                                                        </div>
+                                                        <div class="client-info">
+                                                            <h4>David Kim</h4>
+                                                            <span>Lead Developer, Indie Studio</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="testimonial-rating">
+                                                        <i class="ti-star"></i><i class="ti-star"></i><i
+                                                            class="ti-star"></i><i class="ti-star"></i><i
+                                                            class="ti-star"></i>
+                                                    </div>
+                                                    <i class="ti-quote-left quote-icon"></i>
+                                                    <p>"Alex's 3D models are always top-notch. Technical skill combined
+                                                        with artistic vision — exactly what we needed."</p>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide testimonial-slide">
+                                                <div class="testimonial-card">
+                                                    <div class="testimonial-header">
+                                                        <div class="client-avatar">
+                                                            <img src="images/testimonials/avatar-5.png" alt="Sophia Lee"
+                                                                loading="lazy">
+                                                        </div>
+                                                        <div class="client-info">
+                                                            <h4>Sophia Lee</h4>
+                                                            <span>Creative Director, Lumina Films</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="testimonial-rating">
+                                                        <i class="ti-star"></i><i class="ti-star"></i><i
+                                                            class="ti-star"></i><i class="ti-star"></i><i
+                                                            class="ti-star"></i>
+                                                    </div>
+                                                    <i class="ti-quote-left quote-icon"></i>
+                                                    <p>"Incredible work ethic and even more incredible results. Alex
+                                                        took our concept and elevated it beyond what we imagined."</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- SKILLS -->
+                    <section id="skills" class="skills-section horizontal-section">
+                        <div class="container">
+                            <div class="section-header text-center">
+                                <span class="section-tag">HABILITATS I TECNOLOGIES</span>
+                                <h2 class="section-title">Eines | <span class="highlight">Master</span></h2>
+                                <p class="section-subtitle">Software i eines creatives que utilitzo a diari per els meus
+                                    treballs
+                                </p>
+                            </div>
+                            <div class="skills-grid">
+                                <!-- 3D Software -->
+                                <div class="skill-category">
+                                    <div class="category-header">
+                                        <div class="category-icon"><i class="ti-ruler-alt-2"></i></div>
+                                        <h3 class="category-title">Software 3D </h3>
+                                    </div>
+                                    <p class="category-description">Eines professionals de modelatge i escultura 3D</p>
+                                    <div class="skill-items">
+                                        <span class="skill-badge" data-level="95"><i class="ti-check-box"></i> Blender
+                                            <img src="images/Icons/blender-icon.ico" alt="" width="30"
+                                                height="30"></span>
+                                        <span class="skill-badge" data-level="95"><i class="ti-check-box"></i> Maya
+                                            <img src="images/Icons/Maya-icon.ico" alt="" width="30" height="30"></span>
+                                    </div>
+
+                                </div>
+                                <!-- Rendering Engines -->
+                                <div class="skill-category">
+                                    <div class="category-header">
+                                        <div class="category-icon"><i class="ti-shine"></i></div>
+                                        <h3 class="category-title">Motors de renderització</h3>
+                                    </div>
+                                    <p class="category-description">Solucions de renderització d'alta qualitat</p>
+                                    <div class="skill-items">
+
+                                        <span class="skill-badge" data-level="92"><i class="ti-check-box"></i> Cycles
+                                            <span class="skill-level">92%</span></span>
+
+                                    </div>
+
+                                </div>
+                                <!-- Game Engines -->
+                                <div class="skill-category">
+                                    <div class="category-header">
+                                        <div class="category-icon"><i class="ti-game"></i></div>
+                                        <h3 class="category-title">Motors de joc</h3>
+                                    </div>
+                                    <p class="category-description">Plataformes de desenvolupament 3D en temps real</p>
+                                    <div class="skill-items">
+                                        <span class="skill-badge" data-level="95"><i class="ti-check-box"></i> Unreal
+                                            Engine
+                                            <img src="images/Icons/unreal-icon.ico" alt="" width="30"
+                                                height="30"></span>
+                                        <span class="skill-badge" data-level="95"><i class="ti-check-box"></i> Unity
+                                            <img src="images/Icons/unity.ico" alt="" width="30" height="30"></span>
+                                    </div>
+                                </div>
+                                <!-- Post-Production -->
+                                <div class="skill-category">
+                                    <div class="category-header">
+                                        <div class="category-icon"><i class="ti-video-clapper"></i></div>
+                                        <h3 class="category-title">Postproducció</h3>
+                                    </div>
+                                    <p class="category-description">Eines de composició i edició</p>
+                                    <div class="skill-items">
+                                        <span class="skill-badge" data-level="95"><i class="ti-check-box"></i> Substance
+                                            Painter
+                                            <img src="images/Icons/SubstancePainter.ico" alt="" width="30"
+                                                height="30"></span>
+                                        <span class="skill-badge" data-level="95"><i class="ti-check-box"></i> Photoshop
+                                            <img src="images/Icons/Photoshop.ico" alt="" width="30" height="30"></span>
+                                        <span class="skill-badge" data-level="95"><i class="ti-check-box"></i> Davinci
+                                            Resolve
+                                            <img src="images/Icons/Davinci.ico" alt="" width="30" height="30"></span>
+                                        <span class="skill-badge" data-level="95"><i class="ti-check-box"></i>
+                                            Illustrator
+                                            <img src="images/Icons/Illustrator.ico" alt="" width="30"
+                                                height="30"></span>
+                                        <span class="skill-badge" data-level="95"><i class="ti-check-box"></i> Indesign
+                                            <img src="images/Icons/Indesign.ico" alt="" width="30" height="30"></span>
+                                        <span class="skill-badge" data-level="95"><i class="ti-check-box"></i> After
+                                            Effects
+                                            <img src="images/Icons/AfterEffects.ico" alt="" width="30"
+                                                height="30"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Additional Skills Marquee -->
+                            <div class="additional-skills">
+                                <span class="additional-label">Also proficient in:</span>
+                                <div class="skills-marquee">
+                                    <div class="marquee-content">
+                                        <span>Marvelous Designer</span><span class="separator">•</span>
+                                        <span>Mixamo</span><span class="separator">•</span>
+                                        <span>Quixel Mixer</span><span class="separator">•</span>
+                                        <span>Sketchfab</span><span class="separator">•</span>
+                                        <span>Figma</span><span class="separator">•</span>
+                                        <span>Premiere Pro</span><span class="separator">•</span>
+                                        <span>Illustrator</span><span class="separator">•</span>
+                                        <span>Procreate</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- WORK -->
+                    <section id="work" class="work-section horizontal-section">
+                        <div class="container">
+                            <div class="section-header text-center">
+                                <span class="section-tag">TREBALL DESTACAT</span>
+                                <h2 class="section-title">Creacions <span class="highlight">Creatives</span></h2>
+                                <p class="section-subtitle">Una selecció de les meves millors obres d'art i projectes en
+                                    3D</p>
+                            </div>
+                            <!-- Filter Buttons -->
+                            <div class="work-filter">
+                                <button class="filter-btn active" data-filter="all">Tots els treballs</button>
+                                <button class="filter-btn" data-filter="sculpture">Modelatge 3D</button>
+                                <button class="filter-btn" data-filter="environment">Entorn</button>
+                            </div>
+                            <!-- Portfolio Grid -->
+                            <div class="portfolio-grid-enhanced">
+                                <div class="portfolio-card" data-category="sculpture">
+                                    
+                                    <div class="card-inner">
+                                        <div class="card-front">
+                                            <div class="card-image">
+                                                <img src="images/work/portfolio-1.png" alt="Ethereal Being"
+                                                    loading="lazy">
+                                                <div class="card-badge">Featured</div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="card-back">
+                                            <div class="card-back-content">
+                                                <i class="ti-crown card-icon"></i>
+                                                <h3>Ethereal Being</h3>
+                                                <p>Digital Sculpture, 2024</p>
+                                                <div class="card-tech-stack">
+                                                    <span>ZBrush</span><span>Substance</span><span>Octane</span>
+                                                </div>
+                                                <div class="card-stats">
+                                                    <span><i class="ti-heart"></i> 2.3k</span>
+                                                    <span><i class="ti-comment"></i> 48</span>
+                                                </div>
+                                                <a href="#" class="btn-view-project">View Project <i
+                                                        class="ti-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="work-view-more">
+                                <a href="#" class="btn btn-outline-primary btn-lg">
+                                    <i class="ti-arrow-down"></i> Load More Projects
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- SERVICES -->
+                    <section id="services" class="services-section horizontal-section">
+                        <div class="container">
+                            <div class="section-header text-center">
+                                <span class="section-tag">WHAT I OFFER</span>
+                                <h2 class="section-title">Creative <span class="highlight">Services</span></h2>
+                                <p class="section-subtitle">Professional 3D art services tailored to your needs</p>
+                            </div>
+                            <div class="services-grid-enhanced">
+                                <!-- 3D Modeling -->
+                                <div class="service-card-enhanced" data-service="modeling">
+                                    <div class="service-card-inner">
+                                        <div class="service-icon-wrapper">
+                                            <div class="service-icon-bg"></div>
+                                            <i class="ti-palette service-icon-enhanced"></i>
+                                        </div>
+                                        <h3 class="service-title-enhanced">3D Modeling</h3>
+                                        <p class="service-description-enhanced">High-quality 3D models for games, films,
+                                            and product visualization.</p>
+                                        <ul class="service-features">
+                                            <li><i class="ti-check"></i> High-poly & Low-poly</li>
+                                            <li><i class="ti-check"></i> Game-ready assets</li>
+                                            <li><i class="ti-check"></i> Product visualization</li>
+                                        </ul>
+                                        <div class="service-pricing">
+                                            <span class="price-start">Starting at</span>
+                                            <span class="price-amount">$499</span>
+                                        </div>
+                                        <a href="#" class="service-cta" data-nav-section="contact">
+                                            <span>Inquire Now</span><i class="ti-arrow-right"></i>
+                                        </a>
+                                        <div class="service-hover-border"></div>
+                                    </div>
+                                </div>
+                                <!-- Digital Sculpting -->
+                                <div class="service-card-enhanced featured" data-service="sculpting">
+                                    <div class="service-popular-badge"><i class="ti-star"></i> Most Popular</div>
+                                    <div class="service-card-inner">
+                                        <div class="service-icon-wrapper">
+                                            <div class="service-icon-bg"></div>
+                                            <i class="ti-brush-alt service-icon-enhanced"></i>
+                                        </div>
+                                        <h3 class="service-title-enhanced">Digital Sculpting</h3>
+                                        <p class="service-description-enhanced">Detailed character and creature
+                                            sculpting for AAA productions.</p>
+                                        <ul class="service-features">
+                                            <li><i class="ti-check"></i> High-resolution sculpts</li>
+                                            <li><i class="ti-check"></i> 3D printable models</li>
+                                            <li><i class="ti-check"></i> Character design</li>
+                                        </ul>
+                                        <div class="service-pricing">
+                                            <span class="price-start">Starting at</span>
+                                            <span class="price-amount">$799</span>
+                                        </div>
+                                        <a href="#" class="service-cta" data-nav-section="contact">
+                                            <span>Inquire Now</span><i class="ti-arrow-right"></i>
+                                        </a>
+                                        <div class="service-hover-border"></div>
+                                    </div>
+                                </div>
+                                <!-- Motion Graphics -->
+                                <div class="service-card-enhanced" data-service="motion">
+                                    <div class="service-card-inner">
+                                        <div class="service-icon-wrapper">
+                                            <div class="service-icon-bg"></div>
+                                            <i class="ti-control-play service-icon-enhanced"></i>
+                                        </div>
+                                        <h3 class="service-title-enhanced">Motion Graphics</h3>
+                                        <p class="service-description-enhanced">Dynamic 3D animations and motion
+                                            graphics for advertising.</p>
+                                        <ul class="service-features">
+                                            <li><i class="ti-check"></i> 2D/3D Animation</li>
+                                            <li><i class="ti-check"></i> Title sequences</li>
+                                            <li><i class="ti-check"></i> Social media content</li>
+                                        </ul>
+                                        <div class="service-pricing">
+                                            <span class="price-start">Starting at</span>
+                                            <span class="price-amount">$349</span>
+                                        </div>
+                                        <a href="#" class="service-cta" data-nav-section="contact">
+                                            <span>Inquire Now</span><i class="ti-arrow-right"></i>
+                                        </a>
+                                        <div class="service-hover-border"></div>
+                                    </div>
+                                </div>
+                                <!-- VR/AR Experiences -->
+                                <div class="service-card-enhanced" data-service="vr">
+                                    <div class="service-card-inner">
+                                        <div class="service-icon-wrapper">
+                                            <div class="service-icon-bg"></div>
+                                            <i class="ti-world service-icon-enhanced"></i>
+                                        </div>
+                                        <h3 class="service-title-enhanced">VR/AR Experiences</h3>
+                                        <p class="service-description-enhanced">Immersive virtual and augmented reality
+                                            experiences.</p>
+                                        <ul class="service-features">
+                                            <li><i class="ti-check"></i> Interactive environments</li>
+                                            <li><i class="ti-check"></i> WebAR integration</li>
+                                            <li><i class="ti-check"></i> Meta/Oculus ready</li>
+                                        </ul>
+                                        <div class="service-pricing">
+                                            <span class="price-start">Starting at</span>
+                                            <span class="price-amount">$1,299</span>
+                                        </div>
+                                        <a href="#" class="service-cta" data-nav-section="contact">
+                                            <span>Inquire Now</span><i class="ti-arrow-right"></i>
+                                        </a>
+                                        <div class="service-hover-border"></div>
+                                    </div>
+                                </div>
+                                <!-- Texture & Shading -->
+                                <div class="service-card-enhanced" data-service="texture">
+                                    <div class="service-card-inner">
+                                        <div class="service-icon-wrapper">
+                                            <div class="service-icon-bg"></div>
+                                            <i class="ti-layers service-icon-enhanced"></i>
+                                        </div>
+                                        <h3 class="service-title-enhanced">Texture & Shading</h3>
+                                        <p class="service-description-enhanced">Realistic textures and materials for
+                                            photorealistic rendering.</p>
+                                        <ul class="service-features">
+                                            <li><i class="ti-check"></i> PBR Textures</li>
+                                            <li><i class="ti-check"></i> Procedural materials</li>
+                                            <li><i class="ti-check"></i> UV Unwrapping</li>
+                                        </ul>
+                                        <div class="service-pricing">
+                                            <span class="price-start">Starting at</span>
+                                            <span class="price-amount">$299</span>
+                                        </div>
+                                        <a href="#" class="service-cta" data-nav-section="contact">
+                                            <span>Inquire Now</span><i class="ti-arrow-right"></i>
+                                        </a>
+                                        <div class="service-hover-border"></div>
+                                    </div>
+                                </div>
+                                <!-- 3D Animation -->
+                                <div class="service-card-enhanced" data-service="animation">
+                                    <div class="service-card-inner">
+                                        <div class="service-icon-wrapper">
+                                            <div class="service-icon-bg"></div>
+                                            <i class="ti-video-camera service-icon-enhanced"></i>
+                                        </div>
+                                        <h3 class="service-title-enhanced">3D Animation</h3>
+                                        <p class="service-description-enhanced">Smooth character animation and cinematic
+                                            sequences.</p>
+                                        <ul class="service-features">
+                                            <li><i class="ti-check"></i> Character rigging</li>
+                                            <li><i class="ti-check"></i> Lip sync animation</li>
+                                            <li><i class="ti-check"></i> Cinematic sequences</li>
+                                        </ul>
+                                        <div class="service-pricing">
+                                            <span class="price-start">Starting at</span>
+                                            <span class="price-amount">$599</span>
+                                        </div>
+                                        <a href="#" class="service-cta" data-nav-section="contact">
+                                            <span>Inquire Now</span><i class="ti-arrow-right"></i>
+                                        </a>
+                                        <div class="service-hover-border"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- TEAM -->
+                    <section id="team" class="team-section horizontal-section">
+                        <div class="container">
+                            <div class="section-header text-center">
+                                <span class="section-tag">CREATIVE TEAM</span>
+                                <h2 class="section-title">Meet My <span class="highlight">Team</span></h2>
+                                <p class="section-subtitle">Talented professionals who bring ideas to life</p>
+                            </div>
+                            <div class="team-grid-enhanced">
+                                <!-- Alex Morgan -->
+                                <div class="team-card" data-member="alex">
+                                    <div class="team-card-inner">
+                                        <div class="team-image-wrapper">
+                                            <div class="team-image-glow"></div>
+                                            <div class="team-image">
+                                                <img src="images/team/alex.jpeg" alt="Alex Morgan" loading="lazy">
+                                            </div>
+                                            <div class="team-status online">
+                                                <span class="status-dot"></span>
+                                                <span class="status-text">Available</span>
+                                            </div>
+                                        </div>
+                                        <div class="team-info">
+                                            <h3 class="team-name">Alex Morgan</h3>
+                                            <p class="team-role">Lead 3D Artist</p>
+                                            <div class="team-skills">
+                                                <span class="skill-tag">ZBrush</span>
+                                                <span class="skill-tag">Maya</span>
+                                                <span class="skill-tag">Blender</span>
+                                                <span class="skill-tag">Substance</span>
+                                            </div>
+                                            <p class="team-bio">10+ years of experience in AAA game development and film
+                                                VFX.</p>
+                                            <div class="team-social">
+                                                <a href="#" class="social-icon" title="LinkedIn"><i
+                                                        class="ti-linkedin"></i><span
+                                                        class="social-tooltip">LinkedIn</span></a>
+                                                <a href="#" class="social-icon" title="Instagram"><i
+                                                        class="ti-instagram"></i><span
+                                                        class="social-tooltip">Instagram</span></a>
+                                                <a href="#" class="social-icon" title="Dribbble"><i
+                                                        class="ti-dribbble"></i><span
+                                                        class="social-tooltip">Dribbble</span></a>
+                                                <a href="#" class="social-icon" title="Behance"><i
+                                                        class="ti-export"></i><span
+                                                        class="social-tooltip">Behance</span></a>
+                                            </div>
+                                        </div>
+                                        <div class="team-hover-border"></div>
+                                    </div>
+                                </div>
+                                <!-- Sarah Chen -->
+                                <div class="team-card" data-member="sarah">
+                                    <div class="team-card-inner">
+                                        <div class="team-image-wrapper">
+                                            <div class="team-image-glow"></div>
+                                            <div class="team-image">
+                                                <img src="images/team/sarah.jpeg" alt="Sarah Chen" loading="lazy">
+                                            </div>
+                                            <div class="team-status busy">
+                                                <span class="status-dot"></span>
+                                                <span class="status-text">On Project</span>
+                                            </div>
+                                        </div>
+                                        <div class="team-info">
+                                            <h3 class="team-name">Sarah Chen</h3>
+                                            <p class="team-role">Motion Designer</p>
+                                            <div class="team-skills">
+                                                <span class="skill-tag">After Effects</span>
+                                                <span class="skill-tag">Cinema 4D</span>
+                                                <span class="skill-tag">Premiere</span>
+                                                <span class="skill-tag">Figma</span>
+                                            </div>
+                                            <p class="team-bio">Award-winning motion designer with a passion for dynamic
+                                                visuals.</p>
+                                            <div class="team-social">
+                                                <a href="#" class="social-icon"><i class="ti-linkedin"></i><span
+                                                        class="social-tooltip">LinkedIn</span></a>
+                                                <a href="#" class="social-icon"><i class="ti-instagram"></i><span
+                                                        class="social-tooltip">Instagram</span></a>
+                                                <a href="#" class="social-icon"><i class="ti-dribbble"></i><span
+                                                        class="social-tooltip">Dribbble</span></a>
+                                            </div>
+                                        </div>
+                                        <div class="team-hover-border"></div>
+                                    </div>
+                                </div>
+                                <!-- Mike Rodriguez -->
+                                <div class="team-card" data-member="mike">
+                                    <div class="team-card-inner">
+                                        <div class="team-image-wrapper">
+                                            <div class="team-image-glow"></div>
+                                            <div class="team-image">
+                                                <img src="images/team/mike.jpeg" alt="Mike Rodriguez" loading="lazy">
+                                            </div>
+                                            <div class="team-status online">
+                                                <span class="status-dot"></span>
+                                                <span class="status-text">Available</span>
+                                            </div>
+                                        </div>
+                                        <div class="team-info">
+                                            <h3 class="team-name">Mike Rodriguez</h3>
+                                            <p class="team-role">Technical Artist</p>
+                                            <div class="team-skills">
+                                                <span class="skill-tag">Unreal 5</span>
+                                                <span class="skill-tag">Houdini</span>
+                                                <span class="skill-tag">Python</span>
+                                                <span class="skill-tag">Maya</span>
+                                            </div>
+                                            <p class="team-bio">Bridging art and code to create optimized, stunning
+                                                visuals.</p>
+                                            <div class="team-social">
+                                                <a href="#" class="social-icon"><i class="ti-linkedin"></i><span
+                                                        class="social-tooltip">LinkedIn</span></a>
+                                                <a href="#" class="social-icon"><i class="ti-github"></i><span
+                                                        class="social-tooltip">GitHub</span></a>
+                                                <a href="#" class="social-icon"><i class="ti-dribbble"></i><span
+                                                        class="social-tooltip">Dribbble</span></a>
+                                            </div>
+                                        </div>
+                                        <div class="team-hover-border"></div>
+                                    </div>
+                                </div>
+                                <!-- Emma Watson -->
+                                <div class="team-card" data-member="emma">
+                                    <div class="team-card-inner">
+                                        <div class="team-image-wrapper">
+                                            <div class="team-image-glow"></div>
+                                            <div class="team-image">
+                                                <img src="images/team/emma.jpeg" alt="Emma Watson" loading="lazy">
+                                            </div>
+                                            <div class="team-status away">
+                                                <span class="status-dot"></span>
+                                                <span class="status-text">Away</span>
+                                            </div>
+                                        </div>
+                                        <div class="team-info">
+                                            <h3 class="team-name">Emma Watson</h3>
+                                            <p class="team-role">Texture Artist</p>
+                                            <div class="team-skills">
+                                                <span class="skill-tag">Substance</span>
+                                                <span class="skill-tag">Photoshop</span>
+                                                <span class="skill-tag">Mari</span>
+                                                <span class="skill-tag">Maya</span>
+                                            </div>
+                                            <p class="team-bio">Creating photorealistic textures that bring 3D models to
+                                                life.</p>
+                                            <div class="team-social">
+                                                <a href="#" class="social-icon"><i class="ti-linkedin"></i><span
+                                                        class="social-tooltip">LinkedIn</span></a>
+                                                <a href="#" class="social-icon"><i class="ti-instagram"></i><span
+                                                        class="social-tooltip">Instagram</span></a>
+                                                <a href="#" class="social-icon"><i class="ti-dribbble"></i><span
+                                                        class="social-tooltip">Dribbble</span></a>
+                                            </div>
+                                        </div>
+                                        <div class="team-hover-border"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- BLOG -->
+                    <section id="blog" class="blog-section horizontal-section">
+                        <div class="container">
+                            <div class="section-header text-center">
+                                <span class="section-tag">LATEST ARTICLES</span>
+                                <h2 class="section-title">From My <span class="highlight">Blog</span></h2>
+                                <p class="section-subtitle">Insights, tutorials, and behind-the-scenes</p>
+                            </div>
+                            <!-- Blog Filter -->
+                            <div class="blog-filter">
+                                <button class="blog-filter-btn active" data-blog-filter="all">All Posts</button>
+                                <button class="blog-filter-btn" data-blog-filter="tutorial">Tutorials</button>
+                                <button class="blog-filter-btn" data-blog-filter="insight">Insights</button>
+                                <button class="blog-filter-btn" data-blog-filter="news">News</button>
+                            </div>
+                            <!-- Blog Grid -->
+                            <div class="blog-grid-enhanced">
+                                <!-- Blog 1 -->
+                                <div class="blog-card-enhanced" data-category="tutorial">
+                                    <div class="blog-card-inner">
+                                        <div class="blog-featured-badge"><i class="ti-star"></i> Featured</div>
+                                        <div class="blog-image-wrapper">
+                                            <img src="images/blog/blog-1.png" alt="Subsurface Scattering"
+                                                loading="lazy">
+                                            <div class="blog-image-overlay">
+                                                <span class="blog-read-time"><i class="ti-timer"></i> 8 min read</span>
+                                            </div>
+                                        </div>
+                                        <div class="blog-content-enhanced">
+                                            <div class="blog-category">
+                                                <span class="category-tag tutorial"><i class="ti-bookmark-alt"></i>
+                                                    Tutorial</span>
+                                            </div>
+                                            <h3 class="blog-title">Mastering Subsurface Scattering in Blender</h3>
+                                            <div class="blog-meta-enhanced">
+                                                <div class="blog-author">
+                                                    <img src="images/team/alex.jpeg" alt="Author" class="author-avatar">
+                                                    <span class="author-name">Alex Morgan</span>
+                                                </div>
+                                                <div class="blog-date"><i class="ti-calendar"></i><span>Jan 15,
+                                                        2024</span></div>
+                                                <div class="blog-comments"><i class="ti-comment"></i><span>12
+                                                        Comments</span></div>
+                                            </div>
+                                            <p class="blog-excerpt">Learn how to create realistic skin materials using
+                                                advanced SSS techniques...</p>
+                                            <a href="#" class="blog-read-more"><span>Read Article</span><i
+                                                    class="ti-arrow-right"></i></a>
+                                        </div>
+                                        <div class="blog-hover-border"></div>
+                                    </div>
+                                </div>
+                                <!-- Blog 2 -->
+                                <div class="blog-card-enhanced" data-category="tutorial">
+                                    <div class="blog-card-inner">
+                                        <div class="blog-image-wrapper">
+                                            <img src="images/blog/blog-2.png" alt="UV Mapping Tips" loading="lazy">
+                                            <div class="blog-image-overlay">
+                                                <span class="blog-read-time"><i class="ti-timer"></i> 6 min read</span>
+                                            </div>
+                                        </div>
+                                        <div class="blog-content-enhanced">
+                                            <div class="blog-category">
+                                                <span class="category-tag tutorial"><i class="ti-bookmark-alt"></i>
+                                                    Tutorial</span>
+                                            </div>
+                                            <h3 class="blog-title">Top 10 Tips for Efficient UV Mapping</h3>
+                                            <div class="blog-meta-enhanced">
+                                                <div class="blog-author">
+                                                    <img src="images/team/sarah.jpeg" alt="Author"
+                                                        class="author-avatar">
+                                                    <span class="author-name">Sarah Chen</span>
+                                                </div>
+                                                <div class="blog-date"><i class="ti-calendar"></i><span>Jan 10,
+                                                        2024</span></div>
+                                                <div class="blog-comments"><i class="ti-comment"></i><span>8
+                                                        Comments</span></div>
+                                            </div>
+                                            <p class="blog-excerpt">Optimize your workflow with these essential UV
+                                                mapping techniques...</p>
+                                            <a href="#" class="blog-read-more"><span>Read Article</span><i
+                                                    class="ti-arrow-right"></i></a>
+                                        </div>
+                                        <div class="blog-hover-border"></div>
+                                    </div>
+                                </div>
+                                <!-- Blog 3 -->
+                                <div class="blog-card-enhanced" data-category="tutorial">
+                                    <div class="blog-card-inner">
+                                        <div class="blog-image-wrapper">
+                                            <img src="images/blog/blog-3.png" alt="Unreal Engine 5" loading="lazy">
+                                            <div class="blog-image-overlay">
+                                                <span class="blog-read-time"><i class="ti-timer"></i> 12 min read</span>
+                                            </div>
+                                        </div>
+                                        <div class="blog-content-enhanced">
+                                            <div class="blog-category">
+                                                <span class="category-tag tutorial"><i class="ti-bookmark-alt"></i>
+                                                    Tutorial</span>
+                                            </div>
+                                            <h3 class="blog-title">Creating Realistic Environments in Unreal Engine 5
+                                            </h3>
+                                            <div class="blog-meta-enhanced">
+                                                <div class="blog-author">
+                                                    <img src="images/team/mike.jpeg" alt="Author" class="author-avatar">
+                                                    <span class="author-name">Mike Rodriguez</span>
+                                                </div>
+                                                <div class="blog-date"><i class="ti-calendar"></i><span>Jan 5,
+                                                        2024</span></div>
+                                                <div class="blog-comments"><i class="ti-comment"></i><span>15
+                                                        Comments</span></div>
+                                            </div>
+                                            <p class="blog-excerpt">Step-by-step guide to building immersive game
+                                                environments using Nanite and Lumen...</p>
+                                            <a href="#" class="blog-read-more"><span>Read Article</span><i
+                                                    class="ti-arrow-right"></i></a>
+                                        </div>
+                                        <div class="blog-hover-border"></div>
+                                    </div>
+                                </div>
+                                <!-- Blog 4 -->
+                                <div class="blog-card-enhanced" data-category="insight">
+                                    <div class="blog-card-inner">
+                                        <div class="blog-featured-badge"><i class="ti-star"></i> Featured</div>
+                                        <div class="blog-image-wrapper">
+                                            <img src="images/blog/blog-4.png" alt="AI in 3D Art" loading="lazy">
+                                            <div class="blog-image-overlay">
+                                                <span class="blog-read-time"><i class="ti-timer"></i> 10 min read</span>
+                                            </div>
+                                        </div>
+                                        <div class="blog-content-enhanced">
+                                            <div class="blog-category">
+                                                <span class="category-tag insight"><i class="ti-light-bulb"></i>
+                                                    Insight</span>
+                                            </div>
+                                            <h3 class="blog-title">The Future of AI in 3D Art Creation</h3>
+                                            <div class="blog-meta-enhanced">
+                                                <div class="blog-author">
+                                                    <img src="images/team/alex.jpeg" alt="Author" class="author-avatar">
+                                                    <span class="author-name">Alex Morgan</span>
+                                                </div>
+                                                <div class="blog-date"><i class="ti-calendar"></i><span>Dec 20,
+                                                        2023</span></div>
+                                                <div class="blog-comments"><i class="ti-comment"></i><span>24
+                                                        Comments</span></div>
+                                            </div>
+                                            <p class="blog-excerpt">Exploring how artificial intelligence is
+                                                revolutionizing 3D workflows...</p>
+                                            <a href="#" class="blog-read-more"><span>Read Article</span><i
+                                                    class="ti-arrow-right"></i></a>
+                                        </div>
+                                        <div class="blog-hover-border"></div>
+                                    </div>
+                                </div>
+                                <!-- Blog 5 -->
+                                <div class="blog-card-enhanced" data-category="news">
+                                    <div class="blog-card-inner">
+                                        <div class="blog-image-wrapper">
+                                            <img src="images/blog/blog-5.png" alt="Industry News" loading="lazy">
+                                            <div class="blog-image-overlay">
+                                                <span class="blog-read-time"><i class="ti-timer"></i> 5 min read</span>
+                                            </div>
+                                        </div>
+                                        <div class="blog-content-enhanced">
+                                            <div class="blog-category">
+                                                <span class="category-tag news"><i class="ti-announcement"></i>
+                                                    News</span>
+                                            </div>
+                                            <h3 class="blog-title">Blender 4.0: What's New and Exciting</h3>
+                                            <div class="blog-meta-enhanced">
+                                                <div class="blog-author">
+                                                    <img src="images/team/sarah.jpeg" alt="Author"
+                                                        class="author-avatar">
+                                                    <span class="author-name">Sarah Chen</span>
+                                                </div>
+                                                <div class="blog-date"><i class="ti-calendar"></i><span>Dec 15,
+                                                        2023</span></div>
+                                                <div class="blog-comments"><i class="ti-comment"></i><span>18
+                                                        Comments</span></div>
+                                            </div>
+                                            <p class="blog-excerpt">A comprehensive overview of the latest features in
+                                                Blender 4.0...</p>
+                                            <a href="#" class="blog-read-more"><span>Read Article</span><i
+                                                    class="ti-arrow-right"></i></a>
+                                        </div>
+                                        <div class="blog-hover-border"></div>
+                                    </div>
+                                </div>
+                                <!-- Blog 6 -->
+                                <div class="blog-card-enhanced" data-category="insight">
+                                    <div class="blog-card-inner">
+                                        <div class="blog-image-wrapper">
+                                            <img src="images/blog/blog-6.png" alt="Career Tips" loading="lazy">
+                                            <div class="blog-image-overlay">
+                                                <span class="blog-read-time"><i class="ti-timer"></i> 7 min read</span>
+                                            </div>
+                                        </div>
+                                        <div class="blog-content-enhanced">
+                                            <div class="blog-category">
+                                                <span class="category-tag insight"><i class="ti-light-bulb"></i>
+                                                    Insight</span>
+                                            </div>
+                                            <h3 class="blog-title">How to Build a Standout 3D Art Portfolio</h3>
+                                            <div class="blog-meta-enhanced">
+                                                <div class="blog-author">
+                                                    <img src="images/team/emma.jpeg" alt="Author" class="author-avatar">
+                                                    <span class="author-name">Emma Watson</span>
+                                                </div>
+                                                <div class="blog-date"><i class="ti-calendar"></i><span>Dec 10,
+                                                        2023</span></div>
+                                                <div class="blog-comments"><i class="ti-comment"></i><span>32
+                                                        Comments</span></div>
+                                            </div>
+                                            <p class="blog-excerpt">Expert advice on creating a portfolio that gets
+                                                noticed by recruiters...</p>
+                                            <a href="#" class="blog-read-more"><span>Read Article</span><i
+                                                    class="ti-arrow-right"></i></a>
+                                        </div>
+                                        <div class="blog-hover-border"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Newsletter -->
+                            <div class="blog-newsletter">
+                                <div class="newsletter-content">
+                                    <i class="ti-email newsletter-icon"></i>
+                                    <h3>Subscribe to Newsletter</h3>
+                                    <p>Get the latest tutorials and insights delivered straight to your inbox</p>
+                                    <form class="newsletter-form">
+                                        <input type="email" placeholder="Enter your email address" required>
+                                        <button type="submit">Subscribe <i class="ti-arrow-right"></i></button>
+                                    </form>
+                                    <p class="newsletter-note">No spam, unsubscribe anytime.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- CONTACT -->
+                    <section id="contact" class="contact-section horizontal-section">
+                        <div class="container">
+                            <div class="section-header text-center">
+                                <span class="section-tag">POSA'T EN CONTACTE</span>
+                                <h2 class="section-title">Treballem <span class="highlight">Junts</span></h2>
+                                <p class="section-subtitle">Tens algun projecte en ment? M'encantaria saber-ne més.</p>
+                            </div>
+                            <div class="contact-grid-compact">
+                                <!-- Left Column: Contact Info -->
+                                <div class="contact-info-compact">
+                                    <div class="contact-card">
+                                        <div class="contact-card-icon"><i class="ti-email"></i></div>
+                                        <div class="contact-card-content">
+                                            <h3>Envia'm un correu</h3>
+                                            <p>contact.oriolbadia@gmail.com</p>
+                                        </div>
+                                    </div>
+                                    <div class="contact-card">
+                                        <div class="contact-card-icon"><i class="ti-mobile"></i></div>
+                                        <div class="contact-card-content">
+                                            <h3>Truca'm</h3>
+                                            <p>+34 604 48 41 57</p>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="contact-social-compact">
+                                        <h3>Connect With Me</h3>
+                                        <div class="contact-social-links">
+                                            <a href="#" class="contact-social-link" data-social="linkedin"><i
+                                                    class="ti-linkedin"></i><span>LinkedIn</span></a>
+                                            <a href="#" class="contact-social-link" data-social="instagram"><i
+                                                    class="ti-instagram"></i><span>Instagram</span></a>
+                                            <a href="#" class="contact-social-link" data-social="dribbble"><i
+                                                    class="ti-dribbble"></i><span>Dribbble</span></a>
+                                            <a href="#" class="contact-social-link" data-social="github"><i
+                                                    class="ti-github"></i><span>GitHub</span></a>
+                                        </div>
+                                    </div> -->
+                                </div>
+                                <!-- Right Column: Contact Form -->
+                                <!-- <div class="contact-form-compact">
+                                    <div class="form-header">
+                                        <h3>Send Me a Message</h3>
+                                        <p>Fill out the form below and I'll get back to you as soon as possible.</p>
+                                    </div>
+                                    <form class="enhanced-contact-form" id="enhancedContactForm">
+                                        <div class="form-row">
+                                            <div class="form-group">
+                                                <div class="form-input-wrapper">
+                                                    <i class="ti-user"></i>
+                                                    <input type="text" id="contactName" placeholder="Your full name"
+                                                        required>
+                                                </div>
+                                                <div class="form-error" data-for="contactName"></div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="form-input-wrapper">
+                                                    <i class="ti-email"></i>
+                                                    <input type="email" id="contactEmail" placeholder="Email address"
+                                                        required>
+                                                </div>
+                                                <div class="form-error" data-for="contactEmail"></div>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group">
+                                                <div class="form-input-wrapper">
+                                                    <i class="ti-pencil-alt"></i>
+                                                    <input type="text" id="contactSubject" placeholder="Subject"
+                                                        required>
+                                                </div>
+                                                <div class="form-error" data-for="contactSubject"></div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="form-input-wrapper">
+                                                    <i class="ti-layers"></i>
+                                                    <select id="contactService">
+                                                        <option value="">Service (optional)</option>
+                                                        <option value="3d-modeling">3D Modeling</option>
+                                                        <option value="digital-sculpting">Digital Sculpting</option>
+                                                        <option value="motion-graphics">Motion Graphics</option>
+                                                        <option value="vr-ar">VR/AR Experiences</option>
+                                                        <option value="texture-shading">Texture & Shading</option>
+                                                        <option value="3d-animation">3D Animation</option>
+                                                        <option value="other">Other / Custom</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="form-input-wrapper textarea-wrapper">
+                                                <i class="ti-comment"></i>
+                                                <textarea id="contactMessage" rows="4"
+                                                    placeholder="Tell me about your project, goals, and timeline..."
+                                                    required></textarea>
+                                            </div>
+                                            <div class="form-error" data-for="contactMessage"></div>
+                                        </div>
+                                        <div class="form-footer">
+                                            <button type="submit" class="submit-btn" id="contactSubmitBtn">
+                                                <span class="btn-text">Send Message</span>
+                                                <span class="btn-loader"><i class="ti-loading"></i></span>
+                                                <span class="btn-success"><i class="ti-check"></i> Sent!</span>
+                                                <i class="ti-arrow-right btn-icon"></i>
+                                            </button>
+                                            <div class="form-trust-badges">
+                                                <div class="trust-badge"><i class="ti-lock"></i><span>Your info is
+                                                        safe</span></div>
+                                                <div class="trust-badge"><i class="ti-timer"></i><span>Fast
+                                                        response</span></div>
+                                                <div class="trust-badge"><i class="ti-headphone"></i><span>24/7
+                                                        Support</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="form-status-message" id="formStatusMessage"></div>
+                                    </form>
+                                </div> -->
+                            </div>
+                        </div>
+                    </section>
+
                 </div>
             </div>
-            <div thumbsSlider="" class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide pointer">
-                        <img src="media/benchBG.jpg" alt="" />
-                    </div>
-                    <div class="swiper-slide pointer">
-                        <img src="https://images3.alphacoders.com/136/thumb-1920-1366129.jpeg" alt="" />
-                    </div>
-                    <div class="swiper-slide pointer">
-                        <img src="https://images5.alphacoders.com/139/thumb-1920-1390300.jpg" alt="" />
-                    </div>
-                    <div class="swiper-slide pointer">
-                        <img src="https://images3.alphacoders.com/225/thumb-1920-225467.jpg" alt="" />
-                    </div>
-                    <div class="swiper-slide pointer">
-                        <img src="https://images5.alphacoders.com/318/thumb-1920-318459.jpg" alt="" />
-                    </div>
-                    <div class="swiper-slide pointer">
-                        <img src="https://images.alphacoders.com/650/thumb-1920-650678.jpg" alt="" />
-                    </div>
-                    <div class="swiper-slide pointer">
-                        <img src="https://images6.alphacoders.com/139/thumb-1920-1390427.jpg" alt="" />
-                    </div>
-                    <div class="swiper-slide pointer">
-                        <img src="https://images8.alphacoders.com/138/thumb-1920-1387562.jpg" alt="" />
-                    </div>
-                    <div class="swiper-slide pointer">
-                        <img src="https://images8.alphacoders.com/139/thumb-1920-1391440.png" alt="" />
-                    </div>
-                    <div class="swiper-slide pointer">
-                        <img src="https://images7.alphacoders.com/136/thumb-1920-1367603.jpeg" alt="" />
-                    </div>
-                    <div class="swiper-slide pointer">
-                        <img src="https://images2.alphacoders.com/116/thumb-1920-1166094.jpg" alt="" />
-                    </div>
-                    <div class="swiper-slide pointer">
-                        <img src="https://swiperjs.com/demos/images/nature-10.jpg" alt="" />
-                    </div>
-                </div>
-            </div>
         </div>
-    </section>
+    </div>
 
-    <!--!-------------------------------------------------------------*-->
-    <!-- BOTÓ TORNAR AMUNT -->
-    <button id="scrollTopBtn" title="Torna amunt"><i class="fa-solid fa-arrow-up"></i></button>
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/simplebar.min.js"></script>
+    <script src="js/three.module.js"></script>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "./js/three.module.js"
+            }
+        }
+    </script>
+    <script type="module" src="js/main.js"></script>
 </body>
-
-<script src="https://kit.fontawesome.com/008e638cf2.js" crossorigin="anonymous"></script>
-<script src="Plugins/Swiper/swiper-bundle.min.js"></script>
-<script src="Plugins/Swiper/PersonalSwiper.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script src="Plugins/Tippy/Development/popper.min.js"></script>
-<script src="Plugins/Tippy/Development/tippy-bundle.umd.js"></script>
-<script src="Plugins/Tippy/Production/core@2.js"></script>
-<script src="Plugins/Tippy/Production/tippy@6.js"></script>
-<script src="Plugins/Tippy/PersonalTippy.js"></script>
-<script src="program/JS.js"></script>
-
 
 </html>
