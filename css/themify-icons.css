@@ -331,6 +331,7 @@
 
 .ti-check:before {
 	content: "\e64c";
+	color: #5e9164;
 }
 
 .ti-check-box:before {
