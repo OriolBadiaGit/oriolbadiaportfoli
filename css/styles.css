@@ -50,6 +50,7 @@ h6 {
 /* ---------- 3D CANVAS ---------- */
 #three-canvas-container {
     position: fixed;
+    background-position: center;
     top: 0;
     left: 0;
     width: 100%;
@@ -1815,8 +1816,7 @@ h6 {
     object-fit: cover;
     transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
     /* Fix untuk kualitas gambar di mobile */
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
+
 }
 
 .portfolio-card:hover .card-image img {
@@ -2061,7 +2061,6 @@ h6 {
         object-fit: cover;
         object-position: center;
         /* Pastikan gambar tidak pecah */
-        image-rendering: auto;
     }
 
     /* Pastikan card inner mengisi penuh */
