@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ca">
 
 <head>
     <meta charset="UTF-8">
@@ -53,7 +53,7 @@
         <aside class="dashboard-sidebar" id="dashboardSidebar">
             <div class="sidebar-profile">
                 <div class="profile-avatar">
-                    <img src="images/FotoCV.jpg" alt="Profile">
+                    <img src="images/ProfilePhoto.JPG" alt="Profile">
                 </div>
                 <h3 class="profile-name">Oriol Badia</h3>
                 <p class="profile-role">
@@ -102,9 +102,11 @@
                                         <span class="typed-text">Artista 3D</span>
                                     </h2> -->
                                     <p class="hero-description">
-                                        <span class="highlight-text">Artista 3D</span> que s’especialitza en els àmbits
-                                        de modelatge, il·luminació, texturització, i animació. El meu propòsit és poder
-                                        millorar en cada projecte i aportar valor a l’empresa.
+                                        <span class="highlight-text">Artista 3D</span> Sóc un artista 3D que
+                                        s’especialitza en l’àmbit de modelatge on puc demostrar eficiència i
+                                        qualitat de treball al complert. Prioritzo ser organitzat, tenir una bona
+                                        comunicació i poder millorar les habilitats personals perquè el projecte pugui
+                                        fluir sense problemes.
                                     </p>
                                     <!-- <div class="hero-stats-mini">
                                         <div class="stat-mini">
@@ -124,8 +126,8 @@
                                         <a href="#" class="btn btn-primary btn-lg" data-nav-section="work">
                                             <i class="ti-arrow-right"></i> Projectes
                                         </a>
-                                        <a href="#" class="btn btn-outline-light btn-lg" data-nav-section="contact">
-                                            <i class="ti-email"></i> Contacta'm
+                                        <a href="#" class="btn btn-outline-light btn-lg" data-nav-section="about">
+                                            <i class="ti-user"></i> Sobre Mi
                                         </a>
                                     </div>
                                 </div>
@@ -432,6 +434,38 @@
                     </section>
 
                     <!-- WORK -->
+                    <!-- Modal de projectes -->
+                    <div class="project-modal" id="projectModal" aria-hidden="true">
+                        <div class="project-modal-overlay" data-close-modal></div>
+
+                        <div class="project-modal-content" role="dialog" aria-modal="true"
+                            aria-labelledby="modalProjectTitle">
+
+                            <button class="project-modal-close" type="button" aria-label="Tancar projecte"
+                                data-close-modal>
+                                &times;
+                            </button>
+
+                            <div class="project-modal-gallery">
+                                <div class="swiper project-swiper">
+                                    <div class="swiper-wrapper" id="projectSlides">
+                                        <!-- Les imatges s'afegeixen amb JavaScript -->
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="project-modal-details">
+                                <h2 id="modalProjectTitle"></h2>
+                                <p class="project-modal-meta" id="modalProjectMeta"></p>
+
+                                <div class="card-tech-stack" id="modalProjectTech"></div>
+
+                                <p id="modalProjectDescription"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fi del modal de projectes -->
                     <section id="work" class="work-section horizontal-section">
                         <div class="container">
                             <div class="section-header text-center">
@@ -443,12 +477,12 @@
                             <!-- Filter Buttons -->
                             <div class="work-filter">
                                 <button class="filter-btn active" data-filter="all">Tots els treballs</button>
-                                <button class="filter-btn" data-filter="sculpture">Modelatge 3D</button>
+                                <button class="filter-btn" data-filter="3Dmodel">Modelatge 3D</button>
                                 <button class="filter-btn" data-filter="environment">Entorn</button>
                             </div>
                             <!-- Portfolio Grid -->
                             <div class="portfolio-grid-enhanced">
-                                <div class="portfolio-card" data-category="sculpture">
+                                <div class="portfolio-card" data-category="3Dmodel" data-gallery="images/work/HouseInNature.webp">
 
                                     <div class="card-inner">
                                         <div class="card-front">
@@ -462,15 +496,52 @@
                                         <div class="card-back">
                                             <div class="card-back-content">
                                                 <!-- <i class="ti-crown card-icon"></i> -->
-                                                <h3>Ethereal Being</h3>
-                                                <p>Digital Sculpture, 2024</p>
+                                                <h3>La casa</h3>
+                                                <p>Modelatge Digital | 2024-2025</p>
                                                 <div class="card-tech-stack">
-                                                    <span>ZBrush</span><span>Substance</span><span>Octane</span>
+                                                    <span>Blender</span><span>Substance</span>
                                                 </div>
-                                                <div class="card-stats">
+                                                <p>
+                                                    Em va ajudar a saber més sobre el substance painter, on em vaig
+                                                    barallar amb les UV's pero gràcies aixo vaig coneixer el tiles sets.
+                                                </p>
+                                                <!-- <div class="card-stats">
                                                     <span><i class="ti-heart"></i> 2.3k</span>
                                                     <span><i class="ti-comment"></i> 48</span>
+                                                </div> -->
+                                                <a href="#" class="btn-view-project">View Project <i
+                                                        class="ti-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="portfolio-card" data-category="3Dmodel" data-gallery="images/work/GarageTankiHD.webp">
+
+                                    <div class="card-inner">
+                                        <div class="card-front">
+                                            <div class="card-image">
+                                                <img src="images/work/GarageTankiHD.webp" alt="Ethereal Being"
+                                                    loading="lazy">
+                                                <!-- <div class="card-badge">Featured</div> -->
+                                            </div>
+                                        </div>
+
+                                        <div class="card-back">
+                                            <div class="card-back-content">
+                                                <!-- <i class="ti-crown card-icon"></i> -->
+                                                <h3>Remasterització Garatge Tanki Online</h3>
+                                                <p>Modelatge Digital | 2026-2027</p>
+                                                <div class="card-tech-stack">
+                                                    <span>Blender</span><span>Substance</span><span>RizomUV</span>
                                                 </div>
+                                                <p>
+                                                    Un projecte molt divertir sobre el joc de la meva infancia on vaig
+                                                    poder deescobrir més en detall els UDIMS
+                                                </p>
+                                                <!-- <div class="card-stats">
+                                                    <span><i class="ti-heart"></i> 2.3k</span>
+                                                    <span><i class="ti-comment"></i> 48</span>
+                                                </div> -->
                                                 <a href="#" class="btn-view-project">View Project <i
                                                         class="ti-arrow-right"></i></a>
                                             </div>

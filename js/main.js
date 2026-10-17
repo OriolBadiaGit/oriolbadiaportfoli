@@ -445,29 +445,29 @@ document.head.appendChild(filterAnimationStyle);
     function setupServices() {
         // Add hover sound effect simulation (visual only)
         const serviceCards = document.querySelectorAll('.service-card-enhanced');
-        
+
         // Ripple effect on click
         serviceCards.forEach(card => {
-            card.addEventListener('click', function(e) {
+            card.addEventListener('click', function (e) {
                 // Don't trigger if clicking on CTA button
                 if (e.target.closest('.service-cta')) return;
-                
+
                 // Create ripple element
                 const ripple = document.createElement('span');
                 ripple.classList.add('service-ripple');
                 ripple.style.left = `${e.clientX - card.getBoundingClientRect().left}px`;
                 ripple.style.top = `${e.clientY - card.getBoundingClientRect().top}px`;
-                
+
                 card.style.position = 'relative';
                 card.style.overflow = 'hidden';
                 card.appendChild(ripple);
-                
+
                 setTimeout(() => {
                     ripple.remove();
                 }, 600);
             });
         });
-        
+
         // Add ripple style
         const rippleStyle = document.createElement('style');
         rippleStyle.textContent = `
@@ -495,13 +495,13 @@ document.head.appendChild(filterAnimationStyle);
             }
         `;
         document.head.appendChild(rippleStyle);
-        
+
         // Add intersection observer for scroll animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
         };
-        
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -511,7 +511,7 @@ document.head.appendChild(filterAnimationStyle);
                 }
             });
         }, observerOptions);
-        
+
         // Observe all service cards for scroll animation
         serviceCards.forEach(card => {
             card.style.opacity = '0';
@@ -536,7 +536,7 @@ document.head.appendChild(filterAnimationStyle);
     function setupTeam() {
         // Add 3D tilt effect on team cards
         const teamCards = document.querySelectorAll('.team-card');
-        
+
         teamCards.forEach(card => {
             // Tilt effect on mouse move
             card.addEventListener('mousemove', (e) => {
@@ -547,15 +547,15 @@ document.head.appendChild(filterAnimationStyle);
                 const centerY = rect.height / 2;
                 const rotateX = (y - centerY) / 20;
                 const rotateY = (centerX - x) / 20;
-                
+
                 card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
             });
-            
+
             // Reset on mouse leave
             card.addEventListener('mouseleave', () => {
                 card.style.transform = '';
             });
-            
+
             // Add subtle entrance animation reset on hover out
             card.addEventListener('mouseenter', () => {
                 card.style.transition = 'transform 0.1s ease';
@@ -567,7 +567,7 @@ document.head.appendChild(filterAnimationStyle);
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
         };
-        
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -614,14 +614,14 @@ document.head.appendChild(filterAnimationStyle);
         // Blog Filter Functionality
         const filterBtns = document.querySelectorAll('.blog-filter-btn');
         const blogCards = document.querySelectorAll('.blog-card-enhanced');
-        
+
         if (filterBtns.length && blogCards.length) {
             function filterBlogPosts(category) {
                 let visibleCount = 0;
-                
+
                 blogCards.forEach((card, index) => {
                     const cardCategory = card.getAttribute('data-category');
-                    
+
                     if (category === 'all' || cardCategory === category) {
                         card.style.display = 'block';
                         card.style.animation = `blogCardFadeIn 0.5s ease-out ${visibleCount * 0.1}s backwards`;
@@ -631,16 +631,16 @@ document.head.appendChild(filterAnimationStyle);
                     }
                 });
             }
-            
+
             filterBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
+                btn.addEventListener('click', function () {
                     // Update active state
                     filterBtns.forEach(b => b.classList.remove('active'));
                     this.classList.add('active');
-                    
+
                     // Get filter value
                     const filterValue = this.getAttribute('data-blog-filter');
-                    
+
                     // Apply filter with animation
                     const grid = document.querySelector('.blog-grid-enhanced');
                     if (grid) {
@@ -654,11 +654,11 @@ document.head.appendChild(filterAnimationStyle);
                     }
                 });
             });
-            
+
             // Initial filter
             filterBlogPosts('all');
         }
-        
+
         // Newsletter Form Handler
         const newsletterForm = document.querySelector('.newsletter-form');
         if (newsletterForm) {
@@ -666,7 +666,7 @@ document.head.appendChild(filterAnimationStyle);
                 e.preventDefault();
                 const emailInput = newsletterForm.querySelector('input[type="email"]');
                 const email = emailInput.value;
-                
+
                 if (email) {
                     // Show success message
                     const successMsg = document.createElement('div');
@@ -677,23 +677,23 @@ document.head.appendChild(filterAnimationStyle);
                         margin-top: 1rem;
                         text-align: center;
                     `;
-                    
+
                     newsletterForm.reset();
-                    
+
                     // Remove any existing message
                     const existingMsg = newsletterForm.parentElement.querySelector('.newsletter-success');
                     if (existingMsg) existingMsg.remove();
-                    
+
                     successMsg.classList.add('newsletter-success');
                     newsletterForm.parentElement.appendChild(successMsg);
-                    
+
                     setTimeout(() => {
                         successMsg.remove();
                     }, 5000);
                 }
             });
         }
-        
+
         // Add hover parallax effect on blog images
         const blogImages = document.querySelectorAll('.blog-image-wrapper');
         blogImages.forEach(wrapper => {
@@ -707,13 +707,13 @@ document.head.appendChild(filterAnimationStyle);
                     const moveY = (y - 0.5) * 10;
                     img.style.transform = `scale(1.1) translate(${moveX}px, ${moveY}px)`;
                 });
-                
+
                 wrapper.addEventListener('mouseleave', () => {
                     img.style.transform = 'scale(1) translate(0, 0)';
                 });
             }
         });
-        
+
         // Add intersection observer for scroll animations
         const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
         const observer = new IntersectionObserver((entries) => {
@@ -725,14 +725,14 @@ document.head.appendChild(filterAnimationStyle);
                 }
             });
         }, observerOptions);
-        
+
         document.querySelectorAll('.blog-card-enhanced').forEach(card => {
             card.style.opacity = '0';
             card.style.transform = 'translateY(30px)';
             card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(card);
         });
-        
+
         // Add click handlers for read more links
         const readMoreLinks = document.querySelectorAll('.blog-read-more');
         readMoreLinks.forEach(link => {
@@ -762,17 +762,17 @@ document.head.appendChild(filterAnimationStyle);
 
         const submitBtn = document.getElementById('contactSubmitBtn');
         const statusMessage = document.getElementById('formStatusMessage');
-        
+
         // Form validation function
         function validateField(field, type) {
             const value = field.value.trim();
             const errorDiv = document.querySelector(`.form-error[data-for="${field.id}"]`);
-            
+
             if (!value) {
                 showError(field, errorDiv, 'This field is required');
                 return false;
             }
-            
+
             if (type === 'email') {
                 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 if (!emailRegex.test(value)) {
@@ -780,26 +780,26 @@ document.head.appendChild(filterAnimationStyle);
                     return false;
                 }
             }
-            
+
             if (type === 'name' && value.length < 2) {
                 showError(field, errorDiv, 'Name must be at least 2 characters');
                 return false;
             }
-            
+
             if (type === 'subject' && value.length < 3) {
                 showError(field, errorDiv, 'Subject must be at least 3 characters');
                 return false;
             }
-            
+
             if (type === 'message' && value.length < 10) {
                 showError(field, errorDiv, 'Message must be at least 10 characters');
                 return false;
             }
-            
+
             hideError(field, errorDiv);
             return true;
         }
-        
+
         function showError(field, errorDiv, message) {
             field.style.borderColor = '#f44336';
             if (errorDiv) {
@@ -807,20 +807,20 @@ document.head.appendChild(filterAnimationStyle);
                 errorDiv.classList.add('visible');
             }
         }
-        
+
         function hideError(field, errorDiv) {
             field.style.borderColor = '';
             if (errorDiv) {
                 errorDiv.classList.remove('visible');
             }
         }
-        
+
         // Add real-time validation
         const nameField = document.getElementById('contactName');
         const emailField = document.getElementById('contactEmail');
         const subjectField = document.getElementById('contactSubject');
         const messageField = document.getElementById('contactMessage');
-        
+
         if (nameField) {
             nameField.addEventListener('input', () => validateField(nameField, 'name'));
         }
@@ -833,54 +833,54 @@ document.head.appendChild(filterAnimationStyle);
         if (messageField) {
             messageField.addEventListener('input', () => validateField(messageField, 'message'));
         }
-        
+
         // Form submission
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
-            
+
             const isNameValid = nameField ? validateField(nameField, 'name') : true;
             const isEmailValid = emailField ? validateField(emailField, 'email') : true;
             const isSubjectValid = subjectField ? validateField(subjectField, 'subject') : true;
             const isMessageValid = messageField ? validateField(messageField, 'message') : true;
-            
+
             if (!isNameValid || !isEmailValid || !isSubjectValid || !isMessageValid) {
                 return;
             }
-            
+
             if (submitBtn) {
                 submitBtn.classList.add('loading');
                 submitBtn.disabled = true;
             }
-            
+
             // Simulate submission
             await new Promise(resolve => setTimeout(resolve, 1500));
-            
+
             if (submitBtn) {
                 submitBtn.classList.remove('loading');
                 submitBtn.classList.add('success');
                 form.reset();
-                
+
                 if (statusMessage) {
                     statusMessage.textContent = '✓ Message sent successfully! I\'ll get back to you soon.';
                     statusMessage.classList.add('success');
                 }
-                
+
                 setTimeout(() => {
                     submitBtn.classList.remove('success');
                     submitBtn.disabled = false;
-                    
+
                     if (statusMessage) {
                         statusMessage.classList.remove('success');
                         statusMessage.textContent = '';
                     }
-                    
+
                     [nameField, emailField, subjectField, messageField].forEach(field => {
                         if (field) field.style.borderColor = '';
                     });
                 }, 3000);
             }
         });
-        
+
         // Social link click handlers
         const socialLinks = document.querySelectorAll('.contact-social-link');
         socialLinks.forEach(link => {
@@ -890,7 +890,7 @@ document.head.appendChild(filterAnimationStyle);
                 console.log(`Social link clicked: ${social}`);
             });
         });
-        
+
         // Intersection observer for animations
         const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
         const observer = new IntersectionObserver((entries) => {
@@ -902,7 +902,7 @@ document.head.appendChild(filterAnimationStyle);
                 }
             });
         }, observerOptions);
-        
+
         const contactCards = document.querySelectorAll('.contact-card');
         contactCards.forEach((card, index) => {
             card.style.opacity = '0';
@@ -910,7 +910,7 @@ document.head.appendChild(filterAnimationStyle);
             card.style.transition = `opacity 0.4s ease ${index * 0.08}s, transform 0.4s ease ${index * 0.08}s`;
             observer.observe(card);
         });
-        
+
         const formElement = document.querySelector('.contact-form-compact');
         if (formElement) {
             formElement.style.opacity = '0';
@@ -1036,3 +1036,183 @@ function initThreeJS() {
 }
 
 document.addEventListener('DOMContentLoaded', initThreeJS);
+
+const projectModal = document.getElementById('projectModal');
+const projectSlides = document.getElementById('projectSlides');
+
+let projectSwiper = null;
+let lastFocusedElement = null;
+
+function openProjectModal(card) {
+    const content = card.querySelector('.card-back-content');
+    const title = content.querySelector('h3');
+    const paragraphs = content.querySelectorAll(':scope > p');
+    const techItems = content.querySelectorAll('.card-tech-stack span');
+    const mainImage = card.querySelector('.card-image img');
+
+    // Obté les imatges de la galeria.
+    const gallery = card.dataset.gallery
+        ? card.dataset.gallery.split(',').map(src => src.trim()).filter(Boolean)
+        : [mainImage.src];
+
+    // Si no s'ha especificat la galeria, utilitza la imatge de la targeta.
+    const images = gallery.length ? gallery : [mainImage.src];
+
+    // Omple la informació del projecte.
+    document.getElementById('modalProjectTitle').textContent =
+        title?.textContent.trim() || '';
+
+    document.getElementById('modalProjectMeta').textContent =
+        paragraphs[0]?.textContent.trim() || '';
+
+    document.getElementById('modalProjectDescription').textContent =
+        paragraphs[1]?.textContent.trim() || '';
+
+    const techContainer = document.getElementById('modalProjectTech');
+    techContainer.replaceChildren();
+
+    techItems.forEach(item => {
+        const tag = document.createElement('span');
+        tag.textContent = item.textContent;
+        techContainer.appendChild(tag);
+    });
+
+    // Crea les diapositives.
+    projectSlides.replaceChildren();
+
+    images.forEach((src, index) => {
+        const slide = document.createElement('div');
+        slide.className = 'swiper-slide';
+
+        const zoomContainer = document.createElement('div');
+        zoomContainer.className = 'swiper-zoom-container';
+
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = `${title?.textContent.trim() || 'Projecte'} - imatge ${index + 1}`;
+        img.loading = index === 0 ? 'eager' : 'lazy';
+
+        zoomContainer.appendChild(img);
+        slide.appendChild(zoomContainer);
+        projectSlides.appendChild(slide);
+    });
+
+    // Mostra el modal.
+    lastFocusedElement = document.activeElement;
+    projectModal.classList.add('is-open');
+    projectModal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('project-modal-open');
+
+    projectModal.querySelector('.project-modal-close').focus();
+
+    // Destrueix la instància anterior, si n'hi ha.
+    if (projectSwiper) {
+        projectSwiper.destroy(true, true);
+    }
+
+    // Inicialitza Swiper amb navegació, paginació i zoom.
+    projectSwiper = new Swiper('.project-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        loop: images.length > 1,
+
+        // Canvi automàtic d'imatges
+        autoplay: {
+            delay: 3500,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true
+        },
+
+        // Transició suau
+        speed: 800,
+        effect: 'slide',
+
+        // Zoom de les imatges
+        zoom: {
+            maxRatio: 3,
+            minRatio: 1
+        },
+    });
+
+    // Amaga els controls de navegació si només hi ha una imatge.
+    const hasMultipleImages = images.length > 1;
+    projectModal.querySelectorAll('.swiper-pagination').forEach(el => {
+        el.hidden = !hasMultipleImages;
+    });
+    
+    projectSwiper = new Swiper('.project-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 0,
+
+        // Només activa el carrusel si hi ha més d'una imatge
+        loop: hasMultipleImages,
+        allowTouchMove: hasMultipleImages,
+
+        // Autoplay només amb diverses imatges
+        autoplay: hasMultipleImages
+            ? {
+                delay: 3500,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true
+            }
+            : false,
+
+        speed: 800,
+        effect: 'slide',
+
+        // Zoom sempre disponible
+        zoom: {
+            maxRatio: 3,
+            minRatio: 1
+        },
+
+        // Paginació només si hi ha diverses imatges
+        pagination: {
+            el: '.project-swiper .swiper-pagination',
+            clickable: hasMultipleImages
+        }
+
+
+    });
+}
+
+function closeProjectModal() {
+    if (!projectModal.classList.contains('is-open')) return;
+
+    projectModal.classList.remove('is-open');
+    projectModal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('project-modal-open');
+
+    if (projectSwiper) {
+        projectSwiper.destroy(true, true);
+        projectSwiper = null;
+    }
+
+    projectSlides.replaceChildren();
+    lastFocusedElement?.focus();
+}
+
+// Clic a "View Project".
+document.querySelectorAll('.btn-view-project').forEach(button => {
+    button.addEventListener('click', event => {
+        event.preventDefault();
+
+        const card = button.closest('.portfolio-card');
+        if (card) openProjectModal(card);
+    });
+});
+
+// Tancar amb la creu o clicant el fons.
+projectModal.querySelectorAll('[data-close-modal]').forEach(element => {
+    element.addEventListener('click', closeProjectModal);
+});
+
+// Tancar amb Escape.
+document.addEventListener('keydown', event => {
+    if (
+        event.key === 'Escape' &&
+        projectModal.classList.contains('is-open')
+    ) {
+        closeProjectModal();
+    }
+});
