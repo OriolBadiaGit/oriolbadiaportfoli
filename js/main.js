@@ -925,120 +925,242 @@ document.head.appendChild(filterAnimationStyle);
 // THREE.JS 3D BACKGROUND
 // ============================================
 
+
 import * as THREE from 'three';
-import { GLTFLoader } from '../js/GLTFLoader.js';
 
 function initThreeJS() {
     const container = document.getElementById('three-canvas-container');
-    if (!container) return;
+    if (!container || container.querySelector('canvas')) return;
 
     const scene = new THREE.Scene();
     scene.background = new THREE.Color(0x050510);
-    scene.fog = new THREE.FogExp2(0x050510, 0.008);
+    scene.fog = new THREE.FogExp2(0x050510, 0.012);
 
-    const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
-    camera.position.set(0, 1.5, 8);
+    const camera = new THREE.PerspectiveCamera(
+        45,
+        window.innerWidth / window.innerHeight,
+        0.1,
+        150
+    );
+    camera.position.set(0, 0, 10);
 
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setPixelRatio(window.devicePixelRatio);
-    container.appendChild(renderer.domElement);
-    container.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none';
-
-    scene.add(new THREE.AmbientLight(0x404060, 1));
-
-    const dirLight = new THREE.DirectionalLight(0xffffff, 1.5);
-    dirLight.position.set(3, 5, 2);
-    scene.add(dirLight);
-
-    const neonLight1 = new THREE.PointLight(0x6c63ff, 1.5, 15);
-    neonLight1.position.set(-2, 1, 2);
-    scene.add(neonLight1);
-
-    const neonLight2 = new THREE.PointLight(0xff66cc, 1.5, 15);
-    neonLight2.position.set(2, 1, 2);
-    scene.add(neonLight2);
-
-    const loader = new GLTFLoader();
-    let face;
-    loader.load('../3dfile/Astronaut.glb', function (gltf) {
-        face = gltf.scene;
-        face.scale.set(2, 2, 2);
-        face.position.set(0, -2.2, 0);
-        face.traverse((child) => {
-            if (child.isMesh) {
-                child.material.metalness = 0.7;
-                child.material.roughness = 0.3;
-                child.material.emissive = new THREE.Color(0x2a1e5a);
-                child.material.emissiveIntensity = 0.6;
-            }
-        });
-        scene.add(face);
+    const renderer = new THREE.WebGLRenderer({
+        antialias: true,
+        alpha: false,
+        powerPreference: 'high-performance'
     });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
+    container.appendChild(renderer.domElement);
 
-    const starGeo = new THREE.BufferGeometry();
-    const starCount = 2000;
-    const starPos = new Float32Array(starCount * 3);
-    for (let i = 0; i < starCount; i++) {
-        starPos[i * 3] = (Math.random() - 0.5) * 100;
-        starPos[i * 3 + 1] = (Math.random() - 0.5) * 50;
-        starPos[i * 3 + 2] = (Math.random() - 0.5) * 60 - 20;
+    // LLUMS AMBIENTALS
+    const purpleLight = new THREE.PointLight(0x6c63ff, 2.5, 20);
+    purpleLight.position.set(-5, 2, 1);
+    scene.add(purpleLight);
+
+    const pinkLight = new THREE.PointLight(0xff66cc, 2.0, 20);
+    pinkLight.position.set(5, -1, 0);
+    scene.add(pinkLight);
+
+    // ──────────────────────────────────────────────
+    // TEXTURA CIRCULAR BRILLANT (clau per fer-les rodones)
+    // ──────────────────────────────────────────────
+    function createCircleTexture() {
+        const size = 128;
+        const canvas = document.createElement('canvas');
+        canvas.width = size;
+        canvas.height = size;
+        const ctx = canvas.getContext('2d');
+
+        const gradient = ctx.createRadialGradient(
+            size / 2, size / 2, 0,
+            size / 2, size / 2, size / 2
+        );
+
+        // Nucli molt brillant → exterior transparent
+        gradient.addColorStop(0, 'rgba(255, 255, 255, 1)');
+        gradient.addColorStop(0.15, 'rgba(255, 240, 255, 0.9)');
+        gradient.addColorStop(0.4, 'rgba(200, 160, 255, 0.45)');
+        gradient.addColorStop(0.7, 'rgba(140, 100, 255, 0.15)');
+        gradient.addColorStop(1, 'rgba(80, 40, 200, 0)');
+
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, size, size);
+
+        const texture = new THREE.CanvasTexture(canvas);
+        texture.needsUpdate = true;
+        return texture;
     }
-    starGeo.setAttribute('position', new THREE.BufferAttribute(starPos, 3));
-    const stars = new THREE.Points(starGeo, new THREE.PointsMaterial({ color: 0x88aaff, size: 0.05, transparent: true, opacity: 0.6 }));
+
+    const particleTexture = createCircleTexture();
+
+    // ──────────────────────────────────────────────
+    // PARTÍCULES PETITES: ESTRELLES
+    // ──────────────────────────────────────────────
+    const starCount = 1400;
+    const starPositions = new Float32Array(starCount * 3);
+
+    for (let i = 0; i < starCount; i++) {
+        starPositions[i * 3] = (Math.random() - 0.5) * 45;
+        starPositions[i * 3 + 1] = (Math.random() - 0.5) * 28;
+        starPositions[i * 3 + 2] = -Math.random() * 45 - 2;
+    }
+
+    const starGeometry = new THREE.BufferGeometry();
+    starGeometry.setAttribute('position', new THREE.BufferAttribute(starPositions, 3));
+
+    const stars = new THREE.Points(
+        starGeometry,
+        new THREE.PointsMaterial({
+            map: particleTexture,          // ← textura circular
+            color: 0xc8d0ff,
+            size: 0.055,
+            transparent: true,
+            opacity: 0.7,
+            blending: THREE.AdditiveBlending,
+            depthWrite: false,
+            sizeAttenuation: true
+        })
+    );
     scene.add(stars);
 
-    const particleCount = 800;
-    const particleGeo = new THREE.BufferGeometry();
-    const particlePos = new Float32Array(particleCount * 3);
+    // ──────────────────────────────────────────────
+    // PARTÍCULES LILES I ROSES
+    // ──────────────────────────────────────────────
+    const particleCount = 500;
+    const particlePositions = new Float32Array(particleCount * 3);
+    const originalY = new Float32Array(particleCount);
+    const phases = new Float32Array(particleCount);
+    const speeds = new Float32Array(particleCount);
+
     for (let i = 0; i < particleCount; i++) {
-        particlePos[i * 3] = (Math.random() - 0.5) * 20;
-        particlePos[i * 3 + 1] = (Math.random() - 0.5) * 10;
-        particlePos[i * 3 + 2] = (Math.random() - 0.5) * 20;
+        particlePositions[i * 3] = (Math.random() - 0.5) * 22;
+        particlePositions[i * 3 + 1] = (Math.random() - 0.5) * 12;
+        particlePositions[i * 3 + 2] = (Math.random() - 0.5) * 15;
+
+        originalY[i] = particlePositions[i * 3 + 1];
+        phases[i] = Math.random() * Math.PI * 2;
+        speeds[i] = 0.3 + Math.random() * 0.7;
     }
-    particleGeo.setAttribute('position', new THREE.BufferAttribute(particlePos, 3));
-    const particles = new THREE.Points(particleGeo, new THREE.PointsMaterial({ color: 0xff66cc, size: 0.08, transparent: true, opacity: 0.7, blending: THREE.AdditiveBlending }));
+
+    const particleGeometry = new THREE.BufferGeometry();
+    particleGeometry.setAttribute('position', new THREE.BufferAttribute(particlePositions, 3));
+
+    const particles = new THREE.Points(
+        particleGeometry,
+        new THREE.PointsMaterial({
+            map: particleTexture,          // ← textura circular
+            color: 0xe0a0ff,
+            size: 0.09,
+            transparent: true,
+            opacity: 0.95,
+            blending: THREE.AdditiveBlending,
+            depthWrite: false,
+            sizeAttenuation: true
+        })
+    );
     scene.add(particles);
 
-    let time = 0;
+    // ──────────────────────────────────────────────
+    // HALOS SUAUS (el mateix que ja tenies)
+    // ──────────────────────────────────────────────
+    function createGlowTexture() {
+        const canvas = document.createElement('canvas');
+        canvas.width = 128;
+        canvas.height = 128;
+        const ctx = canvas.getContext('2d');
+        const gradient = ctx.createRadialGradient(64, 64, 0, 64, 64, 64);
+
+        gradient.addColorStop(0, 'rgba(160, 100, 255, 0.24)');
+        gradient.addColorStop(0.25, 'rgba(130, 75, 255, 0.10)');
+        gradient.addColorStop(1, 'rgba(100, 50, 255, 0)');
+
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, 128, 128);
+
+        return new THREE.CanvasTexture(canvas);
+    }
+
+    const glowTexture = createGlowTexture();
+    const glows = [];
+
+    for (let i = 0; i < 7; i++) {
+        const material = new THREE.SpriteMaterial({
+            map: glowTexture,
+            transparent: true,
+            blending: THREE.AdditiveBlending,
+            depthWrite: false,
+            opacity: 0.5
+        });
+
+        const glow = new THREE.Sprite(material);
+        glow.position.set(
+            (Math.random() - 0.5) * 18,
+            (Math.random() - 0.5) * 10,
+            -2 - Math.random() * 8
+        );
+        const size = 3 + Math.random() * 4;
+        glow.scale.set(size, size, 1);
+        scene.add(glow);
+        glows.push(glow);
+    }
+
+    // ──────────────────────────────────────────────
+    // ANIMACIÓ
+    // ──────────────────────────────────────────────
+    const clock = new THREE.Clock();
+
     function animate() {
         requestAnimationFrame(animate);
-        time += 0.01;
 
-        if (face) {
-            face.rotation.y += 0.01;
-            face.rotation.x = Math.sin(time * 0.5) * 0.2;
-        }
+        const delta = Math.min(clock.getDelta(), 0.05);
+        const time = clock.elapsedTime;
 
-        stars.rotation.y += 0.0008;
-        particles.rotation.y += 0.002;
-        particles.rotation.x += 0.001;
-
-        const positions = particles.geometry.attributes.position.array;
         for (let i = 0; i < particleCount; i++) {
-            positions[i * 3 + 1] += Math.sin(time + i) * 0.002;
+            particlePositions[i * 3 + 1] =
+                originalY[i] + Math.sin(time * speeds[i] + phases[i]) * 0.22;
         }
-        particles.geometry.attributes.position.needsUpdate = true;
+        particleGeometry.attributes.position.needsUpdate = true;
 
-        camera.position.x = Math.sin(time * 0.3) * 0.5;
-        camera.position.y = 1.5 + Math.sin(time * 0.2) * 0.2;
-        camera.lookAt(0, 0, 0);
+        particles.rotation.y += delta * 0.012;
+        stars.rotation.y += delta * 0.003;
+
+        glows.forEach((glow, i) => {
+            glow.material.opacity = 0.3 + (Math.sin(time * 0.5 + i) + 1) * 0.12;
+            glow.position.y += Math.sin(time * 0.25 + i) * delta * 0.025;
+        });
+
+        purpleLight.intensity = 2.2 + Math.sin(time * 0.5) * 0.3;
+        pinkLight.intensity = 1.8 + Math.sin(time * 0.4 + 2) * 0.3;
 
         renderer.render(scene, camera);
     }
+
     animate();
 
-    window.addEventListener('resize', () => {
+    // RESPONSIVE
+    function resize() {
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();
         renderer.setSize(window.innerWidth, window.innerHeight);
-    });
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
+    }
+    window.addEventListener('resize', resize);
 }
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initThreeJS);
+} else {
+    initThreeJS();
+}
+
 
 document.addEventListener('DOMContentLoaded', initThreeJS);
 
 const projectModal = document.getElementById('projectModal');
 const projectSlides = document.getElementById('projectSlides');
+const imageLightbox = document.getElementById('imageLightbox');
+const lightboxImage = document.getElementById('lightboxImage');
 
 let projectSwiper = null;
 let lastFocusedElement = null;
@@ -1050,34 +1172,32 @@ function openProjectModal(card) {
     const techItems = content.querySelectorAll('.card-tech-stack span');
     const mainImage = card.querySelector('.card-image img');
 
-    // Obté les imatges de la galeria.
     const gallery = card.dataset.gallery
         ? card.dataset.gallery.split(',').map(src => src.trim()).filter(Boolean)
         : [mainImage.src];
 
-    // Si no s'ha especificat la galeria, utilitza la imatge de la targeta.
     const images = gallery.length ? gallery : [mainImage.src];
 
-    // Omple la informació del projecte.
+    // Informació del projecte
     document.getElementById('modalProjectTitle').textContent =
         title?.textContent.trim() || '';
 
     document.getElementById('modalProjectMeta').textContent =
         paragraphs[0]?.textContent.trim() || '';
 
+    const fullDescription = content.querySelector('[data-full-description]');
     document.getElementById('modalProjectDescription').textContent =
-        paragraphs[1]?.textContent.trim() || '';
+        fullDescription?.textContent.trim() || '';
 
     const techContainer = document.getElementById('modalProjectTech');
     techContainer.replaceChildren();
-
     techItems.forEach(item => {
         const tag = document.createElement('span');
         tag.textContent = item.textContent;
         techContainer.appendChild(tag);
     });
 
-    // Crea les diapositives.
+    // Crear diapositives
     projectSlides.replaceChildren();
 
     images.forEach((src, index) => {
@@ -1091,64 +1211,40 @@ function openProjectModal(card) {
         img.src = src;
         img.alt = `${title?.textContent.trim() || 'Projecte'} - imatge ${index + 1}`;
         img.loading = index === 0 ? 'eager' : 'lazy';
+        img.style.cursor = 'pointer'; // indica que es pot clicar
+
+        // >>> CLIC ÚNIC → PANTALLA COMPLETA
+        img.addEventListener('click', () => {
+            openLightbox(src, img.alt);
+        });
 
         zoomContainer.appendChild(img);
         slide.appendChild(zoomContainer);
         projectSlides.appendChild(slide);
     });
 
-    // Mostra el modal.
+    // Mostrar modal
     lastFocusedElement = document.activeElement;
     projectModal.classList.add('is-open');
     projectModal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('project-modal-open');
-
     projectModal.querySelector('.project-modal-close').focus();
 
-    // Destrueix la instància anterior, si n'hi ha.
+    // Destruir Swiper anterior
     if (projectSwiper) {
         projectSwiper.destroy(true, true);
+        projectSwiper = null;
     }
 
-    // Inicialitza Swiper amb navegació, paginació i zoom.
-    projectSwiper = new Swiper('.project-swiper', {
-        slidesPerView: 1,
-        spaceBetween: 0,
-        loop: images.length > 1,
-
-        // Canvi automàtic d'imatges
-        autoplay: {
-            delay: 3500,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true
-        },
-
-        // Transició suau
-        speed: 800,
-        effect: 'slide',
-
-        // Zoom de les imatges
-        zoom: {
-            maxRatio: 3,
-            minRatio: 1
-        },
-    });
-
-    // Amaga els controls de navegació si només hi ha una imatge.
     const hasMultipleImages = images.length > 1;
-    projectModal.querySelectorAll('.swiper-pagination').forEach(el => {
-        el.hidden = !hasMultipleImages;
-    });
-    
+
+    // Inicialitzar Swiper (només una vegada)
     projectSwiper = new Swiper('.project-swiper', {
         slidesPerView: 1,
         spaceBetween: 0,
-
-        // Només activa el carrusel si hi ha més d'una imatge
         loop: hasMultipleImages,
         allowTouchMove: hasMultipleImages,
 
-        // Autoplay només amb diverses imatges
         autoplay: hasMultipleImages
             ? {
                 delay: 3500,
@@ -1160,19 +1256,21 @@ function openProjectModal(card) {
         speed: 800,
         effect: 'slide',
 
-        // Zoom sempre disponible
+        // Zoom de Swiper (doble clic) — el deixem per si vols
         zoom: {
             maxRatio: 3,
             minRatio: 1
         },
 
-        // Paginació només si hi ha diverses imatges
         pagination: {
             el: '.project-swiper .swiper-pagination',
             clickable: hasMultipleImages
         }
+    });
 
-
+    // Amagar paginació si només hi ha una imatge
+    projectModal.querySelectorAll('.swiper-pagination').forEach(el => {
+        el.hidden = !hasMultipleImages;
     });
 }
 
@@ -1192,27 +1290,97 @@ function closeProjectModal() {
     lastFocusedElement?.focus();
 }
 
-// Clic a "View Project".
+// ===== LIGHTBOX PANTALLA COMPLETA =====
+let driftInstance = null;
+
+function openLightbox(src, alt = '') {
+    lightboxImage.src = src;
+    lightboxImage.alt = alt;
+
+    // Drift necessita l'atribut data-zoom
+    lightboxImage.setAttribute('data-zoom', src);
+
+    // Esperem que la imatge estigui carregada
+    const initDrift = () => {
+        // Destrueix la instància anterior
+        if (driftInstance) {
+            driftInstance.destroy();
+            driftInstance = null;
+        }
+
+        driftInstance = new Drift(lightboxImage, {
+            // Mode lupa (sempre a sobre de la imatge)
+            inlinePane: true,
+            containInline: true,
+            inlineContainer: imageLightbox,   // important!
+
+            // Zoom
+            zoomFactor: 3,
+
+            // Usa data-zoom
+            sourceAttribute: 'data-zoom',
+
+            // També al mòbil
+            handleTouch: true,
+
+            // Mostra el rectangle de la zona
+            hoverBoundingBox: false,
+            touchBoundingBox: false
+        });
+    };
+
+    if (lightboxImage.complete) {
+        initDrift();
+    } else {
+        lightboxImage.onload = initDrift;
+    }
+
+    imageLightbox.classList.add('is-open');
+    imageLightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+    imageLightbox.classList.remove('is-open');
+    imageLightbox.setAttribute('aria-hidden', 'true');
+    lightboxImage.src = '';
+    lightboxImage.removeAttribute('data-zoom');
+    document.body.style.overflow = '';
+
+    if (driftInstance) {
+        driftInstance.destroy();
+        driftInstance = null;
+    }
+}
+
+// Tancar lightbox
+imageLightbox.querySelectorAll('[data-close-lightbox]').forEach(el => {
+    el.addEventListener('click', closeLightbox);
+});
+
+// ===== ESDEVENIMENTS GENERALS =====
+
+// Obrir modal amb "View Project"
 document.querySelectorAll('.btn-view-project').forEach(button => {
     button.addEventListener('click', event => {
         event.preventDefault();
-
         const card = button.closest('.portfolio-card');
         if (card) openProjectModal(card);
     });
 });
 
-// Tancar amb la creu o clicant el fons.
+// Tancar modal
 projectModal.querySelectorAll('[data-close-modal]').forEach(element => {
     element.addEventListener('click', closeProjectModal);
 });
 
-// Tancar amb Escape.
+// Tecla Escape (tanca primer el lightbox, després el modal)
 document.addEventListener('keydown', event => {
-    if (
-        event.key === 'Escape' &&
-        projectModal.classList.contains('is-open')
-    ) {
-        closeProjectModal();
+    if (event.key === 'Escape') {
+        if (imageLightbox.classList.contains('is-open')) {
+            closeLightbox();
+        } else if (projectModal.classList.contains('is-open')) {
+            closeProjectModal();
+        }
     }
 });

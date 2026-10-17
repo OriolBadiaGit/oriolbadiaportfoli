@@ -30,6 +30,7 @@
 
     <!-- Local CSS Files -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/drift-zoom@1.5.1/dist/drift-basic.min.css">
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/themify-icons.css">
@@ -465,6 +466,13 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Lightbox a pantalla completa -->
+                    <div class="image-lightbox" id="imageLightbox" aria-hidden="true">
+                        <div class="image-lightbox-overlay" data-close-lightbox></div>
+                        <button class="image-lightbox-close" type="button" aria-label="Tancar"
+                            data-close-lightbox>&times;</button>
+                        <img class="image-lightbox-img" id="lightboxImage" src="" alt="">
+                    </div>
                     <!-- Fi del modal de projectes -->
                     <section id="work" class="work-section horizontal-section">
                         <div class="container">
@@ -482,7 +490,51 @@
                             </div>
                             <!-- Portfolio Grid -->
                             <div class="portfolio-grid-enhanced">
-                                <div class="portfolio-card" data-category="3Dmodel" data-gallery="images/work/HouseInNature.webp">
+                                <div class="portfolio-card" data-category="3Dmodel"
+                                    data-gallery="images/work/PlasmaGun.webp">
+
+                                    <div class="card-inner">
+                                        <div class="card-front">
+                                            <div class="card-image">
+                                                <img src="images/work/PlasmaGun.webp" alt="Ethereal Being"
+                                                    loading="lazy">
+                                                <!-- <div class="card-badge">Featured</div> -->
+                                            </div>
+                                        </div>
+
+                                        <div class="card-back">
+                                            <div class="card-back-content">
+                                                <!-- <i class="ti-crown card-icon"></i> -->
+                                                <h3>Arma Sc-Fi</h3>
+                                                <p>Modelatge Digital | 2024-2025</p>
+                                                <div class="card-tech-stack">
+                                                    <span>Blender</span><span>Substance</span>
+                                                </div>
+                                                <p data-description>
+                                                    Un projecte on vaig començar a veure en profunditat les UVs i les
+                                                    textures
+                                                </p>
+
+                                                <p data-full-description hidden>
+                                                    Aquest projecte em va ajudar a aprofundir en l'ús de Substance
+                                                    Painter i les UVs al blender. Durant el procés vaig tenir
+                                                    dificultats amb les UV, però
+                                                    vaig poder millorar l'organització de
+                                                    les textures. També vaig aprendre a optimitzar el flux de treball
+                                                    entre Blender i Substance Painter.
+                                                </p>
+                                                <!-- <div class="card-stats">
+                                                    <span><i class="ti-heart"></i> 2.3k</span>
+                                                    <span><i class="ti-comment"></i> 48</span>
+                                                </div> -->
+                                                <a href="#" class="btn-view-project">View Project <i
+                                                        class="ti-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="portfolio-card" data-category="3Dmodel"
+                                    data-gallery="images/work/HouseInNature.webp">
 
                                     <div class="card-inner">
                                         <div class="card-front">
@@ -501,9 +553,16 @@
                                                 <div class="card-tech-stack">
                                                     <span>Blender</span><span>Substance</span>
                                                 </div>
-                                                <p>
-                                                    Em va ajudar a saber més sobre el substance painter, on em vaig
-                                                    barallar amb les UV's pero gràcies aixo vaig coneixer el tiles sets.
+                                                <p data-description>
+                                                    El descobriment de les UDIMS
+                                                </p>
+
+                                                <p data-full-description hidden>
+                                                    Aquest projecte em va ajudar a aprofundir en l'ús de Substance
+                                                    Painter. Durant el procés vaig tenir dificultats amb les UV, però
+                                                    vaig descobrir com treballar amb UDIMs i millorar l'organització de
+                                                    les textures. També vaig aprendre a optimitzar el flux de treball
+                                                    entre Blender i Substance Painter.
                                                 </p>
                                                 <!-- <div class="card-stats">
                                                     <span><i class="ti-heart"></i> 2.3k</span>
@@ -515,7 +574,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="portfolio-card" data-category="3Dmodel" data-gallery="images/work/GarageTankiHD.webp">
+                                <div class="portfolio-card" data-category="3Dmodel"
+                                    data-gallery="images/work/GarageTankiHD.webp">
 
                                     <div class="card-inner">
                                         <div class="card-front">
@@ -534,9 +594,16 @@
                                                 <div class="card-tech-stack">
                                                     <span>Blender</span><span>Substance</span><span>RizomUV</span>
                                                 </div>
-                                                <p>
-                                                    Un projecte molt divertir sobre el joc de la meva infancia on vaig
-                                                    poder deescobrir més en detall els UDIMS
+                                                <p data-description>
+                                                    Un projecte on vaig poder dominar les UVs.
+                                                </p>
+
+                                                <p data-full-description hidden>
+                                                    Aquest projecte em va ajudar a aprofundir en l'ús de Substance
+                                                    Painter. Durant el procés vaig tenir dificultats amb les UV, però
+                                                    vaig descobrir com treballar amb UDIMs i millorar l'organització de
+                                                    les textures. També vaig aprendre a optimitzar el flux de treball
+                                                    entre Blender i Substance Painter.
                                                 </p>
                                                 <!-- <div class="card-stats">
                                                     <span><i class="ti-heart"></i> 2.3k</span>
@@ -1254,6 +1321,7 @@
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/simplebar.min.js"></script>
     <script src="js/three.module.js"></script>
+
     <script type="importmap">
         {
             "imports": {
@@ -1262,6 +1330,7 @@
         }
     </script>
     <script type="module" src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/drift-zoom@1.5.1/dist/Drift.min.js"></script>
 </body>
 
 </html>
