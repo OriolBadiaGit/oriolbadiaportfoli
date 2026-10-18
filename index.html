@@ -569,7 +569,7 @@
                                     </div>
                                 </div>
                                 <div class="portfolio-card" data-category="environment"
-                                    data-gallery="images/work/GarageTankiHD.webp">
+                                    data-gallery="images/work/GarageTankiHD.webp,images/Video.mp4">
 
                                     <div class="card-inner">
                                         <div class="card-front">
@@ -1312,7 +1312,12 @@
     <div class="image-lightbox" id="imageLightbox" aria-hidden="true">
         <div class="image-lightbox-overlay" data-close-lightbox></div>
         <button class="image-lightbox-close" type="button" aria-label="Tancar" data-close-lightbox>&times;</button>
-        <img class="image-lightbox-img" id="lightboxImage" src="" alt="">
+
+        <!-- Imatge -->
+        <img class="image-lightbox-img" id="lightboxImage" src="" alt="" hidden>
+
+        <!-- Vídeo -->
+        <video class="image-lightbox-video" id="lightboxVideo" controls playsinline hidden></video>
     </div>
     <!-- Scripts -->
     <script src="js/jquery.min.js"></script>

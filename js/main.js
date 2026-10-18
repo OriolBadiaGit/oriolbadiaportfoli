@@ -1161,9 +1161,57 @@ const projectModal = document.getElementById('projectModal');
 const projectSlides = document.getElementById('projectSlides');
 const imageLightbox = document.getElementById('imageLightbox');
 const lightboxImage = document.getElementById('lightboxImage');
+const lightboxVideo = document.getElementById('lightboxVideo');
 
 let projectSwiper = null;
 let lastFocusedElement = null;
+let driftInstance = null;
+
+// Detecta si és un vídeo
+function isVideo(src) {
+    return /\.(mp4|webm|ogg|mov)(\?.*)?$/i.test(src);
+}
+
+// Controla autoplay segons si la diapositiva és vídeo o imatge
+function handleSlideMedia(swiper) {
+    // Atura i reinicia tots els vídeos
+    swiper.slides.forEach(slide => {
+        const video = slide.querySelector('video');
+        if (video) {
+            video.pause();
+            video.currentTime = 0;
+            video.onended = null;
+        }
+    });
+
+    const activeSlide = swiper.slides[swiper.activeIndex];
+    const video = activeSlide?.querySelector('video');
+
+    if (video) {
+        // És un vídeo → atura l'autoplay
+        if (swiper.autoplay && swiper.autoplay.running) {
+            swiper.autoplay.stop();
+        }
+
+        // Quan el vídeo acaba → passa a la següent
+        video.onended = () => {
+            if (swiper.params.loop || swiper.activeIndex < swiper.slides.length - 1) {
+                swiper.slideNext();
+            } else if (swiper.autoplay) {
+                swiper.autoplay.start();
+            }
+        };
+
+        // Reprodueix el vídeo automàticament (muted per compatibilitat)
+        video.muted = true;
+        video.play().catch(() => { });
+    } else {
+        // És una imatge → reactiva l'autoplay si n'hi ha més d'una
+        if (swiper.autoplay && swiper.slides.length > 1) {
+            swiper.autoplay.start();
+        }
+    }
+}
 
 function openProjectModal(card) {
     const content = card.querySelector('.card-back-content');
@@ -1176,7 +1224,7 @@ function openProjectModal(card) {
         ? card.dataset.gallery.split(',').map(src => src.trim()).filter(Boolean)
         : [mainImage.src];
 
-    const images = gallery.length ? gallery : [mainImage.src];
+    const mediaItems = gallery.length ? gallery : [mainImage.src];
 
     // Informació del projecte
     document.getElementById('modalProjectTitle').textContent =
@@ -1197,28 +1245,45 @@ function openProjectModal(card) {
         techContainer.appendChild(tag);
     });
 
-    // Crear diapositives
+    // Crear diapositives (imatges + vídeos)
     projectSlides.replaceChildren();
 
-    images.forEach((src, index) => {
+    mediaItems.forEach((src, index) => {
         const slide = document.createElement('div');
         slide.className = 'swiper-slide';
 
         const zoomContainer = document.createElement('div');
         zoomContainer.className = 'swiper-zoom-container';
 
-        const img = document.createElement('img');
-        img.src = src;
-        img.alt = `${title?.textContent.trim() || 'Projecte'} - imatge ${index + 1}`;
-        img.loading = index === 0 ? 'eager' : 'lazy';
-        img.style.cursor = 'pointer'; // indica que es pot clicar
+        if (isVideo(src)) {
+            const video = document.createElement('video');
+            video.src = src;
+            // video.controls = true;
+            video.playsInline = true;
+            video.preload = 'metadata';
+            video.muted = true;
 
-        // >>> CLIC ÚNIC → PANTALLA COMPLETA
-        img.addEventListener('click', () => {
-            openLightbox(src, img.alt);
-        });
+            video.addEventListener('click', (e) => {
+                if (e.target === video) {
+                    openLightbox(src);
+                }
+            });
 
-        zoomContainer.appendChild(img);
+            zoomContainer.appendChild(video);
+        } else {
+            const img = document.createElement('img');
+            img.src = src;
+            img.alt = `${title?.textContent.trim() || 'Projecte'} - imatge ${index + 1}`;
+            img.loading = index === 0 ? 'eager' : 'lazy';
+            img.style.cursor = 'pointer';
+
+            img.addEventListener('click', () => {
+                openLightbox(src, img.alt);
+            });
+
+            zoomContainer.appendChild(img);
+        }
+
         slide.appendChild(zoomContainer);
         projectSlides.appendChild(slide);
     });
@@ -1236,16 +1301,15 @@ function openProjectModal(card) {
         projectSwiper = null;
     }
 
-    const hasMultipleImages = images.length > 1;
+    const hasMultiple = mediaItems.length > 1;
 
-    // Inicialitzar Swiper (només una vegada)
     projectSwiper = new Swiper('.project-swiper', {
         slidesPerView: 1,
         spaceBetween: 0,
-        loop: hasMultipleImages,
-        allowTouchMove: hasMultipleImages,
+        loop: hasMultiple,
+        allowTouchMove: hasMultiple,
 
-        autoplay: hasMultipleImages
+        autoplay: hasMultiple
             ? {
                 delay: 3500,
                 disableOnInteraction: false,
@@ -1256,7 +1320,6 @@ function openProjectModal(card) {
         speed: 800,
         effect: 'slide',
 
-        // Zoom de Swiper (doble clic) — el deixem per si vols
         zoom: {
             maxRatio: 3,
             minRatio: 1
@@ -1264,18 +1327,32 @@ function openProjectModal(card) {
 
         pagination: {
             el: '.project-swiper .swiper-pagination',
-            clickable: hasMultipleImages
+            clickable: hasMultiple
+        },
+
+        on: {
+            init: function () {
+                handleSlideMedia(this);
+            },
+            slideChange: function () {
+                handleSlideMedia(this);
+            }
         }
     });
 
-    // Amagar paginació si només hi ha una imatge
     projectModal.querySelectorAll('.swiper-pagination').forEach(el => {
-        el.hidden = !hasMultipleImages;
+        el.hidden = !hasMultiple;
     });
 }
 
 function closeProjectModal() {
     if (!projectModal.classList.contains('is-open')) return;
+
+    // Atura tots els vídeos del modal
+    projectSlides.querySelectorAll('video').forEach(v => {
+        v.pause();
+        v.currentTime = 0;
+    });
 
     projectModal.classList.remove('is-open');
     projectModal.setAttribute('aria-hidden', 'true');
@@ -1290,49 +1367,49 @@ function closeProjectModal() {
     lastFocusedElement?.focus();
 }
 
-// ===== LIGHTBOX PANTALLA COMPLETA =====
-let driftInstance = null;
-
+// ===== LIGHTBOX (imatge + vídeo) =====
 function openLightbox(src, alt = '') {
-    lightboxImage.src = src;
-    lightboxImage.alt = alt;
+    const videoMode = isVideo(src);
 
-    // Drift necessita l'atribut data-zoom
-    lightboxImage.setAttribute('data-zoom', src);
+    lightboxImage.hidden = videoMode;
+    lightboxVideo.hidden = !videoMode;
 
-    // Esperem que la imatge estigui carregada
-    const initDrift = () => {
-        // Destrueix la instància anterior
+    if (videoMode) {
+        lightboxVideo.src = src;
+        lightboxVideo.play().catch(() => { });
+
         if (driftInstance) {
             driftInstance.destroy();
             driftInstance = null;
         }
-
-        driftInstance = new Drift(lightboxImage, {
-            // Mode lupa (sempre a sobre de la imatge)
-            inlinePane: true,
-            containInline: true,
-            inlineContainer: imageLightbox,   // important!
-
-            // Zoom
-            zoomFactor: 3,
-
-            // Usa data-zoom
-            sourceAttribute: 'data-zoom',
-
-            // També al mòbil
-            handleTouch: true,
-
-            // Mostra el rectangle de la zona
-            hoverBoundingBox: false,
-            touchBoundingBox: false
-        });
-    };
-
-    if (lightboxImage.complete) {
-        initDrift();
     } else {
-        lightboxImage.onload = initDrift;
+        lightboxImage.src = src;
+        lightboxImage.alt = alt;
+        lightboxImage.setAttribute('data-zoom', src);
+
+        const initDrift = () => {
+            if (driftInstance) {
+                driftInstance.destroy();
+                driftInstance = null;
+            }
+
+            driftInstance = new Drift(lightboxImage, {
+                inlinePane: true,
+                containInline: true,
+                inlineContainer: imageLightbox,
+                zoomFactor: 3,
+                sourceAttribute: 'data-zoom',
+                handleTouch: true,
+                hoverBoundingBox: false,
+                touchBoundingBox: false
+            });
+        };
+
+        if (lightboxImage.complete) {
+            initDrift();
+        } else {
+            lightboxImage.onload = initDrift;
+        }
     }
 
     imageLightbox.classList.add('is-open');
@@ -1343,8 +1420,16 @@ function openLightbox(src, alt = '') {
 function closeLightbox() {
     imageLightbox.classList.remove('is-open');
     imageLightbox.setAttribute('aria-hidden', 'true');
+
     lightboxImage.src = '';
     lightboxImage.removeAttribute('data-zoom');
+    lightboxImage.hidden = true;
+
+    lightboxVideo.pause();
+    lightboxVideo.removeAttribute('src');
+    lightboxVideo.load();
+    lightboxVideo.hidden = true;
+
     document.body.style.overflow = '';
 
     if (driftInstance) {
@@ -1359,8 +1444,6 @@ imageLightbox.querySelectorAll('[data-close-lightbox]').forEach(el => {
 });
 
 // ===== ESDEVENIMENTS GENERALS =====
-
-// Obrir modal amb "View Project"
 document.querySelectorAll('.btn-view-project').forEach(button => {
     button.addEventListener('click', event => {
         event.preventDefault();
@@ -1369,12 +1452,10 @@ document.querySelectorAll('.btn-view-project').forEach(button => {
     });
 });
 
-// Tancar modal
 projectModal.querySelectorAll('[data-close-modal]').forEach(element => {
     element.addEventListener('click', closeProjectModal);
 });
 
-// Tecla Escape (tanca primer el lightbox, després el modal)
 document.addEventListener('keydown', event => {
     if (event.key === 'Escape') {
         if (imageLightbox.classList.contains('is-open')) {
